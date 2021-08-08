@@ -1,0 +1,667 @@
+.set-detail {
+  margin: 0 40px;
+  padding: 30px 0;
+  border-bottom: 1px solid #e5e5e6;
+
+  .sub-title {
+    color: #333;
+    font-size: 14px;
+    font-weight: 600;
+    padding-bottom: 20px;
+
+    .desc {
+      font-size: 12px;
+      color: #999;
+      font-weight: normal;
+      margin-left: 10px;
+    }
+
+    .desc2 {
+      font-size: 14px;
+      color: #666666;
+      font-weight: normal;
+      margin-right: 10px;
+    }
+
+    .icon-41 {
+      color: #ccc;
+      font-size: 16px;
+      vertical-align: -1px;
+      font-weight: normal;
+    }
+    // 标题文字中的超链接
+    .link {
+      color: #265bed;
+      margin-left: 10px;
+      font-weight: normal;
+    }
+    &.padding-bottom10 {
+      padding-bottom: 10px;
+    }
+    &.padding-bottom0 {
+      padding-bottom: 0px;
+    }
+    &.flex {
+      display: flex;
+      align-items: center;
+      .kf-ai-form-item-label {
+        padding: 0;
+        font-weight: normal;
+      }
+    }
+  }
+
+  // 二级标题文字
+  .sub-child-title {
+    font-size: 14px;
+    color: #000000;
+    line-height: 20px;
+    margin-bottom: 14px;
+  }
+
+  .sub-checkbox {
+    &:last-child {
+      .checkbox-list {
+        margin-bottom: 10px;
+      }
+    }
+
+    .checkbox-title {
+      font-size: 14px;
+      color: #333333;
+    }
+
+    .checkbox-list {
+      font-size: 0;
+      padding: 20px 0;
+    }
+
+    .kf-checkbox {
+      vertical-align: -2.5px;
+      margin-right: 10px;
+    }
+
+    .kf-checkbox-wrapper {
+      margin-right: 90px;
+    }
+  }
+
+  .kf-ai-form-item {
+    width: 100%;
+    @include clearfix;
+
+    .kf-ai-form-item-content {
+      box-sizing: border-box;
+
+      .more-item {
+        padding: 20px 0;
+        width: 940px;
+        font-size: 0;
+
+        background: #f7f7fa;
+        margin-bottom: 10px;
+        position: relative;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        .kf-ai-select {
+          padding-left: 10px;
+        }
+
+        .edit-area {
+          opacity: 0;
+          position: absolute;
+          right: 0;
+          top: 0;
+          top: 50%;
+          transform: translateY(-50%);
+          right: 20px;
+          font-size: 0;
+          transition: opacity 0.3s ease;
+
+          .item {
+            display: inline-block;
+            margin-left: 20px;
+            cursor: pointer;
+            font-size: 0;
+          }
+
+          .txt {
+            font-size: 14px;
+            color: #265cf0;
+            vertical-align: 2px;
+            display: inline-block;
+          }
+
+          .iconfont {
+            margin-right: 6px;
+            display: inline-block !important;
+            color: #265cf0;
+          }
+        }
+
+        &.deafault-state {
+          position: relative;
+          padding: 19px 0 18px 0;
+          height: 19px;
+
+          &:hover {
+            background: #ccdaff;
+
+            .kf-ai-select-selection {
+              background: #ccdaff;
+              transition: none;
+            }
+
+            .kf-ai-tag {
+              background: #ccdaff;
+              transition: none;
+            }
+
+            .edit-area {
+              opacity: 1;
+
+              .txt {
+                color: #265cf0;
+              }
+
+              .iconfont {
+                display: inline-block;
+                color: #265cf0;
+              }
+            }
+          }
+
+          .kf-ai-select {
+            width: auto;
+            vertical-align: top;
+            padding-right: 20px;
+
+            &:nth-child(3) {
+              padding-left: 10px;
+            }
+          }
+
+          .iconfont {
+            display: none;
+          }
+
+          .kf-ai-select-selection {
+            border: none;
+            background: #f7f7fa;
+            transition: none;
+            height: 19px;
+            overflow: hidden;
+            min-height: auto;
+            padding-left: 10px;
+          }
+
+          .tag-group {
+            display: inline-block;
+          }
+
+          .kf-ai-select-value {
+            float: left;
+            height: 19px;
+            line-height: 19px;
+          }
+
+          .kf-ai-tag {
+            padding: 0;
+            background: #f7f7fa;
+            display: inline-block;
+            color: #000;
+            margin: 0;
+            padding-right: 10px;
+            transition: none;
+            height: 19px;
+            line-height: 19px;
+
+            &:last-child {
+              padding-right: 0;
+            }
+
+            &.title {
+              font-size: 14px;
+              color: #999999;
+              float: left;
+              margin: 0;
+            }
+
+            .kf-ai-tag-text {
+              margin-right: 0;
+            }
+          }
+
+          .kf-ai-tag.title {
+            display: block;
+          }
+        }
+
+        .kf-ai-tag.title {
+          display: none;
+        }
+      }
+
+      .kf-ai-select {
+        width: 250px;
+        // padding-left: 10px;
+        box-sizing: border-box;
+        position: relative;
+        overflow: visible !important;
+
+        .icon-43 {
+          color: #999;
+          font-size: 16px;
+          margin-top: -8px;
+        }
+      }
+      .kf-ai-input-wrapper.select-input {
+        .kf-ai-select {
+          width: 480px;
+        }
+      }
+      .search-input {
+        .kf-ai-select {
+          width: 100%;
+        }
+      }
+
+      .kf-ai-switch {
+        margin: 9px 0;
+      }
+
+      .status {
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: 5px;
+        font-size: 0;
+        z-index: 999;
+        position: relative;
+        .status-item {
+          font-size: 14px;
+          color: #265cf0;
+          padding: 0 15px;
+        }
+        .iconfont {
+          font-size: 20px;
+          cursor: pointer;
+        }
+
+        .icon-49 {
+          color: #265cf0;
+          margin-right: 10px;
+        }
+
+        .icon-close-fill {
+          color: #ccc;
+        }
+      }
+
+      .setting-options {
+        position: absolute;
+        left: 480px;
+        top: 0;
+        display: inline-block;
+        margin-left: 10px;
+        font-size: 0;
+        height: 40px;
+        line-height: 40px;
+
+        .setting-item {
+          font-size: 14px;
+          color: #265cf0;
+          margin: 0 10px;
+        }
+
+        .setting-sure {
+          font-size: 14px;
+          color: #265cf0;
+          margin: 0 10px;
+        }
+
+        .setting-cancel {
+          margin: 0 10px;
+          font-size: 14px;
+          color: #265cf0;
+        }
+      }
+
+      .delete {
+        cursor: pointer;
+        display: inline-block;
+        vertical-align: middle;
+
+        .iconfont {
+          font-size: 20px;
+          color: #ed4343;
+          cursor: pointer;
+        }
+      }
+    }
+
+    .kf-ai-form-item-tips {
+      text-align: right;
+      vertical-align: middle;
+      float: left;
+      font-size: 14px;
+      color: #999;
+      line-height: 1;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .add-time {
+      color: #265cf0;
+      font-size: 14px;
+      // margin-left: 210px;
+      padding-top: 10px;
+      box-sizing: border-box;
+      cursor: pointer;
+
+      span {
+        margin-left: 2px;
+      }
+    }
+  }
+
+  .radio-title {
+    font-size: 14px;
+    color: #666666;
+    margin-bottom: 10px;
+  }
+
+  .one-input {
+    .search-input {
+      width: 480px;
+      &.has-search-btn {
+        .kf-ai-input {
+          padding-right: 90px;
+        }
+        .ai-btn-sm {
+          position: absolute;
+          right: 0;
+          top: 0;
+          min-width: 80px;
+        }
+      }
+    }
+    .select-input {
+      width: 480px;
+    }
+
+    .kf-ai-select-multiple {
+      width: 480px !important;
+    }
+
+    .kf-ai-form-item-content {
+      font-size: 0;
+    }
+
+    .kf-ai-select-dropdown {
+      width: 480px;
+    }
+
+    .message {
+      height: auto;
+      resize: none;
+      overflow-y: auto;
+      overflow-y: overlay;
+      height: 127px;
+    }
+    // 富文本输入框
+    .editDiv {
+      height: 124px;
+    }
+  }
+
+  .two-input {
+    .kf-ai-form-item-content {
+      font-size: 0;
+    }
+  }
+
+  .tips {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 30px;
+
+    .mini-input {
+      width: 40px;
+      height: 28px;
+      margin-left: 10px;
+      margin-right: 10px;
+      box-sizing: border-box;
+      outline: 0;
+      display: inline-block;
+
+      .kf-ai-form-item-content {
+        margin-left: 0 !important;
+        width: 40px;
+      }
+
+      .kf-ai-select-item {
+        padding: 4px 25px 4px 10px;
+      }
+
+      .kf-ai-form-item {
+        margin-bottom: 0;
+      }
+
+      .kf-ai-select {
+        width: 40px;
+        padding-left: 0;
+      }
+
+      .kf-ai-select-selection {
+        min-height: 28px;
+      }
+
+      .kf-ai-select-placeholder,
+      .kf-ai-select-value {
+        height: 26px;
+        line-height: 26px;
+        padding-left: 4px;
+      }
+
+      .kf-ai-icon-arrow {
+        right: 4px;
+      }
+
+      .kf-ai-select-dropdown {
+        bottom: 31px;
+      }
+    }
+
+    .minute {
+      width: 40px;
+      height: 28px;
+      margin-left: 10px;
+      margin-right: 10px;
+      padding: 0 5px;
+      box-sizing: border-box;
+      outline: 0;
+      display: inline-block;
+    }
+  }
+
+  .close {
+    .kf-ai-form-item:not(:first-child) {
+      display: none;
+    }
+
+    .tips {
+      display: none;
+    }
+  }
+
+  .kf-ai-form-item {
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  // 话术设置中 kf-ai-form-item-content 上方信息
+  .manual-setting-info {
+    width: 480px;
+    // margin-left: 200px;
+    line-height: 1;
+    padding: 13px 10px 13px 0;
+    font-size: 14px;
+    color: #666;
+    .right {
+      float: right;
+      .right-link {
+        margin-left: 20px;
+      }
+    }
+  }
+}
+
+.set-area {
+  height: calc(100vh - 56px);
+  overflow-y: auto;
+  overflow-y: overlay;
+  overflow-x: hidden;
+  &.-flex-area {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    .set-main {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      // 修复火狐浏览器没法滚动的问题
+      min-height: 0;
+    }
+  }
+  &.-quality-inspection {
+    height: calc(100vh - 36px);
+  }
+}
+
+.hide {
+  display: none !important;
+}
+
+// 快捷键设置页面
+.shortcut-area {
+  display: flex;
+  padding: 20px 40px;
+  .shortcut-area__left {
+    flex: 1;
+    margin-right: 20px;
+  }
+  .shortcut-area__right {
+    flex: 1;
+    margin-left: 20px;
+  }
+}
+.shortcut-key {
+  margin-bottom: 40px;
+  .shortcut-key__hd {
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    background: #f5f5f7;
+    height: 48px;
+
+    .icon-89 {
+      position: relative;
+      color: #acb2bf;
+      cursor: pointer;
+      position: relative;
+      line-height: 21px;
+      display: inline-block;
+      vertical-align: -1px;
+      margin-left: 6px;
+      &:hover {
+        .icon89-tips {
+          display: block;
+        }
+      }
+    }
+  }
+  .shortcut-key__title {
+    font-size: 14px;
+    color: #333333;
+    font-weight: bold;
+  }
+
+  .shortcut-key__item {
+    display: flex;
+    height: 56px;
+    position: relative;
+    &::after {
+      @include retina-one-px-border($direction: bottom, $color: #e5e5e6);
+    }
+  }
+  .shortcut-key__key {
+    flex: 1;
+    line-height: 56px;
+    padding: 0 20px;
+    font-size: 14px;
+    color: #666666;
+  }
+  .shortcut-key__value {
+    flex: 1;
+    line-height: 56px;
+    padding: 0 20px;
+    font-size: 14px;
+    color: #666666;
+  }
+}
+
+.icon89-tips {
+  display: none;
+  position: absolute;
+  background: #ffffff;
+  padding: 12px;
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.14);
+  box-sizing: border-box;
+  z-index: 100;
+  .icon89-tips__title {
+    font-size: 14px;
+    color: #000000;
+    margin-bottom: 10px;
+  }
+  .icon89-tips__pic {
+    .shortcutpic-01 {
+      max-width: 530px;
+    }
+    .shortcutpic-02 {
+      max-width: 530px;
+    }
+    .shortcutpic-03 {
+      max-width: 300px;
+    }
+    .shortcutpic-04 {
+      max-width: 530px;
+    }
+  }
+  &.-leftTop {
+    top: -12px;
+    left: 26px;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 16px;
+      left: -10px;
+      border: 5px solid transparent;
+      border-right-color: #fff;
+    }
+  }
+  &.-leftBottom {
+    bottom: -10px;
+    left: 26px;
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: 16px;
+      left: -10px;
+      border: 5px solid transparent;
+      border-right-color: #fff;
+    }
+  }
+}

@@ -1,0 +1,200 @@
+@import '../base/lib-mixin.scss';
+
+// 进度选项组件
+// * 默认为水平横向，更改为垂直纵向添加类名 -vertical
+.m-progress--option {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  .option__title {
+    display: block;
+    width: 100%;
+    flex-shrink: 0;
+    font-size: 14px;
+    line-height: 20px;
+    color: #999999;
+    margin-bottom: 20px;
+  }
+  .option__itemList {
+    width: 100%;
+    flex-shrink: 0;
+  }
+  .option__item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    &:not(:last-child) {
+      flex: 1;
+    }
+    &.current {
+      .option__order {
+        border: none;
+        background: #265cf0;
+        color: #fff;
+      }
+      .option__label {
+        color: #265cf0;
+      }
+      .option__line {
+        background: #265cf0;
+      }
+    }
+    &.finish {
+      .option__order {
+        // border-color: #265CF0;
+        border: none;
+        color: #265cf0;
+      }
+      .option__orderNumber {
+        display: none;
+      }
+      .option__finishIcon {
+        display: block;
+      }
+      .option__label {
+        color: #265cf0;
+      }
+      .option__line {
+        background: #265cf0;
+      }
+    }
+  }
+  .option__order {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    margin-right: 6px;
+    border-radius: 50%;
+    border: 1px solid #999999;
+    font-size: 14px;
+    line-height: 1;
+    color: #999999;
+    box-sizing: border-box;
+    .icon-400 {
+      font-size: 20px;
+    }
+    &.-blue {
+      color: #265cf0;
+      border-color: #265cf0;
+    }
+  }
+  .option__finishIcon {
+    display: none;
+    .iconfont {
+      font-size: 20px;
+    }
+  }
+  .option__label {
+    font-size: 14px;
+    line-height: 19px;
+    color: #999;
+  }
+  .option__line {
+    flex: 1;
+    margin: 0px 12px;
+    height: 1px;
+    background: #e5e5e6;
+  }
+  .option__desc {
+    font-size: 12px;
+    line-height: 16px;
+    color: #ccc;
+    margin-top: 6px;
+  }
+  .option__item__hd {
+    position: relative;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+  }
+  .option__item__bd {
+    padding-left: 26px;
+    .kf-ai-form {
+      margin-top: 10px;
+    }
+    .kf-ai-form-item {
+      width: 360px;
+      &:last-child {
+        margin-bottom: 0px;
+      }
+    }
+  }
+  // 垂直纵向进度条
+  &.-vertical {
+    flex-direction: column;
+    .option__label {
+      color: #000;
+    }
+    .option__item {
+      flex-direction: column;
+      align-items: unset;
+      min-height: 80px;
+      padding-bottom: 20px;
+      box-sizing: border-box;
+      &.-long {
+        min-height: 120px;
+        padding-bottom: 40px;
+      }
+      &:last-child {
+        min-height: unset;
+        padding-bottom: unset;
+      }
+    }
+    .option__line {
+      position: absolute;
+      width: 1px;
+      height: auto;
+      margin: unset;
+      top: 20px;
+      bottom: 0px;
+      left: 10px;
+      transform: translateX(-50%);
+      z-index: 0;
+    }
+  }
+}
+
+// 进度表格组件
+.progress-table {
+  position: relative;
+  width: 100%;
+  border: 1px solid #e5e5e6;
+  .progress-table__header {
+    height: 40px;
+    background-color: #f7f7fa;
+    color: #666;
+    font-size: 14px;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    .header-title {
+      padding-left: 10px;
+    }
+  }
+  .progress-table__row {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    &:not(:last-child) {
+      border-bottom: 1px solid #e5e5e6;
+    }
+  }
+  .progress-table__td {
+    width: 20%;
+    padding-left: 10px;
+    box-sizing: border-box;
+    .val {
+      color: #000;
+      font-size: 14px;
+      text-align: left;
+      word-break: break-all;
+      word-wrap: break-word;
+      white-space: normal;
+      @include ellipsis-lines($lines: 1);
+    }
+  }
+}

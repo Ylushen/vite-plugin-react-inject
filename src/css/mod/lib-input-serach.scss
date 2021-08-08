@@ -1,0 +1,31 @@
+.mod-input-serach {
+  padding-top: 10px;
+  padding-bottom: 20px;
+  @include clearfix;
+  // min-width: 1505px;
+  min-width: 1120px;
+  display: flex;
+  .left {
+    // float: left;
+    font-size: 0;
+    .kf-ai-form-item {
+      width: 240px;
+      margin-right: 10px;
+      margin-bottom: 0px;
+      margin-top: 10px;
+      display: inline-block;
+      &:last-child {
+        margin-right: 0px;
+      }
+    }
+  }
+  .right {
+    // float: right;
+    font-size: 0;
+    margin-left: auto;
+    flex-shrink: 0;
+    .ai-btn {
+      margin-top: 10px;
+    }
+  }
+}

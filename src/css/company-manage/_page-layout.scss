@@ -1,0 +1,47 @@
+// 企业管理模块页面样式
+
+// 企业管理-业务管理
+.company-manage {
+  .robot-manage {
+    height: calc(100vh - 56px - 48px);
+    .robot-box {
+      width: 316px;
+      margin-left: 10px;
+      margin-right: 10px;
+      .robot-box-bd .robot-info {
+        display: flex;
+        .robot-info-item {
+          flex: 1;
+          padding: 0;
+          width: auto;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1892px) {
+  .open .company-manage .robot-manage .robot-manage-inner {
+    width: unset;
+  }
+}
+@media (max-width: 1520px) {
+  .open .company-manage .robot-manage .robot-manage-inner {
+    width: unset;
+  }
+}
+@media (min-width: 1920px) {
+  .open .company-manage .robot-manage .robot-manage-inner {
+    width: 1680px;
+  }
+}
+@media (max-width: 1919px) {
+  .open .company-manage .robot-manage .robot-manage-inner {
+    width: 1344px;
+  }
+}
+@media (max-width: 1560px) {
+  .open .company-manage .robot-manage .robot-manage-inner {
+    width: 1008px;
+  }
+}

@@ -1,0 +1,796 @@
+//工单中心
+.workorder {
+  .emergency {
+    color: #b31010;
+  }
+
+  .high {
+    color: #cc8b29;
+  }
+}
+
+//工单中心-工单详情
+.workorder-detail {
+  position: relative;
+  word-wrap: break-word;
+  height: calc(100vh - 104px);
+
+  .layout-ai-four {
+    width: 616px;
+    height: 100%;
+    .top-menu .si-search {
+      background: #fdfdfe;
+    }
+  }
+  .user-info .item {
+    width: 50%;
+    &.long {
+      width: 100% !important;
+    }
+    .value {
+      .suspend {
+        width: calc(100% - 40px);
+        max-width: 420px;
+        left: 20px;
+        white-space: normal;
+        word-break: break-all;
+        &:before {
+          left: 20px;
+        }
+      }
+      &:hover {
+        .suspend {
+          display: block;
+        }
+      }
+    }
+  }
+  .layout-ai-three {
+    position: relative !important;
+    height: auto !important;
+    padding-left: 0 !important;
+    padding-right: 616px !important;
+    background: #fdfdfe !important;
+
+    .workorder-top {
+      @include clearfix;
+      padding: 20px 40px;
+      border-bottom: 1px solid #e5e5e6;
+      // min-width: 1010px;
+
+      &.nobottom {
+        padding-bottom: 0;
+      }
+
+      .left {
+        float: left;
+        font-size: 0;
+        padding-top: 8px;
+        padding-bottom: 8px;
+
+        .page-tool {
+          font-size: 14px;
+
+          .page-turning {
+            color: #265cf0;
+            display: inline-block;
+
+            .page-up {
+              padding-right: 20px;
+
+              .icon-67 {
+                top: 3px;
+                font-size: 20px;
+                margin-right: 6px;
+                position: relative;
+              }
+            }
+
+            .page-down {
+              position: relative;
+              padding-left: 20px;
+
+              .icon-66 {
+                top: 2px;
+                font-size: 20px;
+                margin-left: 6px;
+                position: relative;
+              }
+
+              &:before {
+                content: '';
+                width: 1px;
+                height: 14px;
+                left: 0;
+                top: 4px;
+                background: #ccc;
+                position: absolute;
+              }
+            }
+          }
+
+          .page-status {
+            color: #999;
+            margin-left: 20px;
+            display: inline-block;
+          }
+        }
+      }
+
+      .right {
+        float: right;
+        font-size: 0;
+
+        .ai-btn {
+          margin-left: 20px;
+
+          .iconfont {
+            top: 1px;
+            position: relative;
+          }
+        }
+      }
+    }
+
+    .workorder-list {
+      overflow: hidden;
+      background: #fafafa;
+
+      .btn-area {
+        display: block;
+      }
+
+      .chat-data {
+        height: calc(100vh - 417px);
+        overflow: auto;
+        padding: 10px 20px;
+
+        .workorder-title {
+          color: #333;
+          font-size: 14px;
+          font-weight: 600;
+          padding: 10px 20px;
+        }
+
+        .workorder-cont {
+          padding: 10px 20px;
+
+          .refund-pic {
+            .refund-title {
+              font-size: 14px;
+              color: #666666;
+            }
+
+            .pic-list {
+              font-size: 0;
+              padding-top: 4px;
+              padding-bottom: 20px;
+              border-bottom: 1px solid #e5e5e6;
+
+              img {
+                width: 84px;
+                height: 84px;
+                margin-right: 5px;
+              }
+            }
+          }
+
+          .kf-list {
+            padding: 20px 0;
+            position: relative;
+            border-bottom: 1px solid #e5e5e6;
+
+            &:last-child {
+              border-bottom: none;
+            }
+
+            .kf-list-avatar {
+              left: 0;
+              top: 20px;
+              width: 40px;
+              height: 40px;
+              position: absolute;
+
+              img {
+                width: 100%;
+                height: 100%;
+              }
+            }
+
+            .kf-list-cont {
+              padding-left: 54px;
+
+              .kf-info {
+                font-size: 0;
+
+                .kf-num {
+                  font-size: 14px;
+                  display: inline-block;
+                }
+
+                .kf-option {
+                  color: #999;
+                  font-size: 12px;
+                  margin-left: 20px;
+                  display: inline-block;
+
+                  .iconfont {
+                    top: 1px;
+                    margin-right: 6px;
+                    position: relative;
+                  }
+                }
+
+                .kf-time {
+                  color: #999;
+                  font-size: 12px;
+                  margin-left: 20px;
+                  display: inline-block;
+                }
+              }
+
+              .kf-assign-to {
+                color: #666;
+                font-size: 14px;
+                margin-top: 4px;
+                margin-bottom: 8px;
+              }
+
+              .kf-record {
+                .kf-record-title {
+                  color: #265cf0;
+                  font-size: 14px;
+
+                  .icon-arrow-down {
+                    font-size: 16px;
+                    margin-left: 6px;
+                  }
+                }
+
+                .kf-record-detail {
+                  padding: 10px;
+                  width: 260px;
+                  margin-top: 10px;
+                  border-radius: 1px;
+                  display: inline-block;
+                  box-sizing: border-box;
+                  background: #ebedf3;
+
+                  .kf-record-time {
+                    color: #999;
+                    font-size: 14px;
+                  }
+
+                  .message-line {
+                    font-size: 14px;
+                    margin-top: 4px;
+
+                    .message-name {
+                      color: #666;
+                    }
+                  }
+                }
+              }
+
+              .kf-bubble {
+                padding: 10px;
+                font-size: 14px;
+                max-width: 700px;
+                margin-top: 10px;
+                border-radius: 1px;
+                display: inline-block;
+                box-sizing: border-box;
+                background: #ebedf3;
+              }
+
+              .kf-sendpic {
+                padding: 10px;
+                margin-top: 10px;
+                display: inline-block;
+                background: #ebedf3;
+
+                img {
+                  width: 84px;
+                  height: 84px;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .chat-oper {
+        background: #fdfdfe;
+        position: relative;
+        .right {
+          .iconfont {
+            color: #979797;
+            margin-right: 6px;
+          }
+
+          .txt {
+            color: #666;
+          }
+        }
+
+        .chat-oper-bd {
+          textarea {
+            background: #fdfdfe;
+          }
+        }
+
+        &.chat-oper-disabled {
+          background: #fafafb;
+
+          .chat-oper-bd {
+            textarea {
+              background: #fafafb;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .layout-ai-four {
+    .four-top {
+      background: #fdfdfe;
+      height: calc(100vh - 185px);
+      .user-info {
+        height: calc(100vh - 56px - 50px - 48px);
+      }
+    }
+  }
+}
+
+// 工单详情样式适配
+@media screen and (max-width: 1600px) {
+  .workorder-detail .layout-ai-three {
+    padding-right: 412px !important;
+    left: 0px !important;
+    width: auto !important;
+  }
+  .workorder-detail .layout-ai-four {
+    width: 412px !important;
+    position: absolute !important;
+    margin-left: unset !important;
+    .user-info .item {
+      width: 100% !important;
+    }
+  }
+}
+
+// 针对有si查询模块的工单详情样式适配
+.workorder-detail.has-si {
+  .user-info .item {
+    width: 33.333333% !important;
+  }
+  .layout-ai-three {
+    padding-right: 1000px !important;
+    .workorder-top {
+      min-width: 740px !important;
+      box-sizing: border-box !important;
+    }
+  }
+  .layout-ai-four {
+    width: 1000px !important;
+    height: 100% !important;
+    .top-menu .si-search {
+      background: #fdfdfe !important;
+    }
+  }
+}
+
+@media screen and (max-width: 1919px) {
+  .workorder-detail.has-si {
+    .layout-ai-three {
+      width: 740px !important;
+      left: 0px !important;
+      padding-right: 0px !important;
+    }
+    .layout-ai-four {
+      position: absolute !important;
+      margin-left: 0px !important;
+      left: 740px !important;
+      width: auto !important;
+    }
+  }
+  .layout-ai-inner.close .workorder-detail.has-si {
+    .layout-ai-three {
+      left: 0px !important;
+    }
+  }
+}
+@media screen and (max-width: 1590px) {
+  .workorder-detail.has-si {
+    .layout-ai-four {
+      .user-info .item {
+        width: 50% !important;
+      }
+    }
+  }
+}
+@media screen and (max-width: 1540px) {
+  // 工单详情适配样式
+  .workorder-detail {
+    .layout-ai-three {
+      width: auto !important;
+      position: relative !important;
+      left: unset !important;
+      top: unset !important;
+      bottom: unset !important;
+      transition: padding, width 0.2s ease;
+    }
+    .layout-ai-four {
+      position: absolute !important;
+      margin-left: 0px !important;
+      transition: width 0.2s ease;
+    }
+  }
+  .layout-ai-inner.close .workorder-detail .layout-ai-three {
+    left: unset !important;
+  }
+
+  .workorder-detail.has-si {
+    .layout-ai-four {
+      position: absolute !important;
+    }
+  }
+}
+@media screen and (max-width: 1439px) {
+  .workorder-detail.has-si {
+    .layout-ai-four {
+      .user-info .item {
+        width: 100% !important;
+      }
+    }
+  }
+}
+
+//创建工单弹框
+.create-order {
+  width: 480px;
+  font-size: 0;
+  min-width: 480px;
+  box-sizing: border-box;
+  position: relative;
+  padding: 20px 0 20px 20px;
+  max-height: 687px;
+  overflow-x: hidden;
+  overflow-y: overlay;
+
+  .create-order-left {
+    width: 50%;
+    font-size: 16px;
+    vertical-align: top;
+    display: inline-block;
+    padding-left: 20px;
+    box-sizing: border-box;
+  }
+
+  .create-order-right {
+    width: 50%;
+    font-size: 16px;
+    vertical-align: top;
+    display: inline-block;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
+  }
+
+  .kf-ai-form-title {
+    color: #333;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    margin-bottom: 20px;
+  }
+
+  .kf-ai-form-item-content {
+    // height: 40px;
+    // line-height: 40px;
+    line-height: 20px;
+    // font-size: 0px;
+    font-size: 14px;
+    color: #000;
+    .kf-ai-select {
+      display: block;
+    }
+    .kf-ai-input-wrapper {
+      display: block;
+    }
+  }
+
+  .kf-ai-form-item-label {
+    padding-left: 0;
+  }
+
+  .kf-ai-form-item {
+    width: 50%;
+    display: inline-block;
+    margin-bottom: 20px;
+    position: relative;
+    padding-right: 20px;
+    box-sizing: border-box;
+    &:last-child {
+      margin-bottom: 0px;
+    }
+
+    &.row {
+      width: 100%;
+    }
+
+    label {
+      display: inline-block;
+      float: none;
+      width: 100%;
+      padding: 0px 0px 4px 0;
+      line-height: 16px;
+      color: #666;
+      position: relative;
+      box-sizing: border-box;
+
+      .required-fields {
+        top: 16px;
+        left: -10px;
+        color: #ed4343;
+        position: absolute;
+      }
+    }
+
+    .value {
+      position: absolute;
+      left: 0;
+      width: 184px;
+      margin-left: 90px;
+      height: 40px;
+      line-height: 40px;
+      color: #000;
+      font-size: 14px;
+
+      .kf-ai-select-value {
+        color: #000;
+      }
+    }
+
+    .askbox {
+      height: 200px;
+      border: 1px solid #e5e5e6;
+      background: #fff;
+      &:hover {
+        border-color: #ccc;
+      }
+      &.-input {
+        border-color: #265cf0;
+      }
+
+      .kf-ai-input {
+        border: none;
+        height: 150px;
+        padding-top: 0;
+        font-size: 14px;
+        padding: 0 10px;
+        padding-bottom: 0;
+        resize: none;
+        background: transparent;
+        overflow-y: auto;
+        overflow-y: overlay;
+        overflow-x: hidden;
+      }
+
+      .askbox-icon {
+        width: 100%;
+        height: 40px;
+        text-align: left;
+
+        .iconfont {
+          display: inline-block;
+          position: static;
+          cursor: pointer;
+          margin-top: 5px;
+          margin-left: 10px;
+          color: #666;
+          font-size: 20px;
+          vertical-align: top;
+          line-height: 1;
+          &:hover {
+            color: #265cf0;
+          }
+        }
+      }
+
+      .askbox-right {
+        position: absolute;
+        right: 0;
+        top: 0;
+
+        .askbox-item {
+          font-size: 0;
+          padding: 10px 10px;
+          cursor: pointer;
+          user-select: none;
+
+          .txt {
+            font-size: 12px;
+            color: #666666;
+            display: inline-block;
+          }
+
+          .iconfont {
+            font-size: 16px;
+            color: #999;
+            display: inline-block;
+            margin: 0;
+            margin-left: 5px;
+            vertical-align: -1px;
+          }
+
+          .askbox-item-downlist {
+            min-width: 91px;
+            box-sizing: border-box;
+            position: absolute;
+            top: 40px;
+            z-index: 999;
+            left: 0;
+            background: #ffffff;
+            box-shadow: 0 2px 10px 0 rgba(66, 73, 81, 0.2);
+
+            .list-item {
+              font-size: 14px;
+              height: 40px;
+              padding: 0 10px;
+              text-align: left;
+              line-height: 40px;
+              color: #000000;
+
+              &:hover {
+                background: #ccdaff;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .red-tips {
+    color: #ed4343;
+    font-size: 12px;
+    // line-height: 1;
+    line-height: 18px;
+    // padding-top: 6px;
+  }
+
+  .filter-tips {
+    font-size: 14px;
+    padding: 10px 20px 20px 20px;
+    color: #999;
+
+    .icon-41 {
+      color: #265bed;
+      margin-left: 6px;
+      font-size: 14px;
+      font-weight: 600;
+    }
+  }
+  &.two-column {
+    width: 1000px;
+  }
+  &.three-column {
+    width: auto;
+    padding-left: 40px;
+    max-height: 700px;
+    overflow-y: auto;
+    overflow-y: overlay;
+    overflow-x: hidden;
+    .kf-ai-label-left {
+      // width: 100%;
+      // height: 100%;
+      display: flex;
+
+      // flex-direction: column;
+      flex-wrap: nowrap;
+      // flex column排列布局无法撑开父元素宽度问题！！！
+      // writing-mode: vertical-lr; // writing-mode 兼容性IE8+
+    }
+    .column {
+      display: inline-block;
+      flex: 1 1 300px;
+      width: 300px;
+      &:first-child {
+        .row:nth-child(2) {
+          .kf-ai-form-item-content {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+    .row {
+      display: inline-block;
+      width: 300px;
+      padding-right: 40px;
+      // writing-mode: horizontal-tb; // writing-mode 兼容性IE8+
+      &.kf-ai-form-title {
+        padding-right: 0px;
+      }
+      &:last-child {
+        margin-bottom: 0px;
+      }
+    }
+    .kf-ai-form-item-label {
+      .required-fields {
+        top: 2px;
+      }
+    }
+    // .kf-ai-form-item-content {
+    //     line-height: 40px;
+    // }
+    .askbox-row {
+      .kf-ai-form-item-content {
+        height: auto;
+      }
+    }
+  }
+}
+@media screen and (max-width: 1440px) {
+  .create-order {
+    max-height: 511px;
+  }
+  .create-order.three-column {
+    max-height: 511px;
+  }
+}
+@media screen and (max-height: 880px) {
+  .create-order,
+  .create-order.three-column {
+    max-height: 511px;
+  }
+}
+
+// area上传海外版
+.area-create {
+  padding: 20px;
+  box-sizing: border-box;
+  width: 420px;
+  .self-del .img {
+    &.-big {
+      width: 100px;
+      height: 100px;
+    }
+  }
+  .des-text {
+    margin-left: 10px;
+    font-family: PingFangSC-Regular;
+    font-size: 12px;
+    color: #999999;
+    letter-spacing: 0;
+    text-align: left;
+  }
+  .wait-uploader {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #666666;
+    .iconfont {
+      font-size: 32px;
+    }
+    .uploader-txt {
+      margin-top: 8px;
+      font-family: Helvetica;
+      font-size: 14px;
+      color: #999;
+      letter-spacing: 0;
+    }
+  }
+  .-color {
+    display: flex;
+    .kf-input-color {
+      width: 80px;
+    }
+    > .kf-ai-input {
+      border-right: none;
+    }
+  }
+}

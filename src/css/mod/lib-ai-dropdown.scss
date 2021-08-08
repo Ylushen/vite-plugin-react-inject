@@ -1,0 +1,176 @@
+@import '../base/lib-mixin.scss';
+
+.kf-ai-dropdown {
+  position: relative;
+
+  .kf-ai-dropdown__menu {
+    position: absolute;
+    min-width: 120px;
+    left: 0;
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.14);
+    z-index: 11;
+    // max-height: 200px;
+    // overflow-x: hidden;
+    // overflow-y: overlay;
+  }
+  .kf-ai-dropdown__submenu {
+    position: absolute;
+    top: 0;
+    right: 1px;
+    z-index: 99;
+    opacity: 0;
+  }
+
+  .kf-ai-dropdown__item {
+    position: relative;
+    font-size: 14px;
+    padding: 10px 26px 10px 10px;
+    color: #000000;
+    cursor: pointer;
+    background: #fff;
+    .icon-37 {
+      position: absolute;
+      right: 10px;
+      color: #999;
+      font-size: 16px;
+      line-height: 1;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    .desc {
+      display: inline;
+      font-size: 12px;
+      color: #cccccc;
+    }
+
+    &.-selected {
+      position: relative;
+      color: #265cf0;
+      &::after {
+        display: inline-block;
+        font-family: iconfont;
+        font-style: normal;
+        font-weight: 600;
+        text-transform: none;
+        text-rendering: auto;
+        line-height: 1;
+        -webkit-font-smoothing: ialiased;
+        -moz-osx-font-smoothing: grayscale;
+        vertical-align: middle;
+        font-size: 16px;
+        content: '\e849';
+        color: #265bed;
+        position: absolute;
+        top: 12px;
+        right: 10px;
+      }
+    }
+
+    &.-divided {
+      position: relative;
+      &::before {
+        @include setTopLine();
+      }
+    }
+    &:hover {
+      background: #ccdaff;
+    }
+  }
+
+  // 下拉列表中指向位置的三角箭头
+  .arrow-top {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-color: transparent;
+    border-style: solid;
+    right: 15px;
+    border-width: 0px 5px 5px 5px;
+    border-bottom-color: #fff;
+    top: -5px;
+    z-index: 12;
+  }
+
+  // 下拉列表中指向位置的三角箭头
+  .arrow-right {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-color: transparent;
+    border-style: solid;
+    left: 5px;
+    border-width: 0px 5px 5px 5px;
+    border-bottom-color: #fff;
+    top: -17px;
+    z-index: 12;
+    transform: rotate(-90deg);
+  }
+}
+
+.-enter,
+.-leave {
+  animation-duration: 0.2s;
+  animation-fill-mode: both;
+  animation-play-state: paused;
+}
+
+.-enter {
+  transform: scale(0);
+  opacity: 0;
+  animation-timing-function: cubic-bezier(0.08, 0.82, 0.17, 1);
+  animation-name: ZoomIn;
+  animation-play-state: running;
+}
+
+.-leave {
+  animation-timing-function: cubic-bezier(0.78, 0.14, 0.15, 0.86);
+  animation-name: ZoomOut;
+  animation-play-state: running;
+  pointer-events: none;
+}
+
+@-webkit-keyframes ZoomIn {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes ZoomIn {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes ZoomOut {
+  0% {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+}
+
+@keyframes ZoomOut {
+  0% {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+}

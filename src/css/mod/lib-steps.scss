@@ -1,0 +1,262 @@
+.steps {
+  font-size: 0;
+  padding: 28px 0;
+  text-align: center;
+
+  .steps-item {
+    display: inline-block;
+    padding-right: 142px;
+    font-size: 0;
+    position: relative;
+
+    &:first-child {
+      .number::after {
+        display: none;
+      }
+    }
+    &:last-child {
+      padding-right: 0;
+    }
+
+    .number {
+      font-size: 16px;
+      text-align: center;
+      vertical-align: top;
+      color: #999;
+      display: inline-block;
+      position: relative;
+      font-family: 'TencentSans W7';
+      line-height: 1.2;
+
+      &::after {
+        content: ' ';
+        position: absolute;
+        top: 10px;
+        left: -172px;
+        width: 160px;
+        height: 1px;
+        border-bottom: 1px solid #ccc;
+        color: #265bed;
+      }
+    }
+
+    .desc {
+      font-size: 14px;
+      color: #999999;
+      margin-top: 10px;
+    }
+
+    .arrow-right {
+      position: absolute;
+      right: -40px;
+      top: 6px;
+      font-size: 10px;
+      color: #979797;
+
+      .arrow-r {
+        vertical-align: top;
+        display: inline-block;
+        width: 8px;
+        height: 12px;
+        background-image: url('../img/arrow-r.png');
+        background-image: url('../img/arrow-r.svg'), none;
+        background-size: 100% 100%;
+      }
+    }
+
+    &.current {
+      .number {
+        color: #265bed;
+        &::after {
+          border-color: #265bed;
+        }
+      }
+
+      .desc {
+        color: #265bed;
+      }
+    }
+  }
+}
+
+.step-one {
+  padding-top: 30px;
+  text-align: center;
+
+  .step-one-title {
+    font-size: 15px;
+    color: #333333;
+  }
+
+  .wx-info {
+    margin-top: 30px;
+
+    .wx-avater {
+      width: 100px;
+      margin: 0 auto;
+      height: 100px;
+      background: #ffffff;
+      border: 1px solid #e5e5e6;
+      border-radius: 2px;
+      box-sizing: border-box;
+
+      img {
+        max-width: 100%;
+        border-radius: 2px;
+      }
+    }
+
+    .wx-name {
+      font-size: 14px;
+      color: #666666;
+      margin-top: 10px;
+    }
+  }
+
+  .rs-btn {
+    font-size: 0;
+    margin-top: 40px;
+
+    .ai-btn {
+      margin-right: 20px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .icon-msg {
+    display: inline-block;
+    width: 120px;
+    height: 120px;
+    vertical-align: top;
+    background-image: url('../img/tips-msg.png');
+    background-image: url('../img/tips-msg.svg'), none;
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+  .step-one-2 {
+    .msg-txt {
+      .msg-title {
+        padding: 20px 305px 0 305px;
+        text-align: left;
+      }
+
+      .msg-desc {
+        padding: 30px 305px 0 305px;
+
+        .txt {
+          text-align: left;
+        }
+      }
+
+      .msg-link {
+        padding: 50px 305px 0 305px;
+
+        .link {
+          display: inline-block;
+          width: 100%;
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+}
+
+.msg-txt {
+  .msg-title {
+    padding-top: 30px;
+    font-size: 22px;
+    color: #333333;
+    text-align: center;
+  }
+
+  .msg-desc {
+    padding-top: 20px;
+    font-size: 18px;
+    color: #666666;
+    text-align: center;
+  }
+
+  .msg-link {
+    padding-top: 20px;
+    font-size: 16px;
+    color: #265bed;
+    text-align: center;
+  }
+}
+
+.step-two {
+  // .txt {
+  //     padding-top: 60px;
+  //     font-size: 22px;
+  //     color: #333333;
+  //     text-align: center;
+  // }
+
+  .avater {
+    text-align: center;
+    padding-top: 30px;
+
+    .avater-img {
+      border: 1px solid #e5e5e5;
+      border-radius: 10px;
+      display: inline-block;
+
+      img {
+        border-radius: 10px;
+        vertical-align: top;
+      }
+    }
+  }
+
+  .name {
+    padding-top: 20px;
+    font-size: 12px;
+    color: #9ea9b8;
+    text-align: center;
+  }
+
+  .btn-area {
+    padding-top: 40px;
+    text-align: center;
+
+    .btn {
+      margin-right: 40px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .qr {
+    text-align: center;
+    padding-top: 30px;
+
+    .qr-img {
+      display: inline-block;
+      width: 220px;
+      height: 220px;
+      overflow: hidden;
+      // padding: 10px;
+      box-sizing: content-box;
+      background: #ffffff;
+      border: 1px solid #e5e5ea;
+
+      img {
+        max-width: 100%;
+      }
+    }
+  }
+}
+
+.step-three {
+  .form {
+    padding: 50px 300px 40px 213px;
+  }
+}

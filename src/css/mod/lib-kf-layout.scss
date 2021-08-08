@@ -1,0 +1,102 @@
+// 网页框架布局样式 默认为垂直方向
+.kf-layout {
+  display: flex;
+  flex: auto;
+  flex-direction: column;
+  min-height: 0;
+}
+
+// 布局内容区域
+.kf-layout-content {
+  flex: auto;
+}
+
+// 布局底部区域
+.kf-layout-footer {
+  position: relative;
+}
+
+// 布局呈水平方向
+.kf-layout--horizontal {
+  flex-direction: row;
+}
+
+// 布局呈垂直方向
+.kf-layout--vertical {
+  flex-direction: column;
+}
+
+// 布局子元素
+.kf-layout-item {
+  position: relative;
+  // flex: auto;
+}
+
+// 自由填充元素
+.kf-layout-1 {
+  flex: 1;
+}
+
+.kf-layout-fullHeight {
+  height: 100%;
+}
+
+// 超出隐藏，防止内容撑开元素高度，可配合 .kf-layout-1 使用
+.kf-layout-overflow {
+  overflow: hidden;
+}
+
+// 布局子元素内部内容
+.kf-layout-item--inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+// 调整大小元素
+.kf-resize-box {
+  position: relative;
+}
+
+.kf-resize-handler {
+  position: absolute;
+}
+
+// 调整大小 水平
+.kf-resize-handler--horizontal {
+  width: 6px;
+  height: 100%;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+  cursor: ew-resize;
+}
+
+// 调整大小 垂直
+.kf-resize-handler--vertical {
+  width: 100%;
+  height: 6px;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 1;
+  cursor: ns-resize;
+}
+
+// kf-reset--style 强行重置元素设置的样式
+.kf-reset--style {
+  position: relative !important;
+  left: unset !important;
+  top: unset !important;
+  right: unset !important;
+  bottom: unset !important;
+  width: 100% !important;
+  height: auto !important;
+  margin: unset !important;
+  padding: unset !important;
+  transition: unset !important;
+  transform: unset !important;
+  box-sizing: border-box !important;
+}

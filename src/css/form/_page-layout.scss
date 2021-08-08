@@ -1,0 +1,466 @@
+// 表单模块页面样式
+
+// 表单中心页面
+// .layout-ai-main .form-center {
+//     .layout-ai-two {
+//         width: 222px;
+//     }
+//     .layout-ai-three {
+//         position: relative;
+//         padding-left: 222px;
+//         padding-right: 616px;
+//     }
+//     .layout-ai-three .chat-box.artificial .chat-data {
+//         height: calc(100vh - 304px);
+//     }
+//     .chat-area {
+//         padding: 20px;
+//     }
+//     .conversation:last-child {
+//         margin-bottom: 0px;
+//     }
+//     .chat-oper .chat-oper-bd {
+//         height: 127px;
+//     }
+//     &.has-si-adaptation {
+//         .layout-ai-three {
+//             position: absolute;
+//             left: 402px;
+//             width: 518px;
+//             padding-left: 0px;
+//             padding-right: 0px;
+//         }
+//         .user-info .icon-content__item {
+//             width: 33.333333%;
+//         }
+//     }
+//     .form-detail-area .item-group .image-list-wrap {
+//         min-width: 486px;
+//     }
+// }
+// 表单中心页面样式更改成窗口化
+.yzf-overflow-body .layout-ai-main .form-center {
+  display: flex;
+  height: 100%;
+  .layout-ai-two {
+    position: relative;
+    // flex-basis: 12%;
+    // min-width: 170px;
+    // max-width: 300px;
+    left: unset !important;
+  }
+  .layout-ai-three {
+    position: relative;
+    // flex-basis: 33%;
+    min-width: unset;
+    left: unset !important;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+    background: #fdfdfe;
+  }
+  .layout-ai-four {
+    position: relative;
+    // flex-basis: 58%;
+    // flex-grow: 1;
+    // min-width: 670px;
+    width: auto;
+    height: 100% !important;
+    transition: unset;
+    margin-left: unset !important;
+    display: flex;
+    flex-direction: column;
+    .four-top {
+      flex: 1;
+      height: auto;
+      overflow: unset;
+      background: #fdfdfe;
+    }
+    .user-area .top-menu .current:after {
+      background: #fdfdfe;
+    }
+    .ai-four-status {
+      background: #fdfdfe;
+    }
+    .user-area {
+      flex-direction: column;
+      height: 100%;
+      display: flex;
+    }
+    .user-info {
+      flex: 1;
+      height: unset;
+    }
+  }
+  // .form-detail-area .item-group .image-list-wrap {
+  //     min-width: 486px;
+  // }
+  .chat-area {
+    padding: 20px;
+    min-width: unset;
+    background: #fdfdfe;
+  }
+  .conversation:last-child {
+    margin-bottom: 0px;
+  }
+  .layout-ai-three .chat-box.artificial {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    .chat-data {
+      min-width: unset;
+      flex: 1;
+      height: 100%;
+    }
+    .chat-oper {
+      height: 100%;
+      min-height: unset;
+    }
+  }
+  .user-side {
+    padding-right: 0;
+  }
+  .chat-oper {
+    position: relative;
+    flex-shrink: 0;
+    width: 100%;
+    height: 248px;
+    // min-height: 200px;
+    // max-height: 640px;
+    display: flex;
+    flex-direction: column;
+    .chat-oper-hd {
+      flex-shrink: 0;
+    }
+    .chat-oper-bd {
+      flex: 1;
+      height: auto;
+    }
+    .chat-oper-ft {
+      flex-shrink: 0;
+    }
+    .chat-textarea {
+      background: #fdfdfe;
+    }
+  }
+
+  .user-info .item-group .item {
+    width: 33.333333%;
+  }
+  .icon-content__item {
+    width: 33.333333%;
+  }
+}
+.form-center {
+  .user-info .item-group .item {
+    width: 33.333333%;
+  }
+  .icon-content__item {
+    width: 33.333333%;
+  }
+}
+
+.form-detail-area {
+  position: relative;
+  // padding: 0 20px 20px;
+  &.-bottom30 {
+    margin-bottom: 30px;
+  }
+  .history {
+    padding: 0;
+    .title {
+      font-size: 14px;
+      color: #265bed;
+      text-align: center;
+      padding-top: 10px;
+      cursor: pointer;
+    }
+    .desc {
+      font-size: 12px;
+      color: #999999;
+      text-align: center;
+      padding-top: 10px;
+      margin-top: 0px;
+    }
+  }
+
+  .item-group {
+    position: relative;
+    width: 100%;
+    font-size: 0px;
+    box-sizing: border-box;
+    .item {
+      min-width: 50%;
+      min-height: 46px;
+      margin-bottom: 10px;
+      display: inline-block;
+      vertical-align: top;
+      position: relative;
+      &.long {
+        width: 100%;
+      }
+      &.-marginBottom0 {
+        margin-bottom: 0 !important;
+      }
+    }
+    .label {
+      color: #666;
+      font-size: 14px;
+      line-height: 19px;
+      word-break: normal;
+      word-wrap: break-word;
+    }
+    .value {
+      width: 100%;
+      color: rgb(0, 0, 0);
+      font-size: 14px;
+      line-height: 19px;
+      margin-top: 8px;
+      white-space: normal;
+      word-wrap: break-word;
+      word-break: break-all;
+    }
+    .desc {
+      color: #999;
+      font-size: 14px;
+      line-height: 19px;
+      word-break: break-all;
+      word-wrap: break-word;
+      margin-top: 20px;
+    }
+    .edit-btn {
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      color: #265cf0;
+      font-size: 14px;
+      line-height: 19px;
+      cursor: pointer;
+    }
+    .image-list-wrap {
+      // display: block;
+      display: flex;
+      flex-wrap: wrap;
+      font-size: 0;
+      // min-width: 486px;
+    }
+    .image-item {
+      flex-shrink: 0;
+      display: inline-flex;
+      vertical-align: middle;
+      text-align: center;
+      width: 108px;
+      height: 108px;
+      margin-right: 10px;
+      margin-bottom: 10px;
+      overflow: hidden;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid #e5e5e6;
+      box-sizing: border-box;
+      border-radius: 2px;
+      // &:last-child {
+      //     margin-right: 0;
+      // }
+      .pc-image {
+        display: inline-flex;
+        width: auto;
+        height: auto;
+        max-width: 100%;
+        max-height: 100%;
+        box-sizing: border-box;
+      }
+    }
+    // -leftLabel 使里面的项变成左右布局
+    &.-leftLabel {
+      .item {
+        display: inline-flex;
+        min-height: unset;
+        margin-bottom: 10px;
+        .label {
+          width: 56px;
+          flex-shrink: 0;
+          margin: 0px 10px 0px 0px;
+        }
+        .value {
+          margin: 0;
+        }
+      }
+    }
+  }
+  // 用户补充信息内容
+  .form-user-info {
+    margin-top: 20px;
+    .item-group .item:last-child {
+      margin-bottom: 0px;
+    }
+  }
+  .form-list-panel,
+  .form-review-panel {
+    margin-top: 10px;
+  }
+  .form-list--tagGroup {
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 4px;
+    .m-tag--small {
+      margin-right: 6px;
+      margin-bottom: 6px;
+    }
+  }
+  // 表单下方间距
+  &.-bottomspace {
+    margin-bottom: 30px;
+  }
+}
+// 表单列表块
+.form-list-panel {
+  position: relative;
+  background: #ebedf3;
+  border-radius: 2px;
+  width: 100%;
+  padding: 16px 16px 0px 16px;
+  box-sizing: border-box;
+  .item-group .item {
+    width: auto;
+    min-width: 50%;
+    &.long {
+      width: 100%;
+    }
+  }
+  .item-group {
+    &.-col4 {
+      .item {
+        min-width: 25%;
+        width: 25%;
+        .value {
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+        }
+      }
+    }
+    // -leftLabel 使里面的项变成左右布局
+    &.-leftLabel {
+      .item {
+        .label {
+          width: 98px;
+        }
+      }
+    }
+  }
+  .item-group-link {
+    display: inline-block;
+    cursor: pointer;
+    color: #265cf0;
+  }
+  .item-operate {
+    display: flex;
+    align-items: center;
+    padding-bottom: 18px;
+    width: 100%;
+    height: 19px;
+    font-size: 14px;
+    color: #666;
+    .item-operate-radius {
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background-color: #9ba2b1;
+      margin-right: 6px;
+    }
+  }
+  // 消除表单列表块上方间距
+  &.-removeTop {
+    margin-top: 0;
+  }
+  &.-padding6 {
+    padding: 6px;
+  }
+  &.-red {
+    padding: 10px 12px;
+    color: #ed4343;
+    background: #fef0f0;
+  }
+}
+.form-list-panelTxt {
+  line-height: 1.5;
+}
+// 表单的回复内容块
+.form-review-panel {
+  position: relative;
+  background: #ebedf3;
+  width: 100%;
+  padding: 16px 16px 0px 16px;
+  box-sizing: border-box;
+}
+
+// 可拖拽元素模块正常状态添加类名 kf-drag--ele
+.kf-drag--ele {
+  position: relative;
+  // -fixed 被拖动出来以后位于弹窗中时添加类名
+  &.-fixed {
+    width: 800px;
+    max-width: 1200px;
+    min-width: 280px;
+    max-height: 900px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    overflow-y: overlay;
+    background: #fafafb;
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.14);
+    border-radius: 2px;
+    &.para {
+      &:before {
+        display: none;
+      }
+      .title {
+        width: 100%;
+        line-height: 22px;
+        padding: 13px 20px;
+        margin-bottom: 30px;
+        background: #ebedf3;
+        border-radius: 2px 2px 0 0;
+        cursor: grab;
+        box-sizing: border-box;
+        &:after {
+          @include setBottomLine($c: #e5e5e6);
+        }
+        .windowing-icon {
+          padding: 13px 20px;
+        }
+      }
+      .item-group {
+        padding-bottom: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        .item {
+          flex: 1;
+          width: unset;
+          min-width: 260px;
+        }
+      }
+      .icon-content__list {
+        .icon-content__item {
+          flex: 1;
+          width: unset;
+          min-width: 260px;
+        }
+      }
+    }
+  }
+}
+
+// 拖拽到指定位置时显示一下的占位元素，显示放置区域 kf-drag--placeholder
+.kf-drag--placeholder {
+  position: relative;
+  width: 100%;
+  height: 48px;
+  background: rgba(38, 92, 240, 0.2);
+  border: 1px solid #265cf0;
+  border-radius: 4px;
+  // 四周留间隙20px -space20
+  &.-space20 {
+    margin: 20px;
+    width: calc(100% - 40px);
+  }
+}

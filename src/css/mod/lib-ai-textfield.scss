@@ -1,0 +1,518 @@
+// 带字段搜索匹配的select下拉组件
+.kf-ai-textfield {
+  position: relative;
+  width: 100%;
+  line-height: normal;
+  font-size: 14px;
+  border: 1px solid #e5e5e6;
+  border-radius: 0;
+  color: #495060;
+  background-color: #fff;
+  box-sizing: border-box;
+  &.is-disabled {
+    background-color: #f5f5f5;
+    cursor: not-allowed;
+    &:hover {
+      border-color: #e5e5e6;
+    }
+    .textfield-tag-group {
+      cursor: not-allowed;
+    }
+    .textfield-input {
+      background-color: #f5f5f5;
+      opacity: 1;
+      cursor: not-allowed;
+      color: #999;
+    }
+    .textfield-tag {
+      background: #ebedf3;
+      color: #999999;
+      cursor: not-allowed;
+    }
+    .icon-close-fill {
+      cursor: not-allowed;
+    }
+  }
+  &:hover {
+    border-color: #ccc;
+  }
+  &:focus-within {
+    border-color: #265bed;
+  }
+  &.is-focus {
+    border-color: #265bed;
+  }
+  .textfield-tag-group {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    line-height: normal;
+    white-space: normal;
+    z-index: 1;
+    font-size: 0;
+    width: 100%;
+    padding-right: 37px;
+    box-sizing: border-box;
+  }
+  .textfield-tag {
+    display: inline-flex;
+    position: relative;
+    height: 32px;
+    line-height: 32px;
+    margin: 3px 0 3px 4px;
+    padding: 0 8px;
+    color: #000;
+    border-radius: 0;
+    background: #ebedf3;
+    font-size: 14px;
+    vertical-align: middle;
+    opacity: 1;
+    overflow: hidden;
+    cursor: pointer;
+    .-color-grey {
+      color: #666;
+    }
+  }
+  .textfield-input-wrapper {
+    display: flex;
+    flex-grow: 1;
+    width: 0px;
+    overflow: hidden;
+  }
+  .textfield-input {
+    width: 100%;
+    min-width: 30px;
+    padding: 10px 7px;
+    font-size: 14px;
+    color: #000;
+    border: none;
+    &::-moz-placeholder {
+      color: #cccccc;
+      opacity: 1;
+    }
+    &:-ms-input-placeholder {
+      color: #cccccc;
+    }
+    &::-webkit-input-placeholder {
+      color: #cccccc;
+    }
+    &:focus {
+      border-color: #265bed;
+    }
+    &:focus {
+      outline: 0;
+    }
+  }
+  .textfield-icon-arrow {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    line-height: 1;
+    margin-top: -8px;
+    color: #999;
+    transition: all 0.2s ease-in-out;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  .textfield-icon-search {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+    transition: all 0.2s ease-in-out;
+    font-size: 16px;
+    width: 36px;
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+    cursor: pointer;
+    text-overflow: ellipsis;
+    &:after {
+      content: ' ';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 1px;
+      bottom: 0;
+      border-left: 1px solid #e5e5e6;
+      color: #e5e5e6;
+      top: 4px;
+      bottom: 4px;
+    }
+    &:hover {
+      color: #666;
+    }
+  }
+  &.is-search {
+    .textfield-input-wrapper {
+      width: auto;
+      flex: 1;
+    }
+    .textfield-input {
+      padding-right: 40px;
+    }
+    .icon-close-fill {
+      right: 36px;
+      color: #ccc;
+      z-index: -1;
+      opacity: 0;
+      transition: all 0.2s ease-out;
+      &:hover {
+        color: #666;
+      }
+    }
+    &.-error {
+      margin-bottom: 30px;
+      border-color: #ed4343;
+      .kf-ai-form-item-errortip {
+        display: block;
+      }
+    }
+    &:focus,
+    &:focus-within {
+      .icon-close-fill {
+        opacity: 1;
+        z-index: 1;
+      }
+    }
+    .kf-ai-form-item-errortip {
+      left: 0;
+      top: 45px;
+      padding: 0;
+    }
+  }
+}
+
+// 单个下拉框组件
+.textfield-select-dropdown {
+  width: inherit;
+  max-height: 260px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  overflow-y: overlay;
+  margin: 5px 0;
+  background-color: #fff;
+  box-sizing: border-box;
+  position: absolute;
+  z-index: 900;
+  transform-origin: center top 0px;
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.14);
+}
+.textfield-select-dropdown-list {
+  position: relative;
+  padding-left: 0 !important;
+  list-style-type: none;
+  &.selected-list {
+    &:after {
+      content: '';
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      width: 100%;
+      height: 1px;
+      background: #e5e5e6;
+    }
+  }
+}
+.textfield-select-item {
+  position: relative;
+  margin: 0;
+  line-height: normal;
+  padding: 10px 25px 10px 10px;
+  clear: both;
+  color: #000;
+  font-size: 14px;
+  white-space: nowrap;
+  list-style: none;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  word-wrap: normal;
+  transition: background 0.2s ease-in-out;
+  &.textfield-select-item-selected {
+    color: #265bed;
+    &:after {
+      display: inline-block;
+      font-family: iconfont;
+      font-style: normal;
+      font-weight: 600;
+      font-variant: normal;
+      text-transform: none;
+      text-rendering: auto;
+      line-height: 1;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      vertical-align: middle;
+      font-size: 16px;
+      content: '\e849';
+      color: #265bed;
+      position: absolute;
+      top: 12px;
+      right: 10px;
+    }
+  }
+  &:hover {
+    background: #ccdaff;
+  }
+  .high-text {
+    color: #ed4343;
+  }
+}
+
+// 多层的级联下拉列表框组件
+.textfield-cascade-select-dropdown {
+  width: auto;
+  padding: 0;
+  max-height: 340px;
+  white-space: nowrap;
+  overflow: visible;
+  margin: 5px 0;
+  background-color: #fff;
+  box-sizing: border-box;
+  position: absolute;
+  z-index: 900;
+  transform-origin: center top 0px;
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.14);
+  // 要调整级联下拉框的方向，变成向上展开，添加类名 -dropup
+  &.-dropup {
+    bottom: 40px;
+  }
+}
+.textfield-slecet-area {
+  font-size: 0;
+}
+.textfield-select-menu {
+  position: relative;
+  display: inline-block;
+  width: 280px;
+  height: 340px;
+  margin: 0;
+  vertical-align: top;
+  list-style: none;
+  border-right: 1px solid #e8eaec;
+  box-sizing: border-box;
+  overflow-y: auto;
+  overflow-y: overlay;
+  overflow-x: hidden;
+  &:last-child {
+    border-right-color: transparent;
+  }
+  .menu-title {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 8px 16px;
+    color: #000;
+    font-size: 14px;
+    line-height: 24px;
+    width: 100%;
+    box-sizing: border-box;
+    &:after {
+      content: '';
+      position: absolute;
+      left: 10px;
+      right: 10px;
+      bottom: 0;
+      border-bottom: 1px solid #e5e5e6;
+    }
+    .menu-title-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 24px;
+      height: 24px;
+      font-size: 20px;
+      color: #999;
+      line-height: 1;
+      margin-right: 10px;
+    }
+    .menu-title-txt {
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      word-break: break-all;
+      word-wrap: normal;
+    }
+  }
+  .menu-desc {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 8px 16px;
+    color: #999999;
+    font-size: 14px;
+    line-height: 24px;
+    width: 100%;
+    box-sizing: border-box;
+    .menu-desc-txt {
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      word-break: break-all;
+      word-wrap: normal;
+    }
+  }
+  // 列表里面的一级列表
+  .menu-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 8px 16px;
+    color: #000;
+    font-size: 14px;
+    line-height: 24px;
+    width: 100%;
+    box-sizing: border-box;
+    transition: all 0.2s ease-in-out;
+    .kf-checkbox-wrapper {
+      margin-right: 0px;
+      margin-left: 16px;
+    }
+    &:hover {
+      background: #ccdaff;
+    }
+  }
+  .menu-item-leftIcon {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 2px;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    .icon-arrow-down {
+      color: #999;
+      transition: all 0.2s ease-in-out;
+      font-size: 20px;
+      line-height: 1;
+    }
+  }
+  .menu-item-rightIcon {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    .icon-close-fill {
+      color: #cccccc;
+      transition: all 0.2s ease-in-out;
+      font-size: 16px;
+      line-height: 1;
+    }
+  }
+  .menu-item-txtWrap {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    cursor: pointer;
+    overflow: hidden;
+  }
+  .menu-item-txt,
+  .menu-item-desc {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    word-break: break-all;
+    word-wrap: normal;
+  }
+  .menu-item-desc {
+    font-size: 12px;
+    color: #cccccc;
+    margin-top: 4px;
+  }
+  // 列表里面的次级列表
+  .menu-list {
+    // padding-left: 26px;
+    .menu-item {
+      padding-left: 42px;
+    }
+    .menu-list {
+      .menu-item {
+        padding-left: 68px;
+      }
+      .menu-list {
+        .menu-item {
+          padding-left: 94px;
+        }
+      }
+    }
+  }
+  // 列表里面的包裹层
+  .menu-area {
+    position: relative;
+    .menu-list {
+      display: none;
+    }
+    &.open {
+      & > .menu-item {
+        .icon-arrow-down {
+          transform: rotateZ(180deg);
+        }
+      }
+      // 匹配里面的子元素
+      & > .menu-list {
+        display: block;
+      }
+    }
+    &.-disabled {
+      .menu-item {
+        cursor: not-allowed;
+        * {
+          cursor: not-allowed;
+        }
+      }
+      .menu-item:hover {
+        background: transparent;
+      }
+      .menu-item-txt,
+      .iconfont {
+        color: #cccccc;
+      }
+    }
+  }
+  // 匹配第一个目录列表后边的目录列表
+  & + .textfield-select-menu {
+    .menu-item-txtWrap {
+      cursor: default;
+    }
+  }
+}
+// 展示选择结果和操作按钮的最后一个目录
+.textfield-select-option-menu {
+  position: relative;
+  display: inline-block;
+  height: 340px;
+  .textfield-select-menu {
+    height: 260px;
+    border-right-color: transparent;
+    box-sizing: border-box;
+  }
+  // 操作按钮
+  .option-btnWrap {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 10px;
+    height: 80px;
+    border-top: 1px solid #e8eaec;
+    box-sizing: border-box;
+    background: #fff;
+    .ai-btn {
+      width: 120px;
+      &:not(:last-child) {
+        margin-right: 20px;
+      }
+    }
+  }
+}

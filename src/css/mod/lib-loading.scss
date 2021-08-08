@@ -1,0 +1,68 @@
+// loading加载中组件
+.m-loading {
+  position: relative;
+  width: 100%;
+  .m-loading__content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0px 65px;
+  }
+  .m-loading__icon {
+    .iconfont {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #000;
+      font-size: 20px;
+      animation: loading-ring 1s linear infinite;
+    }
+  }
+  .m-loading__txt {
+    font-size: 16px;
+    color: #666;
+    margin-left: 10px;
+  }
+  &.-smallSzie {
+    width: unset;
+    .m-loading__content {
+      padding: 0;
+    }
+    .m-loading__icon .iconfont {
+      color: #265cf0;
+    }
+  }
+}
+@-webkit-keyframes loading-ring {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  50% {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+
+  to {
+    -webkit-transform: rotate(1turn);
+    transform: rotate(1turn);
+  }
+}
+
+@keyframes loading-ring {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  50% {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+
+  to {
+    -webkit-transform: rotate(1turn);
+    transform: rotate(1turn);
+  }
+}

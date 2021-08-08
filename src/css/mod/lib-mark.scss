@@ -1,0 +1,65 @@
+// lib-mark 标识： 放置头像标识之类元素的样式,默认位置右下角,大小由文字撑开
+.mark {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  font-size: 0px;
+  display: inline-block;
+  line-height: 1;
+  // overflow: auto;
+  padding: 0 2px;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+  .mark-text {
+    display: inline-block;
+    position: relative;
+    z-index: 2;
+    font-size: 12px;
+    line-height: 1;
+    color: #fff;
+  }
+  // 机器人管理中的机器人头像处的语言标识
+  &.lang-mark {
+    &::before {
+      border-radius: 2px;
+    }
+    .mark-text {
+      line-height: 14px;
+    }
+  }
+}
+
+// 主页面左侧默认机器人切换位置-语言标识
+.ai-subnav-icon {
+  .mark {
+    transform: scale(0.75);
+    transform-origin: 100% 100%;
+  }
+}
+// 面包屑中添加语言标识
+.kf-ai-breadcrumb {
+  .mark {
+    position: unset;
+    background: #dfe8ff;
+    vertical-align: 2px;
+    padding: 0px 4px;
+    margin-left: 6px;
+    &::before {
+      display: none;
+    }
+    .mark-text {
+      line-height: 16px;
+      color: #265bed;
+    }
+  }
+}

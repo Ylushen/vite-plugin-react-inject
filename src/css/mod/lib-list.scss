@@ -1,0 +1,184 @@
+// 列表组件
+
+// 左侧带蓝色小圆点的无序列表list
+.m-list {
+  .m-list__item {
+    position: relative;
+    padding-left: 10px;
+    box-sizing: border-box;
+    &:before {
+      content: '';
+      position: absolute;
+      width: 4px;
+      height: 4px;
+      background: #265bed;
+      top: 8px;
+      left: 0;
+    }
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+  .m-list__p {
+    font-size: 14px;
+    color: #666666;
+    line-height: 21px;
+  }
+  .m-list__p-link {
+    display: inline-block;
+    font-size: 14px;
+    color: #265bed;
+    line-height: 21px;
+    margin-left: 10px;
+    cursor: pointer;
+  }
+  .m-list__wrap {
+    display: flex;
+  }
+  .list-left {
+    flex-shrink: 0;
+    font-size: 14px;
+    color: #666666;
+    line-height: 21px;
+  }
+  .list-right {
+    flex: 1;
+  }
+  .list-right__txt {
+    font-size: 14px;
+    color: #666666;
+    line-height: 21px;
+    word-break: break-all;
+    white-space: normal;
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+  .m-list__item_little {
+    display: flex;
+    flex-wrap: wrap;
+    .m-list__item {
+      width: 50%;
+    }
+  }
+}
+
+// 左侧label右侧内容的列表组件
+.m-list--labelForm {
+  position: relative;
+  .m-list__item {
+    position: relative;
+    &:not(:last-child) {
+      margin-bottom: 12px;
+    }
+  }
+  .m-list__label {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 88px;
+    font-size: 14px;
+    color: #999999;
+    line-height: 21px;
+    letter-spacing: 0;
+  }
+  .m-list__content {
+    position: relative;
+    padding-left: 112px;
+  }
+  .m-list__txt {
+    font-size: 14px;
+    color: #000000;
+    text-align: left;
+    line-height: 21px;
+    word-break: break-all;
+    word-wrap: break-word;
+    white-space: normal;
+  }
+}
+
+// table类型的list表格，左侧有单选按钮，内容区域有红色高亮文字，右侧有悬浮查看小弹窗
+.m-table--list {
+  position: relative;
+  .m-table__item {
+    padding: 20px 0px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    &:after {
+      @include setBottomLine(#e5e5e6);
+      height: unset;
+    }
+    &:hover {
+      .view-more {
+        display: block;
+      }
+    }
+  }
+  .table-item-content {
+    position: relative;
+    flex: 1;
+  }
+  .table-item-txtWrap {
+    display: flex;
+    align-items: center;
+  }
+  .table-item-radio {
+    display: flex;
+    align-items: center;
+    .kf-radio-wrapper {
+      margin-right: 0px;
+      display: flex;
+      .kf-radio {
+        margin-right: 10px;
+      }
+    }
+  }
+  .table-item-txt {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #000000;
+    line-height: 22px;
+  }
+  .high-text {
+    color: #ed4343;
+  }
+  .table-item-desc {
+    padding-left: 26px;
+    font-size: 12px;
+    color: #999999;
+    line-height: 16px;
+    margin-top: 10px;
+  }
+  .item-right {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+  }
+  .view-more {
+    display: none;
+    position: relative;
+    padding: 8px 10px;
+    cursor: pointer;
+    .iconfont {
+      font-size: 20px;
+      color: #265cf0;
+      margin-right: 6px;
+    }
+    .m-info {
+      display: none;
+    }
+    &:hover {
+      .m-info {
+        display: block;
+      }
+    }
+  }
+  .view-more-txt {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #265cf0;
+  }
+}

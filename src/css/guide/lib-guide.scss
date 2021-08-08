@@ -1,0 +1,727 @@
+.w-guide .modal-mask.is-hidden {
+  display: none;
+}
+.w-guide .modal-wrap .modal-content .modal-hd {
+  border: none;
+  text-align: left;
+  color: #000;
+}
+.w-guide .modal-wrap .modal-content .modal-bd {
+  padding: 20px;
+}
+.w-guide .g-help {
+  line-height: 21px;
+}
+.w-guide .g-help .txt {
+  font-size: 14px;
+  color: #333;
+  padding-bottom: 10px;
+}
+.w-guide .g-help .txt:last-child {
+  padding-bottom: 0;
+  text-align: left;
+}
+.w-guide .g-help .txt span {
+  color: #666;
+}
+.w-guide .g-help .txt .bold {
+  color: #000;
+  font-weight: 600;
+}
+.w-guide .g-help .image {
+  border: 1px solid #e5e5e6;
+  margin-top: 4px;
+}
+.w-guide .g-help .image img {
+  max-width: 100%;
+  vertical-align: top;
+}
+.w-guide .g-content {
+  width: 100%;
+  font-size: 0;
+}
+.w-guide .g-content img {
+  max-width: 100%;
+  border: 1px solid #e5e5e6;
+  box-sizing: border-box;
+  vertical-align: top;
+}
+.w-guide .g-content .g-item {
+  display: inline-block;
+  font-size: 0;
+  margin-right: 40px;
+  margin-top: 14px;
+  padding: 20px;
+  box-sizing: border-box;
+  background: #fafafb;
+}
+.w-guide .g-content .g-item:last-child {
+  margin-right: 0;
+}
+.w-guide .g-content .g-item .g-item-left {
+  width: 180px;
+  text-align: justify;
+  font-size: 14px;
+  display: inline-block;
+  margin-right: 20px;
+  vertical-align: top;
+}
+.w-guide .g-content .g-item .g-item-title {
+  color: #333;
+}
+.w-guide .g-content .g-item .g-item-content {
+  margin-top: 10px;
+  color: #666;
+}
+.w-guide .g-content .g-item .g-item-right {
+  font-size: 14px;
+  display: inline-block;
+}
+.w-guide .g-content .g-item .g-item-right img {
+  width: 250px;
+  height: 120px;
+  max-width: 100%;
+  height: 126px;
+}
+.w-guide .modal-step {
+  font-size: 14px;
+  color: #999;
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+}
+.w-guide .modal-step .iconfont {
+  color: #666;
+  cursor: pointer;
+  font-size: 16px;
+}
+.w-guide .modal-step.is-disabled .iconfont {
+  color: #ccc;
+  cursor: default;
+}
+.w-guide .modal-step.is-disabled .iconfont:hover {
+  color: #ccc;
+}
+.w-guide .modal-step .iconfont:hover {
+  color: #275cf0;
+}
+.w-guide .modal-step .blue {
+  margin-right: 4px;
+}
+.w-guide .modal-step span:last-child {
+  margin-left: 4px;
+}
+.w-guide .modal-step .icon-67 {
+  margin-right: 6px;
+  vertical-align: -1px;
+}
+.w-guide .ai-btn {
+  min-width: 96px !important;
+  color: #fff !important;
+  padding: 9px 12px !important;
+}
+.w-guide .ai-btn.is-active {
+  animation: changebg 0.3s 3;
+}
+.g-white-box {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: #fff;
+  z-index: 9999;
+}
+.g-white-box-opacity {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: #fff;
+  opacity: 0;
+  z-index: 99999999;
+  cursor: default;
+}
+
+// 返回平台
+.w-guide .back {
+  min-width: 120px;
+  height: 40px;
+  text-align: center;
+  border: 1px solid #fff;
+  position: fixed;
+  top: calc(100vh - 40px - 40px);
+  bottom: 40px;
+  left: 40px;
+  font-size: 14px;
+  padding: 9px 10px;
+  box-sizing: border-box;
+  color: #fff;
+  z-index: 9999;
+  cursor: pointer;
+}
+
+// index值
+.w-guide-index {
+  z-index: 9999999 !important;
+}
+.w-guide-index-white {
+  z-index: 9999999 !important;
+  background: #fff;
+}
+
+// 个性化修改 如增加白色部分面积
+.w-guide-index-white .linestat {
+  padding: 4px;
+  background: #fff;
+  top: 0 !important;
+  left: 180px !important;
+}
+.w-guide-index-white ~ .chat-bd {
+  height: calc(100vh - 56px - 48px) !important;
+  border-right: 1px solid #e5e5e6;
+}
+.w-guide-index-white:hover {
+  transform: none !important;
+}
+
+// 箭头+方向
+.w-guide .modal-arrow {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+}
+.w-guide .modal-arrow.is-top-left {
+  left: 20px;
+  top: -5px;
+  border-width: 0 6px 6px;
+  border-bottom-color: #fff;
+}
+.w-guide .modal-arrow.is-top-right {
+  right: 20px;
+  top: -5px;
+  border-width: 0 6px 6px;
+  border-bottom-color: #fff;
+}
+.w-guide .modal-arrow.is-bottom-left {
+  left: 20px;
+  bottom: -5px;
+  border-width: 6px 6px 0;
+  border-top-color: #fff;
+}
+.w-guide .modal-arrow.is-bottom-right {
+  right: 20px;
+  bottom: -5px;
+  border-width: 6px 6px 0;
+  border-top-color: #fff;
+}
+.w-guide .modal-arrow.is-right-top {
+  top: 20px;
+  right: -5px;
+  border-width: 6px 0 6px 6px;
+  border-left-color: #fff;
+}
+.w-guide .modal-arrow.is-right-bottom {
+  bottom: 20px;
+  right: -5px;
+  border-width: 6px 0 6px 6px;
+  border-left-color: #fff;
+}
+.w-guide .modal-arrow.is-left-top {
+  top: 20px;
+  left: -5px;
+  border-width: 6px 6px 6px 0;
+  border-right-color: #fff;
+}
+.w-guide .modal-arrow.is-left-bottom {
+  bottom: 20px;
+  left: -5px;
+  border-width: 6px 6px 6px 0;
+  border-right-color: #fff;
+}
+
+// 标识内容样式
+.signbox-blue {
+  position: fixed;
+  z-index: 99999;
+  background: rgba(39, 92, 240, 0.16);
+  border: 1px dashed #275cf0;
+}
+.signbox-white {
+  position: fixed;
+  z-index: 99999;
+  background: rgba(255, 255, 255, 0.16);
+  border: 1px dashed #fff;
+}
+
+// 标识内容定位
+.w-guide .signbox-blue.location01 {
+  top: 174px;
+  right: 46px;
+  width: 108px;
+  height: 40px;
+}
+.w-guide .signbox-blue.location02 {
+  top: calc(100vh - 14px - 52px);
+  right: 14px;
+  width: 130px;
+  height: 50px;
+  z-index: 9999999;
+}
+.w-guide .signbox-white.location03 {
+  top: 8px;
+  left: 356px;
+  width: 76px;
+  height: 40px;
+  position: absolute;
+}
+.w-guide .signbox-white.location04 {
+  top: 164px;
+  left: 40px;
+  width: 84px;
+  height: 40px;
+  position: absolute;
+}
+.w-guide .signbox-white.location05 {
+  top: 8px;
+  left: 464px;
+  width: 60px;
+  height: 40px;
+  position: absolute;
+}
+.w-guide .signbox-blue.location06 {
+  bottom: 15px;
+  right: -602px;
+  width: 130px;
+  height: 50px;
+  position: absolute;
+  z-index: 999999;
+}
+@media screen and (max-width: 1600px) {
+  // .w-guide .signbox-blue.location02 { right: 5px; }
+  .w-guide .signbox-blue.location06 {
+    right: -407px;
+  }
+}
+.w-guide .signbox-blue.location07 {
+  top: 59px;
+  left: 185px;
+  width: 108px;
+  height: 40px;
+  z-index: 9999999;
+  position: absolute;
+}
+.w-guide .signbox-blue.location08 {
+  bottom: 15px;
+  right: 15px;
+  width: 130px;
+  height: 50px;
+  position: absolute;
+  z-index: 99999999;
+}
+.w-guide .signbox-white.location09 {
+  width: 92px;
+  height: 40px;
+  position: absolute;
+}
+.w-guide .signbox-white.location09-1 {
+  top: 58px;
+  left: 275px;
+}
+.w-guide .signbox-white.location09-2 {
+  top: 58px;
+  left: 275px;
+}
+.w-guide .signbox-blue.location10 {
+  bottom: 39px;
+  right: 236px;
+  width: 92px;
+  height: 40px;
+  position: absolute;
+}
+// .kf-ai-breadcrumb .signbox-white.location11 { top: 3px; left: 5px; width: 92px; height: 40px;position: absolute;}
+.w-guide .signbox-white.location11 {
+  top: 58px;
+  left: 184px;
+  width: 92px;
+  height: 40px;
+  position: absolute;
+}
+.w-guide .signbox-blue.location12 {
+  top: -7px;
+  margin-left: 90px;
+  width: 96px;
+  height: 40px;
+  position: absolute;
+}
+.w-guide .signbox-blue.location13 {
+  top: -7px;
+  margin-left: -16px;
+  width: 96px;
+  height: 40px;
+  position: absolute;
+}
+.w-guide .signbox-blue.location14 {
+  top: 0px;
+  left: 105px;
+  width: 96px;
+  height: 40px;
+  position: absolute;
+}
+.w-guide .signbox-blue.location15 {
+  top: 0px;
+  left: 4px;
+  width: 96px;
+  height: 40px;
+  position: absolute;
+}
+.w-guide .signbox-blue.location16 {
+  top: 278px;
+  right: 270px;
+  width: 96px;
+  height: 40px;
+}
+.w-guide .signbox-white.location17 {
+  top: 8px;
+  left: 556px;
+  width: 60px;
+  height: 40px;
+  position: absolute;
+}
+.w-guide .signbox-white.location18 {
+  top: 284px;
+  left: 40px;
+  width: 84px;
+  height: 40px;
+}
+.w-guide .signbox-blue.location19 {
+  top: 2px;
+  right: 15px;
+  width: 96px;
+  height: 40px;
+  position: absolute;
+}
+.w-guide .signbox-white.location20 {
+  top: 330px;
+  left: 40px;
+  width: 84px;
+  height: 40px;
+}
+.w-guide .signbox-blue.location21-1 {
+  left: -15px;
+  top: -8px;
+  width: 92px;
+  height: 40px;
+  position: absolute;
+}
+.w-guide .signbox-white.location21-2 {
+  left: 278px;
+  top: 59px;
+  width: 92px;
+  height: 40px;
+  position: absolute;
+}
+.w-guide .signbox-white.location22 {
+  left: 186px;
+  top: 59px;
+  width: 92px;
+  height: 40px;
+  position: absolute;
+}
+.w-guide .signbox-white.location23 {
+  left: 38px;
+  top: 114px;
+  width: 92px;
+  height: 40px;
+  position: absolute;
+}
+.w-guide .signbox-white.location24 {
+  left: 269px;
+  top: 59px;
+  width: 92px;
+  height: 40px;
+  position: absolute;
+}
+.w-guide .signbox-white.location25 {
+  top: 266px;
+  left: 40px;
+  width: 84px;
+  height: 40px;
+  position: absolute;
+}
+.w-guide .signbox-white.location27 {
+  top: 314px;
+  left: 40px;
+  width: 84px;
+  height: 40px;
+  position: absolute;
+}
+.w-guide .signbox-white.location28 {
+  top: 7px;
+  left: 348px;
+  width: 80px;
+  height: 40px;
+  position: absolute;
+}
+.w-guide .signbox-white.location29 {
+  top: 7px;
+  left: 646px;
+  width: 100px;
+  height: 40px;
+  position: absolute;
+}
+
+// 弹窗宽度设置,定位
+.w-guide .modal-wrap {
+  transform: none;
+  left: auto;
+  top: auto;
+}
+.w-guide .modal-wrap.is-w01 {
+  width: 280px;
+  top: 56px;
+  right: 660px;
+  position: fixed;
+}
+.w-guide .modal-wrap.is-w02 {
+  width: 480px;
+  top: 56px;
+  right: 660px;
+  position: fixed;
+}
+.w-guide .modal-wrap.is-w03 {
+  width: 280px;
+  right: 68px;
+  position: fixed;
+  top: calc(100vh - 139px);
+  transform: translateY(-100%);
+}
+.w-guide .modal-wrap.is-w04 {
+  width: 280px;
+  top: 54px;
+  left: -185px;
+}
+.w-guide .modal-wrap.is-w05 {
+  width: 280px;
+  top: 56px;
+  left: 347px;
+}
+.w-guide .modal-wrap.is-w06 {
+  width: 280px;
+  bottom: 20px;
+  right: 20px;
+}
+.w-guide .modal-wrap.is-w07 {
+  width: 480px;
+  top: 123px;
+  left: 180px;
+}
+.w-guide .modal-wrap.is-w08 {
+  width: 280px;
+  bottom: 20px;
+  right: -300px;
+}
+.w-guide .modal-wrap.is-w09 {
+  width: 280px;
+  right: -300px;
+  top: 0;
+}
+.w-guide .modal-wrap.is-w10 {
+  width: 280px;
+  bottom: -231px;
+  right: 35px;
+  position: absolute;
+}
+.w-guide .modal-wrap.is-w11 {
+  left: -854px;
+  top: 56px;
+}
+.w-guide .modal-wrap.is-w12 {
+  top: 50%;
+  left: 50%;
+  width: 640px;
+  transform: translate(-50%, -50%);
+}
+.w-guide .modal-wrap.is-w13 {
+  width: 280px;
+  top: 68px;
+  right: 0;
+}
+.w-guide .modal-wrap.is-w14 {
+  left: 15px;
+  top: 70px;
+  width: 280px;
+}
+.w-guide .modal-wrap.is-w15 {
+  width: 640px;
+  height: 541px;
+  left: -434px;
+  top: 75px;
+}
+.w-guide .modal-wrap.is-w16 {
+  width: 640px;
+  height: 541px;
+  left: -434px;
+  top: 75px;
+}
+.w-guide .modal-wrap.is-w19 {
+  width: 280px;
+  left: -300px;
+}
+.w-guide .modal-wrap.is-w20 {
+  width: 280px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  margin-left: -400px;
+  margin-top: -63px;
+}
+.w-guide .modal-wrap.is-w21 {
+  width: 280px;
+  left: -202px;
+  top: 58px;
+}
+.w-guide .modal-wrap.is-w22 {
+  width: 280px;
+  right: 0px;
+  top: 58px;
+}
+.w-guide .modal-wrap.is-w23 {
+  width: 280px;
+  right: 140px;
+  top: 58px;
+}
+.w-guide .modal-wrap.is-w24 {
+  right: 40px;
+  top: 260px;
+  width: 280px;
+}
+.w-guide .modal-wrap.is-w25 {
+  left: -854px;
+  top: 80px;
+}
+.w-guide .modal-wrap.is-w13 .modal-ft .ai-btn {
+  font-size: 14px;
+}
+.w-guide .modal-wrap.is-w26 {
+  left: 358px;
+  top: 65px;
+  .image {
+    width: 442px;
+  }
+}
+.w-guide .modal-wrap.is-w27 {
+  left: 646px;
+  top: 65px;
+  .image {
+    width: 442px;
+  }
+}
+
+@media screen and (max-width: 1540px) {
+  .w-guide .modal-wrap.is-w19 {
+    width: 224px;
+    left: -240px;
+  }
+}
+@media screen and (max-width: 1400px) {
+  .w-guide .modal-wrap.is-w11 {
+    left: -322px;
+    .g-content .g-item {
+      display: block;
+      margin-right: 0px;
+    }
+  }
+  .w-guide .modal-wrap.is-w25 {
+    left: -362px;
+    .g-content .g-item {
+      display: block;
+      margin-right: 0px;
+    }
+  }
+}
+
+@keyframes changebg {
+  from {
+    background: #265bed;
+  }
+  to {
+    background: #1e48bd;
+  }
+}
+
+// 向导中心 - 弹窗宽度设置,定位【英文版】
+.w-guide .modal-wrap.is-w05-en {
+  left: 394px;
+}
+.w-guide .modal-wrap.is-w07-en {
+  left: 240px;
+}
+
+// 向导中心 - 标识内容定位 【英文版】
+.w-guide .signbox-white.location03-en {
+  left: 394px;
+}
+.w-guide .signbox-white.location04-en {
+  width: 132px;
+}
+.w-guide .signbox-white.location05-en {
+  left: 496px;
+}
+.w-guide .signbox-blue.location07-en {
+  width: 185px;
+  left: 245px;
+}
+.w-guide .signbox-white.location09-1.location09-en {
+  left: 164px;
+  width: 113px;
+}
+.w-guide .signbox-white.location09-2.location09-en {
+  left: 164px;
+  width: 113px;
+}
+.w-guide .signbox-white.location11-en {
+  width: 170px;
+}
+.w-guide .signbox-blue.location12-en {
+  margin-left: 85px;
+}
+.w-guide .signbox-blue.location13-en {
+  margin-left: -20px;
+}
+.w-guide .signbox-blue.location14-en {
+  left: 100px;
+}
+.w-guide .signbox-blue.location15-en {
+  left: -2px;
+}
+.w-guide .signbox-white.location17-en {
+  left: 595px;
+  width: 88px;
+}
+.w-guide .signbox-blue.location21-1-en {
+  left: 0px;
+}
+.w-guide .signbox-white.location21-2-en {
+  left: 296px;
+  width: 130px;
+}
+.w-guide .signbox-white.location22-en {
+  width: 115px;
+}
+.w-guide .signbox-white.location23-en {
+  width: 105px;
+}
+.w-guide .signbox-white.location24-en {
+  left: 296px;
+  width: 120px;
+}
+.w-guide .signbox-white.location25-en {
+  width: 132px;
+}
+.w-guide .signbox-white.location27-en {
+  width: 132px;
+}

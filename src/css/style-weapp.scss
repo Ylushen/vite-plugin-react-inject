@@ -1,0 +1,9 @@
+/***  内嵌小程序展示页面样式  ***/
+@import './base/lib-mixin.scss';
+@import './base/lib-reset.scss';
+
+@import './weapp/weapp-layout.scss'; // 内嵌小程序布局样式
+@import './weapp/weapp-font.scss'; // 内嵌小程序字体样式
+@import './weapp/weapp-common.scss'; // 内嵌小程序通用样式
+@import './weapp/weapp-modal.scss'; // 内嵌小程序弹窗样式
+@import './weapp/weapp-mod.scss'; // 内嵌小程序模块样式

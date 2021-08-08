@@ -1,0 +1,91 @@
+.btn {
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: 400;
+  text-align: center;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  padding: 8px 24px;
+  min-width: 120px;
+  font-size: 16px;
+  border-radius: 4px;
+  transition: color 0.2s linear, background-color 0.2s linear, border 0.2s linear, box-shadow 0.2s linear;
+  color: #265bed;
+  background-color: #fff;
+  border-color: #d5d6db;
+}
+
+.btn:hover {
+  color: #265bed;
+  background-color: #fff;
+  border-color: #265bed;
+}
+
+.btn > span {
+  vertical-align: middle;
+}
+
+.btn,
+.btn:active,
+.btn:focus {
+  outline: 0;
+}
+
+.btn:not([disabled]):hover {
+  text-decoration: none;
+}
+
+.btn:not([disabled]):active {
+  outline: 0;
+}
+
+.btn.disabled,
+.btn[disabled] {
+  cursor: not-allowed;
+  opacity: 0.4;
+  background: #265bed;
+  &:hover {
+    background: #265bed;
+  }
+}
+
+.btn.disabled > *,
+.btn[disabled] > * {
+  pointer-events: none;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #265bed;
+  border-color: #265bed;
+}
+
+.btn-primary:hover {
+  color: #fff;
+  background-color: #4f7dfc;
+  border-color: #4f7dfc;
+}
+
+.btn-long {
+  width: 100%;
+}
+
+.to-sending {
+  background: #f9fafc;
+  border: 1px solid #e5e5ea;
+  border-radius: 4px;
+  color: #d6d7dc;
+  &:hover {
+    border-color: #e5e5ea;
+    color: #d6d7dc;
+    background: #f9fafc;
+  }
+}

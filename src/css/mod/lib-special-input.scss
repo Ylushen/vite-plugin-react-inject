@@ -1,0 +1,192 @@
+// 记录一些特殊的输入框
+
+// 使用div来模拟的输入框，结构如下
+// <div class="textarea-value">
+//    <div class="kf-ai-input" contenteditable="true" placeholder="请输入"></div>
+// </div>
+.textarea-value {
+  position: relative;
+  .kf-ai-input {
+    -webkit-user-modify: read-write-plaintext-only;
+    height: 320px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    overflow-y: overlay;
+    resize: vertical;
+    // div添加自定义属性placeholder，然后使用此样式模拟输入框的placeholder
+    &:before {
+      content: attr(placeholder);
+      color: #ccc;
+    }
+    // 聚焦时不显示提示文字placeholder
+    &:focus:before {
+      content: none;
+    }
+    // 有输入内容时不显示提示文字placeholder
+    &:not(:empty):before {
+      content: none;
+    }
+  }
+  &.-height80 .kf-ai-input {
+    height: 80px;
+  }
+  &.-height120 .kf-ai-input {
+    height: 120px;
+  }
+  &.-noResize .kf-ai-input {
+    resize: unset;
+  }
+}
+
+// 串联的输入框操作组件
+.kf-tandem-input-option {
+  position: relative;
+  width: 100%;
+  padding-right: 36px;
+  height: 100px;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+  .kf-ai-input-wrapper:nth-child(1):after {
+    content: '';
+    position: absolute;
+    right: -28px;
+    bottom: 0px;
+    width: 28px;
+    height: 19px;
+    border-top: 1px solid #e5e5e6;
+    border-right: 1px solid #e5e5e6;
+    box-sizing: border-box;
+  }
+  .kf-ai-input-wrapper:nth-child(2):after {
+    content: '';
+    position: absolute;
+    right: -28px;
+    top: 0px;
+    width: 28px;
+    height: 19px;
+    border-bottom: 1px solid #e5e5e6;
+    border-right: 1px solid #e5e5e6;
+    box-sizing: border-box;
+  }
+  .kf-tandem-left {
+    position: relative;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+  }
+  .option-btnWrap {
+    display: flex;
+    align-items: center;
+    padding: 10px 0px 10px 20px;
+    .option-btn {
+      &:not(:first-child) {
+        margin-left: 20px;
+      }
+    }
+  }
+  .option-btn {
+    position: absolute;
+    right: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    line-height: 1;
+    height: 24px;
+    cursor: pointer;
+    // background: #fff;
+    .iconfont {
+      font-size: 16px;
+    }
+    .icon-add {
+      color: #265cf0;
+    }
+    .icon-del {
+      color: #ed4343;
+    }
+    .icon-329 {
+      color: #cccccc;
+    }
+    &.is-disabled {
+      cursor: not-allowed;
+      opacity: 0.3;
+    }
+    &.drag-btn {
+      cursor: grab;
+    }
+  }
+  &.-oneChild {
+    height: 40px;
+    flex-direction: row;
+    .kf-ai-input-wrapper:after {
+      display: none;
+    }
+  }
+  // 多操作按钮
+  &.-multiOptions {
+    flex-direction: row;
+    padding-right: unset;
+    .kf-ai-input-wrapper {
+      flex: 1;
+    }
+    .option-btn {
+      position: relative;
+      right: unset;
+      top: unset;
+      transform: unset;
+    }
+  }
+}
+
+// 混合选择器  左侧选择框+中间输入框(加is-input类名)+右侧选择框
+.mixing-select {
+  display: inline-block;
+  font-size: 0px;
+  white-space: nowrap;
+  .left {
+    position: relative;
+    display: inline-block;
+    .kf-ai-input {
+      z-index: 2;
+    }
+  }
+  .center {
+    position: relative;
+    display: inline-block;
+    margin-left: -1px;
+    .kf-ai-input {
+      z-index: 1;
+    }
+  }
+  .right {
+    position: relative;
+    display: inline-block;
+    margin-left: -1px;
+    .kf-ai-input {
+      z-index: 3;
+    }
+  }
+  .kf-ai-input {
+    &:hover {
+      z-index: 4;
+    }
+    &:focus {
+      z-index: 4;
+    }
+  }
+  .kf-ai-icon-arrow {
+    z-index: 10;
+    cursor: pointer;
+  }
+  .kf-ai-select {
+    .kf-ai-input {
+      cursor: pointer;
+    }
+    .kf-ai-select-dropdown {
+      cursor: pointer;
+    }
+  }
+}

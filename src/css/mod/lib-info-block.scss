@@ -1,0 +1,13 @@
+// 提示信息块组件
+.desc-info--block {
+  background: #f7f7fa;
+  padding: 10px;
+  font-size: 12px;
+  line-height: 1.5; // 添加1.5倍行高
+  color: #666666;
+  &.-big-size {
+    padding: 20px;
+    font-size: 14px;
+    line-height: 21px;
+  }
+}

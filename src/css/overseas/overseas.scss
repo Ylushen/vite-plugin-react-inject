@@ -1,0 +1,169 @@
+// 云智服海外版专属样式
+
+@import '../base/lib-mixin.scss';
+@import './lib-overseas-set.scss';
+
+// 根据类名 overseas 对云智服国内版的一些样式进行特殊调整
+.overseas {
+  // 海外版使用另外的头部logo
+  .layout-ai-header .link-logo {
+    background-image: url('../img/logo-en.png');
+    background-image: url('../img/logo-en.svg'), none;
+  }
+  .layout-ai-header .ai-logo {
+    &.-new .link-logo {
+      width: 112px;
+      height: 48px;
+      background-image: url('../img/logo-en-new.png');
+      background-size: cover;
+      background-image: url('../img/logo-en-new.svg'), none;
+    }
+  }
+  // 人工会话列表顶部的排队信息
+  .chat-list .has-topSubnav .left {
+    margin-left: 20px;
+    cursor: pointer;
+  }
+
+  // 海外版有si的样式
+  .has-si-adaptation .layout-ai-three {
+    left: 540px;
+  }
+
+  // 海外版所有人工会话底部输入区域高度加高
+  .layout-ai-three .chat-box.artificial {
+    .chat-data {
+      height: calc(100vh - 445px);
+      min-height: 80px;
+    }
+    .chat-oper .chat-oper-bd {
+      height: 260px;
+    }
+    .overtime {
+      top: 145px;
+    }
+  }
+
+  // 一行排列的 switch按钮 离左侧 label文字 的距离加大
+  .kf-ai-form.kf-ai-label-left .kf-ai-form-item.row-1 {
+    .kf-ai-form-item-label {
+      width: 235px;
+      word-wrap: break-word;
+      word-break: normal;
+      white-space: normal;
+    }
+    .kf-ai-form-item-content {
+      margin-left: 255px;
+    }
+  }
+
+  // 海外(外语版)左侧导航宽度调整至 240px
+  &.foreign-language {
+    .layout-ai-one {
+      width: 240px;
+    }
+    .layout-ai-main .layout-ai-inner.open .layout-ai-two {
+      left: 240px;
+    }
+    .ai-subnav .ai-subnav-item .ai-subnav-txt {
+      width: 150px;
+    }
+    .ai-subnav.footer {
+      width: 240px;
+    }
+    .ai-side-right {
+      padding-left: 240px;
+    }
+    // 海外版向导页面：因左侧导航加宽，人工在线切换下拉框的位置需要调整
+    .w-guide-index-white .linestat {
+      left: 240px !important;
+    }
+  }
+
+  // 海外版注册页面调整使用邮箱注册
+  .register .step-one {
+    .kf-ai-form {
+      padding: 0px 420px 30px 420px;
+      text-align: left;
+    }
+    .kf-ai-form-item-tip {
+      line-height: 20px;
+    }
+    .register-ok .msg-area {
+      padding-top: 0px;
+    }
+  }
+
+  // 机器人设置页面
+  .robot-settings {
+    .radio-input .kf-radio-wrapper {
+      margin-right: 40px;
+    }
+  }
+
+  // 邮箱渠道设置页面
+  .overseas-email-setting {
+    .set-detail:last-child {
+      border-bottom: none;
+    }
+  }
+
+  // 导入导出下拉框中的下载文件状态文字是伪类控制，换成英文版
+  .ai-qk .ai-import .ai-import-ul .error .icon-92::after {
+    content: 'Error log';
+  }
+  .ai-qk .ai-import .ai-import-ul .succeed .icon-92::after {
+    content: 'Download';
+  }
+}
+
+@media (max-width: 1540px) {
+  .overseas.foreign-language .layout-ai-three {
+    left: 540px;
+  }
+}
+
+@media (max-width: 1600px) {
+  .overseas.foreign-language .layout-ai-three {
+    padding-left: 0px;
+    padding-right: 0px;
+    width: 440px;
+    position: absolute;
+    left: 540px;
+    top: 0px;
+    bottom: 0px;
+    transition: left 0.2s ease;
+  }
+  .overseas.foreign-language .layout-ai-four {
+    width: auto;
+    transition: unset;
+    margin-left: 740px;
+    position: relative;
+  }
+}
+
+// 1920px以上的屏幕
+@media (min-width: 1980px) {
+  .overseas {
+    .has-si-adaptation {
+      .layout-ai-three {
+        position: relative;
+        padding-left: 300px;
+        width: unset;
+        padding-right: 1000px;
+        left: unset !important;
+        top: unset !important;
+        bottom: unset !important;
+      }
+      .layout-ai-four {
+        width: 1000px;
+        transition: all 0.2s ease;
+        margin-left: 0px;
+        position: absolute;
+      }
+    }
+    .layout-ai-inner.close .has-si-adaptation .layout-ai-three {
+      left: unset;
+    }
+  }
+}

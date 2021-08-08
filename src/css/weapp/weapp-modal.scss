@@ -1,0 +1,195 @@
+/***  内嵌小程序弹窗样式  ***/
+
+#yzfWeapp {
+  // 弹窗样式
+  .modal {
+    position: absolute;
+    top: 64px;
+    width: 375px;
+    height: calc(100% - 64px);
+    z-index: 100;
+    .modal-mask {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: rgba(55, 55, 55, 0.6);
+      height: 100%;
+      z-index: 999;
+      transition: all 0.4s ease;
+      opacity: 1;
+    }
+    .modal-content {
+      position: relative;
+      width: 100%;
+      // height: 100%;
+      z-index: 1000;
+      position: absolute;
+      bottom: 0px;
+      left: 0px;
+      &.-radius {
+        border-radius: 10px 10px 0 0;
+        overflow: hidden;
+      }
+    }
+    // 类型为 dialog 的弹窗，默认在全屏居中
+    &.-styleDialog {
+      .modal-content {
+        bottom: unset;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+    // 弹窗宽度控制
+    &.-widthAuto {
+      .modal-content {
+        width: auto;
+      }
+    }
+    &.-disableAnimate {
+      .modal-mask,
+      .modal-is-hide,
+      .modal-content-slideCard,
+      .fk-dialog {
+        transition: none;
+      }
+    }
+    &.-center {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  // 弹窗动画: 初始添加类名 modal-is-hide (隐藏状态) ,需要显示弹窗时移除 modal-to-hide 即可
+  .modal-is-hide {
+    transition: all 0.3s ease;
+    visibility: hidden;
+    .modal-mask {
+      opacity: 0;
+    }
+  }
+
+  // 弹窗隐藏状态
+  .modal-is-hide {
+    // 通用的弹窗
+    .modal-common {
+      transform: translateY(100%);
+    }
+    // modal-dialog  通用 dialog 弹窗
+    .modal-dialog {
+      transform: translateX(-50%) translateY(-50rpx);
+    }
+    .modal-content-slideCard {
+      transform: translateY(-50rpx);
+      opacity: 0;
+    }
+  }
+  // 滑动卡片弹窗包裹层
+  .modal-content-slideCard {
+    position: relative;
+    width: 100%;
+    height: auto;
+    transition: all 0.3s ease;
+  }
+
+  // 事件模块弹窗
+  // pony风控弹窗
+  .fk-dialog {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 336px;
+    border-radius: 8px;
+    background: #fff;
+    z-index: 1000;
+    .fk-dialog__title {
+      height: 68px;
+    }
+    .fk-dialog__btn {
+      padding: 10px 20px 20px 20px;
+    }
+    .m-btn {
+      position: relative;
+      display: block;
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 10px 20px;
+      box-sizing: border-box;
+      font-size: 18px;
+      text-align: center;
+      text-decoration: none;
+      border-radius: 4px;
+      color: #333;
+      line-height: 1.41176471;
+      overflow: hidden;
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+      &.m-btn--default {
+        color: #666666;
+        background: #f5f6fa;
+        min-height: 45px;
+        &::after {
+          display: none;
+        }
+      }
+      &.m-btn--primary {
+        color: #fff;
+        background: #265bed;
+        min-height: 45px;
+      }
+      .m-btn__icon {
+        margin-left: 12rpx;
+      }
+    }
+
+    .m-btn[disabled] {
+      background: #ccdaff !important;
+      color: #fff !important;
+      &::after {
+        border: none;
+      }
+    }
+    .fk-dialog__items {
+      padding: 6px 30px 0 19px;
+      flex: 1;
+    }
+    .fk-dialog__close {
+      position: absolute;
+      width: 33px;
+      height: 33px;
+      bottom: -58px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    .fk-dialog__item {
+      display: flex;
+      padding: 8px 0;
+      align-items: center;
+    }
+    .k-dialog__img {
+      width: 30px;
+      height: 30px;
+      margin-right: 16px;
+    }
+    .k-dialog__info {
+      flex: 1;
+    }
+    .k-dialog__txt {
+      line-height: 22px;
+      font-size: 14px;
+      color: #000000;
+      @include ellipsis-lines($lines: 1);
+    }
+    .k-dialog__desc {
+      line-height: 22px;
+      font-size: 12px;
+      color: #a1a5b3;
+      margin-top: 1px;
+      @include ellipsis-lines($lines: 1);
+    }
+  }
+}

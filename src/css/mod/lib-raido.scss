@@ -1,0 +1,505 @@
+.kf-radio-wrapper {
+  font-size: 14px;
+  vertical-align: middle;
+  display: inline-block;
+  position: relative;
+  white-space: nowrap;
+  margin-right: 8px;
+  cursor: pointer;
+  // 小i提示
+  .icon-89 {
+    cursor: pointer;
+    position: relative;
+    color: #acb2bf;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 6px;
+    &:hover {
+      color: #275cf0;
+      .title-words {
+        display: block;
+      }
+    }
+    .title-words {
+      display: none;
+      position: absolute;
+      width: 480px;
+      top: 21px;
+      left: 0px;
+      color: #000;
+      font-size: 14px;
+      letter-spacing: 0.18px;
+      line-height: 1.5;
+      white-space: normal;
+      z-index: 999999;
+      box-sizing: border-box;
+      background: #ffffff;
+      padding: 20px;
+      box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.14);
+      text-align: justify;
+      word-break: break-all;
+      .title-txt {
+        text-align: left;
+        &:not(:last-child) {
+          margin-bottom: 10px;
+        }
+      }
+      .pic {
+        display: block;
+        width: 100%;
+        img {
+          display: block;
+          max-width: 100%;
+        }
+      }
+      &.-alignTop {
+        top: unset;
+        bottom: 21px;
+      }
+    }
+  }
+  &.margin-bottom0 {
+    margin-bottom: 0px !important;
+  }
+  &.margin-bottom10 {
+    margin-bottom: 10px !important;
+  }
+  &.margin-bottom20 {
+    margin-bottom: 20px !important;
+  }
+  &.margin-bottom30 {
+    margin-bottom: 30px !important;
+  }
+}
+
+.kf-radio {
+  display: inline-block;
+  margin-right: 4px;
+  white-space: nowrap;
+  position: relative;
+  line-height: 1;
+  vertical-align: top;
+  cursor: pointer;
+  padding: 2px 0;
+}
+
+.kf-radio-labeltxt {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 14px;
+  margin-left: 6px;
+}
+
+.kf-radio-inner {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  position: relative;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  border: 1px solid #dddee1;
+  border-radius: 50%;
+  vertical-align: top;
+  transition: all 0.2s ease-in-out;
+}
+
+.kf-radio-inner:after {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  top: 50%;
+  left: 50%;
+  margin-top: -3px;
+  margin-left: -3px;
+
+  border-radius: 50%;
+
+  border-top: 0;
+  border-left: 0;
+  content: ' ';
+  background-color: #fff;
+
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+}
+
+.kf-radio-input {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.kf-radio-group {
+  display: inline-block;
+  font-size: 12px;
+  vertical-align: middle;
+  // -paddingBottom10 垂直方向上撑开10px高度
+  &.-paddingBottom10 {
+    padding-bottom: 10px;
+  }
+  // -space40 单选按钮组里面的按钮之间间距为40px
+  &.-space40 {
+    .kf-radio-wrapper {
+      margin-right: 40px;
+      margin-top: 10px;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+.kf-radio-group-vertical {
+  .kf-radio-wrapper {
+    display: block;
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+  }
+}
+
+.kf-radio-group-vertical .kf-radio-wrapper {
+  display: flex;
+  align-items: flex-start;
+  height: unset;
+  min-height: 40px;
+  line-height: unset;
+  white-space: normal;
+  .kf-radio {
+    margin-top: 10px;
+  }
+  .kf-radio-labeltxt {
+    padding: 10px 0;
+  }
+}
+
+// btton状态
+.kf-radio-group-button {
+  font-size: 0;
+  -webkit-text-size-adjust: none;
+}
+
+.kf-radio-group-button .kf-radio {
+  width: 0;
+  margin-right: 0;
+}
+
+.kf-radio-group-button .kf-radio-wrapper {
+  min-width: 89px;
+  display: inline-block;
+  height: 40px;
+  line-height: 38px;
+  margin: 0; // padding: 0 18px;
+  font-size: 14px;
+  color: #495060;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  border: 1px solid #cdd1df;
+  border-left: 0;
+  background: #fff;
+  position: relative;
+  text-align: center;
+}
+
+.kf-radio-group-button .kf-radio-wrapper > span {
+  margin-left: 0;
+}
+
+.kf-radio-group-button .kf-radio-wrapper:after,
+.kf-radio-group-button .kf-radio-wrapper:before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 1px;
+  height: 100%;
+  left: -1px;
+  top: 0;
+  background: #dddee1;
+  transition: all 0.2s ease-in-out;
+}
+
+.kf-radio-group-button .kf-radio-wrapper:after {
+  height: 36px;
+  left: -1px;
+  top: -3px;
+  background: rgba(45, 140, 240, 0.2);
+  opacity: 0;
+}
+
+.kf-radio-group-button .kf-radio-wrapper:first-child {
+  // border-radius: 4px 0 0 4px;
+  border-left: 1px solid #cdd1df;
+}
+
+.kf-radio-group-button .kf-radio-wrapper:first-child:after,
+.kf-radio-group-button .kf-radio-wrapper:first-child:before {
+  display: none;
+}
+
+.kf-radio-group-button .kf-radio-wrapper:last-child {
+  // border-radius: 0 4px 4px 0
+}
+
+.kf-radio-group-button .kf-radio-wrapper:first-child:last-child {
+  // border-radius: 4px
+}
+
+.kf-radio-group-button .kf-radio-wrapper:hover {
+  position: relative;
+  color: #0575f5;
+}
+
+.kf-radio-group-button .kf-radio-wrapper:hover .kf-radio {
+  background-color: #000;
+}
+
+.kf-radio-group-button .kf-radio-wrapper .kf-radio-inner,
+.kf-radio-group-button .kf-radio-wrapper input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.kf-radio-group-button .kf-radio-wrapper-checked {
+  background: #0575f5;
+  border-color: #0575f5;
+  color: #fff;
+  // box-shadow: -1px 0 0 0 #2d8cf0;
+  z-index: 1;
+}
+
+.kf-radio-group-button .kf-radio-wrapper-checked:before {
+  background: #0575f5;
+  opacity: 0.1;
+}
+
+.kf-radio-group-button .kf-radio-wrapper-checked.kf-radio-focus {
+  box-shadow: -1px 0 0 0 #2d8cf0, 0 0 0 2px rgba(45, 140, 240, 0.2);
+  transition: all 0.2s ease-in-out;
+}
+
+.kf-radio-group-button .kf-radio-wrapper-checked.kf-radio-focus:after {
+  left: -3px;
+  top: -3px;
+  opacity: 1;
+  background: rgba(45, 140, 240, 0.2);
+}
+
+.kf-radio-group-button .kf-radio-wrapper-checked.kf-radio-focus:first-child {
+  box-shadow: 0 0 0 2px rgba(45, 140, 240, 0.2);
+}
+
+.kf-radio-group-button .kf-radio-wrapper-checked:first-child {
+  border-color: #2d8cf0;
+  box-shadow: none;
+}
+
+.kf-radio-group-button .kf-radio-wrapper-checked:hover {
+  border-color: #0575f5;
+  color: #fff;
+}
+
+.kf-radio-group-button .kf-radio-wrapper-checked:active {
+  border-color: #2b85e4;
+  color: #fff;
+}
+
+.kf-radio-group-button .kf-radio-wrapper-disabled {
+  cursor: not-allowed;
+}
+
+.kf-radio-group-button .kf-radio-wrapper-disabled,
+.kf-radio-group-button .kf-radio-wrapper-disabled:first-child,
+.kf-radio-group-button .kf-radio-wrapper-disabled:hover {
+  border-color: #dddee1;
+  background-color: #f7f7f7;
+  color: #ccc;
+}
+
+.kf-radio-group-button .kf-radio-wrapper-disabled:first-child {
+  border-left-color: #dddee1;
+}
+
+.kf-radio-group-button .kf-radio-wrapper-disabled.kf-radio-wrapper-checked {
+  color: #fff;
+  background-color: #e6e6e6;
+  border-color: #dddee1;
+  box-shadow: none !important;
+}
+
+.kf-radio-group-button.kf-radio-group-large .kf-radio-wrapper {
+  height: 36px;
+  line-height: 34px;
+  font-size: 14px;
+}
+
+.kf-radio-group-button.kf-radio-group-large .kf-radio-wrapper:after {
+  height: 40px;
+}
+
+.kf-radio-group-button.kf-radio-group-small .kf-radio-wrapper {
+  height: 24px;
+  line-height: 22px;
+  padding: 0 12px;
+  font-size: 12px;
+}
+
+.kf-radio-group-button.kf-radio-group-small .kf-radio-wrapper:after {
+  height: 28px;
+}
+
+.kf-radio-group-button.kf-radio-group-small .kf-radio-wrapper:first-child {
+  border-radius: 3px 0 0 3px;
+}
+
+.kf-radio-group-button.kf-radio-group-small .kf-radio-wrapper:last-child {
+  border-radius: 0 3px 3px 0;
+}
+
+.kf-radio-group-button .kf-example {
+  position: absolute;
+  display: inline-block;
+  height: 40px;
+  line-height: 38px;
+  font-size: 14px;
+  color: #0575f5;
+  cursor: pointer;
+  margin-left: 10px;
+  word-break: keep-all;
+}
+
+// 选中状态
+.kf-radio-input:checked + .kf-radio-inner:after {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  transition: all 0.2s ease-in-out;
+}
+
+.kf-radio-input:checked + .kf-radio-inner,
+.kf-radio-input:checked + .kf-checkout-inner {
+  border-color: #265cf0 !important;
+  background: #265cf0 !important;
+}
+
+// 选中按钮的不可选状态
+.kf-radio-input:checked[disabled] + .kf-radio-inner,
+.kf-radio-input:checked[disabled] + .kf-checkout-inner {
+  border-color: #ccdaff !important;
+  background-color: #ccdaff !important;
+}
+.kf-radio-input:checked[disabled] + .kf-radio-inner::after {
+  background-color: #fff !important;
+}
+
+// 鼠标移上去状态
+.kf-radio-checked:hover .kf-radio-inner {
+  border-color: #2d8cf0;
+}
+
+// 未选中按钮的不可选状态
+.kf-radio-disabled,
+.kf-radio-input[disabled] {
+  cursor: not-allowed !important;
+  color: #999 !important;
+}
+
+.kf-radio-input[disabled] + .kf-radio-inner,
+.kf-radio-input[disabled] + .kf-checkout-inner {
+  border-color: #dddee1 !important;
+  background-color: #f3f3f3 !important;
+}
+
+.kf-radio-input[disabled] + .kf-radio-inner::after {
+  background-color: #ccc !important;
+}
+
+// 选中按钮的不可选状态
+.kf-radio-input:checked[disabled] + .kf-radio-inner,
+.kf-radio-input:checked[disabled] + .kf-checkout-inner {
+  border-color: #ccdaff !important;
+  background-color: #ccdaff !important;
+}
+.kf-radio-input:checked[disabled] + .kf-radio-inner::after {
+  background-color: #fff !important;
+}
+
+.kf-radio-content {
+  .checklist {
+    margin-top: 20px;
+    font-size: 0;
+    line-height: normal;
+    @include clearfix;
+    .kf-select {
+      width: 260px;
+      float: left;
+      & + .list-item {
+        margin-left: 7px;
+        border: 1px solid #cdd1df;
+      }
+    }
+    .list-item {
+      min-width: 89px;
+      display: inline-block;
+      height: 40px;
+      line-height: 38px;
+      margin: 0;
+      font-size: 14px;
+      color: #495060;
+      transition: all 0.2s ease-in-out;
+      cursor: pointer;
+      border: 1px solid #cdd1df;
+      border-left: 0;
+      background: #fff;
+      position: relative;
+      text-align: center;
+      &:first-child {
+        border-left: 1px solid #cdd1df;
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+      &.current {
+        border: 1px solid #0575f5;
+        color: #0575f5;
+        position: relative;
+        &::before {
+          content: '';
+          position: absolute;
+          right: -8px;
+          bottom: 0px;
+          border-left: 8px solid transparent;
+          border-right: 8px solid transparent;
+          border-top: 8px solid #0575f5;
+          transform-origin: bottom;
+          transform: rotate(-45deg);
+        }
+      }
+      .kf-icon {
+        font-size: 18px;
+
+        margin-right: 5px;
+        vertical-align: -2px;
+      }
+      &.tips {
+        border: none;
+        color: #dc0000;
+        // margin-left: 13px;
+        // position: absolute;
+        width: 350px !important;
+        text-align: left;
+        line-height: normal;
+        height: inherit;
+        margin-top: 5px;
+      }
+    }
+  }
+}

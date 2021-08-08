@@ -1,0 +1,512 @@
+// 语音会话
+.voice-conve-details {
+  position: relative;
+  height: calc(100vh - 104px);
+  background: #fafafa;
+  .top-menu .current:after {
+    background: #fafafa;
+  }
+  &.-noHead {
+    height: calc(100vh - 56px);
+  }
+}
+
+.voice-conve__left {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 1000px;
+  height: 100%;
+}
+
+.voice-conve--wrap {
+  height: calc(100% - 130px);
+}
+.voice-conve--item {
+  position: relative;
+  height: 100%;
+}
+// 对话区
+.voice-conve--chat {
+  .chat-box {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .chat-data {
+    overflow-y: auto;
+    overflow-y: overlay;
+    overflow-x: hidden;
+    // height: calc(100vh - 56px - 48px - 49px - 212px);
+    flex: 1;
+    min-height: 250px;
+  }
+  .chat-oper {
+    position: relative;
+    background: #fafafa;
+    .btn-area:first-child {
+      display: block;
+    }
+  }
+}
+// SI查询
+// 通话信息
+.voice-conve--info {
+  .user-info {
+    height: 100%;
+    overflow-y: auto;
+    overflow-y: overlay;
+    overflow-x: hidden;
+  }
+  .item-group .item {
+    width: 33.33%;
+    &.long {
+      width: 100%;
+    }
+    .icon-content__item {
+      width: 33.33%;
+    }
+  }
+}
+
+.voice-conve__right {
+  position: relative;
+  min-width: 414px;
+  margin-left: 1000px;
+  border-left: 1px solid #e5e5e6;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 56px - 48px);
+  .layout-bd {
+    flex: 1;
+    min-height: 382px;
+    overflow-y: auto;
+    overflow-y: overlay;
+    overflow-x: hidden;
+  }
+  .layout-ft {
+    height: 81px;
+    flex-shrink: 0;
+  }
+  .top-menu .top-menu__item {
+    border: none;
+    &.current:after {
+      background: transparent;
+    }
+  }
+  .filter {
+    padding-bottom: 10px;
+    .item .kf-ai-input {
+      background: transparent;
+    }
+  }
+  .ai-four-status .left img {
+    margin: 24px 20px 0px 20px;
+  }
+}
+
+.add-workorder-btn {
+  position: relative;
+  display: inline-block;
+  line-height: 40px;
+  font-size: 14px;
+  color: #265cf0;
+  cursor: pointer;
+  &:not(:last-child) {
+    margin-right: 20px;
+  }
+  .iconfont {
+    font-size: 20px;
+    color: #265cf0;
+    margin-right: 6px;
+  }
+}
+.end-btn {
+  position: relative;
+  display: inline-block;
+  .m-info {
+    display: none;
+  }
+  &:hover {
+    .m-info {
+      display: block;
+    }
+  }
+}
+
+@media screen and (max-width: 1800px) {
+  .voice-conve-details {
+    .service-history {
+      .filter {
+        padding: 20px 20px 10px 0;
+        .item {
+          width: 100%;
+          margin-bottom: 10px;
+          margin-top: 0;
+          box-sizing: border-box;
+          .value {
+            margin-right: 0px;
+          }
+        }
+      }
+      .service-list .para .item-group .item {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1820px) {
+  .voice-conve-details {
+    .voice-conve__left {
+      position: relative;
+      width: auto;
+      margin-right: 640px;
+    }
+    .voice-conve__right {
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      width: 640px;
+      margin-left: 0px;
+    }
+  }
+}
+
+// 呼叫中心
+.voice-center-details {
+  position: relative;
+  height: calc(100vh - 56px);
+  background: #fafafa;
+  display: flex;
+  .top-menu .current:after {
+    background: #fafafa;
+  }
+  // 空状态样式
+  .mod-empty {
+    width: 100%;
+    padding-top: 288px;
+  }
+  .voice-center__left .mod-empty {
+    padding-top: 240px;
+  }
+  .voice-details--empty {
+    flex: 1;
+  }
+
+  // 底部升级区域里的输入框尺寸适配调整
+  .ai-four-status .option-input__group .kf-input-wrapper {
+    flex: 1;
+    width: auto;
+    max-width: 180px;
+  }
+}
+.voice-center__left {
+  flex-shrink: 0;
+  width: 300px;
+  height: 100%;
+  border-right: 1px solid #e5e5e6;
+  box-sizing: border-box;
+  .voice-chat-area .chat-list {
+    width: 100%;
+  }
+}
+.voice-center__center {
+  flex: 1;
+  min-width: 1000px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.voice-center__right {
+  position: relative;
+  min-width: 320px;
+  height: 100%;
+  border-left: 1px solid #e5e5e6;
+  box-sizing: border-box;
+  overflow: hidden;
+  .layout-bd {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+  }
+  .service-history {
+    flex: 1;
+    min-height: 382px;
+    overflow-y: auto;
+    overflow-y: overlay;
+    overflow-x: hidden;
+  }
+  .layout-ft {
+    height: 81px;
+    flex-shrink: 0;
+  }
+  .top-menu .top-menu__item {
+    border: none;
+    &.current:after {
+      display: none;
+    }
+  }
+  .filter {
+    padding-bottom: 10px;
+    .item .kf-ai-input {
+      background: transparent;
+    }
+  }
+}
+// 语音会话列表
+.voice-chat-list {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.voice-chat-item {
+  .chat-item__title {
+    position: relative;
+    padding: 14px 20px;
+    width: 100%;
+    font-size: 0;
+    box-sizing: border-box;
+    &:after {
+      @include setBottomLine(#e5e5e6);
+      height: unset;
+    }
+  }
+  .chat-item__titleTxt {
+    display: inline-block;
+    font-size: 14px;
+    line-height: 20px;
+    color: #333333;
+    font-weight: bold;
+  }
+  .chat-item__titleNum {
+    display: inline-block;
+    font-size: 14px;
+    line-height: 20px;
+    color: #7b7b7b;
+    margin-left: 10px;
+  }
+  .chat-item__list {
+    position: relative;
+  }
+  .chat-item__info {
+    position: relative;
+    padding: 13px 20px;
+    width: 100%;
+    display: flex;
+    box-sizing: border-box;
+    cursor: pointer;
+    &:after {
+      @include setBottomLine(#e5e5e6);
+      height: unset;
+    }
+    .left {
+      flex-shrink: 0;
+    }
+    .center {
+      flex: 1;
+    }
+    .right {
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    &.-current {
+      background: #e9eefd;
+    }
+  }
+  .chat-item__chatIcon {
+    position: relative;
+    .iconfont {
+      font-size: 20px;
+      line-height: 1;
+      color: #9ba2b1;
+    }
+  }
+  .chat-item__statusIcon {
+    position: relative;
+    .iconfont {
+      font-size: 20px;
+      line-height: 1;
+    }
+    .icon-349 {
+      color: #fa9128;
+    }
+    .icon-368 {
+      color: #fa9128;
+    }
+    .icon-350 {
+      color: #76cc21;
+    }
+  }
+  .chat-item__telephone {
+    display: flex;
+    flex-direction: column;
+    margin-left: 8px;
+  }
+  .telephone-number {
+    font-size: 16px;
+    line-height: 21px;
+    color: #333333;
+  }
+  .telephone-attribution {
+    font-size: 14px;
+    line-height: 19px;
+    color: #999999;
+    margin-top: 6px;
+  }
+}
+
+.tele-group {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 40px;
+  padding-left: 20px;
+  padding-right: 10px;
+  box-sizing: border-box;
+  border-bottom: 1px solid #e5e5e6;
+  background-color: #fafafb;
+}
+
+.tele-group__left {
+  font-size: 14px;
+  color: #666;
+}
+
+.tele-group__num {
+  color: #000;
+}
+
+.tele-group__right {
+  position: relative;
+  .m-info {
+    .txt {
+      width: 280px;
+      padding: 12px;
+      font-size: 14px;
+      user-select: none;
+    }
+    .tele-group__title {
+      width: 100%;
+      // height: 43px;
+      line-height: 19px;
+      padding-bottom: 12px;
+      display: flex;
+      align-items: center;
+      box-sizing: border-box;
+      border-bottom: 1px solid #e5e5e6;
+    }
+    .tele-group__itemWrap {
+      max-height: 584px;
+      overflow-y: overlay;
+    }
+    .tele-group__item {
+      display: flex;
+      align-items: flex-start;
+      width: 100%;
+      margin-top: 12px;
+      color: #666;
+    }
+    .tele-group__itemLabel {
+      width: 84px;
+      flex-shrink: 0;
+      margin-right: 10px;
+    }
+    .tele-group__itemContent {
+      color: #000;
+      line-height: 21px;
+      word-break: break-all;
+      word-wrap: break-word;
+      white-space: normal;
+    }
+  }
+}
+
+.tele-group__btn {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  .iconfont {
+    font-size: 16px;
+    color: #999;
+    transition: all 0.2s ease-out;
+  }
+  &:hover {
+    .iconfont {
+      color: #666;
+    }
+  }
+}
+
+@media screen and (min-width: 2260px) {
+  .voice-center-details .voice-center__right {
+    width: 780px;
+  }
+}
+@media screen and (max-width: 2260px) and (min-width: 1860px) {
+  .voice-center-details {
+    .voice-center__center {
+      max-width: 1000px;
+    }
+    .voice-center__right {
+      flex: 1;
+    }
+  }
+}
+
+@media screen and (max-width: 1860px) {
+  .layout-ai-inner.open .voice-center-details .service-history {
+    .filter {
+      padding: 20px 20px 10px 0;
+      .item {
+        width: 100%;
+        margin-bottom: 10px;
+        margin-top: 0;
+        box-sizing: border-box;
+      }
+    }
+    .service-list .item {
+      width: 100%;
+    }
+  }
+  .voice-center-details {
+    .voice-center__center {
+      max-width: 1000px;
+    }
+    .voice-center__right {
+      flex: 1;
+    }
+  }
+  // .voice-center__right {
+  //   max-width: 380px;
+  // }
+}
+
+@media screen and (max-width: 1800px) {
+  .voice-center-details {
+    .voice-center__center {
+      min-width: unset;
+    }
+    .voice-center__right {
+      width: 320px;
+      flex: unset;
+    }
+  }
+  // .voice-center__center {
+  //     max-width: 1000px;
+  // }
+  // .voice-center__right {
+  //     flex: unset;
+  // }
+}

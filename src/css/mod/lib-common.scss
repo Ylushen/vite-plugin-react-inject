@@ -1,0 +1,22 @@
+// 通用图片样式，宽高由外层容器控制
+.pc-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.pc-video {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.pc-audio {
+  width: 100%;
+  height: 30px;
+  outline: none;
+  &::-webkit-media-controls-panel {
+    background: #ebedf3;
+  }
+  &::-webkit-media-controls-play-button {
+    margin-left: -10px;
+  }
+}

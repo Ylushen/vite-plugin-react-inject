@@ -1,0 +1,73 @@
+// 标签组件
+
+// 状态标签
+.effect-status {
+  flex-shrink: 0;
+  position: relative;
+  display: inline-block;
+  padding: 0 4px;
+  font-size: 12px;
+  transform: scale(0.84);
+  -webkit-transform: scale(0.84);
+  -webkit-transform-origin-x: 0;
+  -moz-transform: scale(0.84);
+  line-height: 16px;
+  color: #265cf0;
+  border: 1px solid #265cf0;
+  // width: 34px;
+  // min-width: 34px;
+  box-sizing: border-box;
+  text-align: center;
+  cursor: default;
+  &.red {
+    color: #d84254;
+    border: 1px solid #d84254;
+  }
+  &.grey {
+    color: #9ba2b1;
+    border: 1px solid #9ba2b1;
+  }
+}
+
+// 小型标签
+.m-tag--small {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  color: #9ba2b1;
+  line-height: 16px;
+  padding: 0px 4px;
+  font-size: 12px;
+  font-weight: normal;
+  transform: scale(0.84); // font-size 需要设置为 10px
+  -webkit-transform: scale(0.84);
+  -webkit-transform-origin-x: 0;
+  -moz-transform: scale(0.84);
+  vertical-align: middle;
+  border: 1px solid #9ba2b1;
+  border-radius: 1px;
+  box-sizing: border-box;
+  cursor: default;
+  &.red {
+    color: #d84254;
+    border: 1px solid #d84254;
+  }
+  &.blue {
+    color: #265cf0;
+    border: 1px solid #265cf0;
+  }
+  &.green {
+    color: #00d200;
+    border: 1px solid #00d200;
+  }
+
+  // 正常大小尺寸 -sizeNormal  字号12px;高度24px
+  &.-sizeNormal {
+    padding: 3px 4px;
+    transform: unset;
+    -webkit-transform: unset;
+    -webkit-transform-origin-x: unset;
+    -moz-transform: unset;
+    border-radius: 2px;
+  }
+}

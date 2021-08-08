@@ -1,0 +1,116 @@
+// 云智服企业微信聊天右侧信息
+html,
+body {
+  height: 100%;
+}
+.yzf-broadside {
+  width: 100%;
+  height: 100%;
+  background: #f5f6fa;
+  .yzf-broadside-top {
+    .yzf-broadside-banner {
+      // width: 380px;
+      max-width: 400px;
+      // height: 276px;
+      margin: 0 auto;
+      img {
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+  .yzf-broadside-bottom {
+    .learn-more-list {
+      padding: 26px 34px;
+      display: flex;
+      justify-content: center;
+      .list {
+        .list-item {
+          font-size: 0px;
+          text-align: left;
+          margin-bottom: 6px;
+          vertical-align: middle;
+          .text {
+            line-height: 20px;
+            display: inline-block;
+            font-size: 14px;
+            color: #000000;
+          }
+          .desc {
+            line-height: 20px;
+            display: inline-block;
+            font-size: 14px;
+            color: #999999;
+          }
+          .icon-01 {
+            display: inline-block;
+            font-size: 14px;
+            color: #3369ff;
+            margin-right: 6px;
+          }
+          &:last-child {
+            margin-bottom: 0px;
+          }
+        }
+      }
+    }
+    .learn-more-btn {
+      width: 120px;
+      margin: 0 auto;
+      padding-bottom: 40px;
+    }
+  }
+}
+
+// 按钮样式
+.ai-btn {
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: 400;
+  text-align: center;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  padding: 9px 12px;
+  min-width: 120px;
+  font-size: 14px;
+  border-radius: 0;
+  transition: color 0.2s linear, background-color 0.2s linear, border 0.2s linear, box-shadow 0.2s linear;
+  color: #666;
+  background-color: transparent;
+  border-color: #e5e5e6;
+  box-sizing: border-box;
+}
+.ai-btn:hover {
+  color: #333;
+}
+.ai-btn:active {
+  color: #000;
+}
+.ai-btn > span {
+  display: inline-block;
+}
+.ai-btn-primary {
+  color: #fff !important;
+  background-color: #265bed;
+  border-color: #265bed;
+}
+
+.ai-btn-primary:hover {
+  color: #fff;
+  background-color: #2252d6;
+  border-color: #2252d6;
+}
+.ai-btn-primary:active {
+  color: #fff;
+  background-color: #1e48bd;
+  border-color: #1e48bd;
+}

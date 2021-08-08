@@ -1,0 +1,118 @@
+// 分隔线组件
+.m-separator-line {
+  display: block;
+  position: relative;
+  width: 100%;
+  text-align: center;
+  font-size: 0;
+  box-sizing: border-box;
+  &:before {
+    content: '';
+    position: absolute;
+    width: calc(50% - 10px);
+    height: 1px;
+    background: #e5e5e6;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  &:after {
+    content: '';
+    position: absolute;
+    width: calc(50% - 10px);
+    height: 1px;
+    background: #e5e5e6;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  &.-lineWidth {
+    font-size: 14px;
+    color: #265bed;
+    &::before,
+    &::after {
+      width: calc(50% - 40px);
+    };
+  }
+  .dot {
+    display: inline-block;
+    position: relative;
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background: #e5e5e6;
+    line-height: 1;
+  }
+  .dotTextLine {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 3px;
+    line-height: 1;
+  }
+  // 简单状态，中间没有dot
+  &.-normal {
+    &:before {
+      width: 50%;
+    }
+    &:after {
+      width: 50%;
+    }
+  }
+}
+
+// 虚线分隔线 m-separator--dashed
+.m-separator--dashed {
+  display: block;
+  position: relative;
+  width: 100%;
+  text-align: center;
+  font-size: 0;
+  box-sizing: border-box;
+  &:before {
+    content: '';
+    display: block;
+    width: 100%;
+    border-bottom: 1px dashed #e5e5e6;
+  }
+  &.-topSpace10 {
+    margin-top: 10px;
+  }
+  &.-bottomSpace10 {
+    margin-bottom: 10px;
+  }
+  &.-colorGrey:before {
+    border-bottom-color: #cccccc;
+  }
+}
+
+.m-separator--solid {
+  display: block;
+  position: relative;
+  width: 100%;
+  text-align: center;
+  font-size: 0;
+  box-sizing: border-box;
+  &:before {
+    content: '';
+    display: block;
+    width: 100%;
+    border-bottom: 1px solid #e5e5e6;
+  }
+  &.-topSpace10 {
+    margin-top: 10px;
+  }
+  &.-bottomSpace10 {
+    margin-bottom: 10px;
+  }
+  &.-topSpace30 {
+    margin-top: 30px;
+  }
+  &.-bottomSpace30 {
+    margin-bottom: 30px;
+  }
+  &.-colorGrey:before {
+    border-bottom-color: #cccccc;
+  }
+}

@@ -1,0 +1,484 @@
+/* lib-info 提示信息框 */
+
+// 小型提示信息
+.small-info {
+  position: absolute;
+  text-align: center;
+  background: #ffffff;
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.14);
+  color: #333333;
+  z-index: 99;
+  padding: 10px;
+  box-sizing: border-box;
+  cursor: auto;
+  user-select: text;
+  .txt {
+    font-size: 12px;
+  }
+  &:before {
+    content: ' ';
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    position: absolute;
+  }
+  &.left:before {
+    top: 10px;
+    right: -12px;
+    border-left-color: #fff;
+  }
+  &.right:before {
+    top: 10px;
+    left: -12px;
+    border-right-color: #fff;
+  }
+  &.bottom:before {
+    top: -12px;
+    left: 50%;
+    margin-left: -6px;
+    border-bottom-color: #fff;
+  }
+  &.top {
+    top: -2px;
+    left: 50%;
+    transform: translateY(-100%) translateX(-50%);
+    &:before {
+      bottom: -12px;
+      left: 50%;
+      margin-left: -6px;
+      border-top-color: #fff;
+    }
+  }
+}
+
+/**
+ * 样式组件模块
+ * 类型：提示消息
+ * 类名：m-info
+ * 特性：根据父元素进行定位的提示消息，消息弹框大小随内容自适应；
+ *      最大宽度默认 400px。
+ * 配置：提示消息的位置，align-top(位于上面) align-bottom(位于下面) align-left(位于左边) align-right(位于右边)
+ * 类型：正常(整个提示消息离父元素一定距离)；
+ *      添加类名 cursor(提示消息的小箭头盖在父元素上面)。
+ */
+.m-info {
+  position: absolute;
+  width: 400px;
+  z-index: 99;
+  .txt {
+    position: relative;
+    display: inline-block;
+    // font-size: 12px;
+    font-size: 14px;
+    line-height: normal;
+    // color: #333333;
+    color: #000000;
+    text-align: left;
+    word-break: break-all;
+    word-wrap: normal;
+    background: #ffffff;
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.14);
+    padding: 10px;
+    box-sizing: border-box;
+    z-index: 99;
+    &:before {
+      content: ' ';
+      width: 0;
+      height: 0;
+      border: 6px solid transparent;
+      position: absolute;
+    }
+    &.-noInnerPadding {
+      padding: 0;
+    }
+  }
+  // 正文文字
+  .m-info__text {
+    // font-size: 12px;
+    // color: #333333;
+    font-size: 14px;
+    color: #000000;
+    margin-bottom: 10px;
+    word-break: break-all;
+    word-wrap: normal;
+    &:last-of-type {
+      margin-bottom: 0px;
+    }
+  }
+  // 描述文字
+  .m-info__desc {
+    font-size: 14px;
+    color: #cccccc;
+  }
+  .m-info__desc2 {
+    font-size: 12px;
+    color: #999;
+  }
+  // 图片包裹层
+  .m-info__pic {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    &:last-of-type {
+      margin-bottom: 0px;
+    }
+  }
+  // 图片
+  .m-info__image {
+    display: block;
+    max-width: 100%;
+    border: 1px solid #e5e5e6;
+  }
+
+  // 插入图表弹窗使用的图片样式
+  .info-img {
+    display: block;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+  // 突出显示弹窗中的title文字,需要配合下面的 -use-title 类名，将箭头颜色也改成跟title标题背景一样的颜色
+  .title {
+    position: relative;
+    // margin-top: -10px;
+    font-size: 14px;
+    color: #666666;
+    line-height: 20px;
+    padding: 10px;
+    // background: #F7F7FA;
+    &:before {
+      content: ' ';
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      border-bottom: 1px solid #e5e5e6;
+      transform-origin: 0 100%;
+      transform: scaleY(0.5);
+    }
+  }
+  // label+内容的列表
+  .label-list {
+    position: relative;
+    .label-list--item {
+      display: flex;
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+    }
+    .item-label {
+      flex-shrink: 0;
+      width: 37px;
+      font-size: 14px;
+      color: #999999;
+      text-align: left;
+      line-height: 21px;
+      margin-right: 20px;
+    }
+    .item-content {
+      flex: 1;
+      font-size: 14px;
+      color: #333333;
+      text-align: left;
+      line-height: 21px;
+    }
+  }
+
+  // 提示消息中的选项列表
+  .m-info--list {
+    .list-item {
+      position: relative;
+      width: 124px;
+      &.-bottomLine:after {
+        @include setBottomLine($c: #e5e5e6);
+      }
+    }
+    .list-item--text {
+      font-size: 14px;
+      color: #000;
+      line-height: 20px;
+      padding: 10px;
+      &.-blue {
+        color: #265bed;
+      }
+    }
+  }
+
+  // 控制三角形箭头的位置(默认不设置为居中)
+  &.arrow-left {
+    .txt:before {
+      left: 12px !important;
+      margin-left: unset !important;
+    }
+    &.align-top {
+      text-align: left;
+      transform: translateY(-100%);
+      margin-left: -18px;
+    }
+    &.align-bottom {
+      text-align: left;
+      transform: translateY(100%);
+      margin-left: -18px;
+    }
+  }
+  &.arrow-right {
+    .txt:before {
+      left: unset !important;
+      right: 12px !important;
+      margin-left: unset !important;
+    }
+    &.align-top {
+      text-align: right;
+      left: unset;
+      right: 50%;
+      transform: translateY(-100%);
+      margin-right: -18px;
+    }
+    &.align-bottom {
+      text-align: right;
+      left: unset;
+      right: 50%;
+      transform: translateY(100%);
+      margin-right: -18px;
+    }
+  }
+  &.arrow-bottom {
+    .txt:before {
+      top: unset !important;
+      bottom: 10px !important;
+    }
+    &.align-left {
+      top: unset;
+      bottom: 0px;
+    }
+    &.align-right {
+      top: unset;
+      bottom: 0px;
+    }
+  }
+
+  // 控制整个提示信息框的位置：align-left align-right align-bottom align-top align-left-top align-left-bottom align-right-top align-right-bottom
+  &.align-left {
+    left: -10px;
+    top: 2px;
+    transform: translateX(-100%);
+    text-align: right;
+    .txt {
+      &:before {
+        top: 10px;
+        right: -12px;
+        border-left-color: #fff;
+      }
+    }
+  }
+  &.align-right {
+    right: -10px;
+    top: 2px;
+    transform: translateX(100%);
+    text-align: left;
+    .txt {
+      &:before {
+        top: 10px;
+        left: -12px;
+        border-right-color: #fff;
+      }
+    }
+  }
+  &.align-bottom {
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%) translateY(100%);
+    text-align: center;
+    .txt {
+      &:before {
+        top: -12px;
+        left: 50%;
+        margin-left: -6px;
+        border-bottom-color: #fff;
+      }
+    }
+  }
+  &.align-top {
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%) translateY(-100%);
+    text-align: center;
+    .txt {
+      &:before {
+        bottom: -12px;
+        left: 50%;
+        margin-left: -6px;
+        border-top-color: #fff;
+      }
+    }
+  }
+  // 左上方提示信息
+  &.align-left-top {
+    top: -10px;
+    left: 26px;
+    transform: translateX(-100%) translateY(-100%);
+    text-align: right;
+    .txt {
+      &:before {
+        bottom: -12px;
+        left: 50%;
+        margin-left: -6px;
+        border-top-color: #fff;
+      }
+    }
+  }
+  // 左上方提示信息
+  &.align-left-bottom {
+    bottom: -10px;
+    left: 26px;
+    transform: translateX(-100%) translateY(100%);
+    text-align: right;
+    .txt {
+      &:before {
+        top: -12px;
+        left: 50%;
+        margin-left: -6px;
+        border-bottom-color: #fff;
+      }
+    }
+  }
+  // 右上方提示信息
+  &.align-right-top {
+    top: -10px;
+    left: 100%;
+    margin-left: -26px;
+    transform: translateY(-100%);
+    text-align: left;
+    .txt {
+      &:before {
+        bottom: -12px;
+        left: 50%;
+        margin-left: -6px;
+        border-top-color: #fff;
+      }
+    }
+  }
+  // 右下方提示信息
+  &.align-right-bottom {
+    bottom: -10px;
+    left: 100%;
+    margin-left: -26px;
+    transform: translateY(100%);
+    text-align: left;
+    .txt {
+      &:before {
+        top: -12px;
+        left: 50%;
+        margin-left: -6px;
+        border-bottom-color: #fff;
+      }
+    }
+  }
+
+  // cursor 更贴近元素
+  &.cursor {
+    &.align-left {
+      left: -2px;
+    }
+    &.align-right {
+      right: -2px;
+    }
+    &.align-bottom {
+      bottom: -2px;
+    }
+    &.align-top {
+      top: -2px;
+    }
+  }
+
+  // 限制行数，超出滚动(最新)
+  &.-overflowInfo {
+    .txt {
+      padding-right: 0;
+    }
+    .m-info__overflowWrap {
+      width: 100%;
+      padding-right: 10px;
+      max-height: 220px;
+      overflow-x: hidden;
+      overflow-y: auto;
+      overflow-y: overlay;
+      box-sizing: border-box;
+    }
+  }
+
+  // 限制行数，超出滚动(废弃)
+  &.-overflow {
+    &:before {
+      content: ' ';
+      width: 0;
+      height: 0;
+      border: 6px solid transparent;
+      position: absolute;
+      z-index: 100;
+    }
+    .txt {
+      max-height: 240px;
+      overflow-x: hidden;
+      overflow-y: auto;
+      overflow-y: overlay;
+      &:before {
+        display: none;
+      }
+    }
+    .m-info__overflowWrap {
+      width: 100%;
+      padding-right: 10px;
+      margin-right: -10px;
+      max-height: 220px;
+      overflow-x: hidden;
+      overflow-y: auto;
+      overflow-y: overlay;
+    }
+    &.align-left {
+      &:before {
+        top: 10px;
+        right: -12px;
+        border-left-color: #fff;
+      }
+    }
+    &.align-right {
+      &:before {
+        top: 10px;
+        left: -12px;
+        border-right-color: #fff;
+      }
+    }
+    &.align-bottom {
+      &:before {
+        top: -12px;
+        left: 50%;
+        margin-left: -6px;
+        border-bottom-color: #fff;
+      }
+    }
+    &.align-top {
+      .txt {
+        display: block;
+      }
+      &:before {
+        bottom: -12px;
+        left: 50%;
+        margin-left: -6px;
+        border-top-color: #fff;
+      }
+    }
+  }
+  // 有标题类型的顶部文字
+  &.-use-title {
+    .txt {
+      padding: 0;
+    }
+    .info-img {
+      padding: 20px;
+    }
+  }
+  &.-widthAuto {
+    width: auto;
+  }
+}

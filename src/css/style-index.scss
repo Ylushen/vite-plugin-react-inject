@@ -1,0 +1,90 @@
+@import './base/lib-mixin.scss';
+@import './base/lib-reset.scss';
+@import './mod/lib-fonts.scss';
+@import './mod/lib-layout.scss';
+@import './mod/lib-kf-layout.scss';
+@import './mod/lib-panel.scss';
+@import './mod/lib-spin.scss';
+@import './mod/lib-steps.scss';
+@import './mod/lib-ai-btn.scss';
+@import './mod/lib-ai-form.scss';
+@import './mod/lib-modal.scss';
+@import './mod/lib-raido.scss';
+@import './mod/lib-notice.scss';
+@import './mod/lib-mark.scss';
+@import './mod/lib-info.scss'; // 提示信息框
+@import './mod/lib-rich-textarea.scss'; // 富文本输入组件
+@import './mod/lib-special-input.scss'; // 特殊的输入框组件
+@import './mod/lib-ai-textfield.scss';
+@import './mod/lib-progress-table.scss'; // 进度表格组件
+@import './mod/lib-common.scss'; // 通用样式
+@import './mod/lib-info-block.scss'; // 提示信息块组件
+@import './mod/lib-list.scss'; // 列表组件
+@import './mod/lib-uploader.scss'; // 上传之类的组件
+@import './mod/lib-tab.scss'; // tab 选项卡/标签栏组件
+@import './mod/lib-loading.scss'; // loading加载中组件
+@import './mod/lib-card.scss'; // 卡片类型组件
+@import './mod/lib-tag.scss'; // 标签组件
+@import './mod/lib-ai-dropdown.scss'; // 下拉组件
+@import './mod/lib-separator-line.scss'; // 分隔线组件
+@import './mod/lib-slide.scss'; // 右侧边栏弹窗动画
+
+// ai
+@import './ai/lib-index.scss';
+@import './ai/lib-modal.scss';
+@import './mod/lib-spin.scss';
+@import './ai/lib-knowledge.scss';
+@import './ai/lib-faq.scss';
+@import './ai/lib-learn.scss';
+@import './ai/lib-set.scss';
+@import './mod/lib-page.scss';
+@import './ai/lib-knowledge-learn.scss';
+@import './ai/lib-quality-inspection.scss';
+@import './ai/lib-official-operation.scss';
+@import './ai/lib-push-manage.scss'; // 推送管理模块页面样式
+@import './ai/lib-push-manage-new.scss'; // 新推送管理模块页面样式
+
+@import './mod/lib-cascader.scss';
+
+@import './mod/lib-checkbox.scss';
+
+@import './ai/lib-manual-set.scss';
+
+@import './mod/lib-input-serach.scss';
+
+@import './ai/lib-file.scss';
+
+@import './ai/lib-ai-chat.scss';
+@import './ai/lib-tab.scss';
+@import './ai/lib-history.scss';
+@import './ai/lib-settings.scss';
+@import './ai/lib-message-center.scss';
+@import './ai/lib-robot-manage.scss';
+@import './ai/lib-data.scss';
+@import './ai/lib-designpanel.scss';
+@import './mod/lib-screen.scss';
+
+@import './ai/lib-workorder.scss';
+@import './ai/lib-voice-conve.scss'; // 语音会话
+
+@import './mod/lib-si.scss'; // 适配si查询
+
+@import './mod/lib-emoticon.scss'; // 适配人工会话表情样式
+
+// 向导样式
+
+@import './guide/lib-guide.scss';
+
+// 云智服海外版专属样式
+@import './overseas/overseas.scss';
+@import './company-manage/_page-layout.scss'; // 企业管理模块页面样式
+@import './form/_page-layout.scss'; // 表单模块页面样式
+
+// @import "./temporary-files/all.scss"; // 临时文件，作合并用
+
+@import './prompt/prompt.scss'; // 提示页面
+
+// 文档组件库样式
+@import './ai/lib-new-mod-x.scss';
+
+@import './ai/lib-form-management.scss'; // 海外版-表单管理样式

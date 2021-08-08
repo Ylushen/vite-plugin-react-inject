@@ -1,0 +1,111 @@
+.mod-panel {
+  background: #ffffff;
+  box-shadow: 0 2px 10px 0 rgba(66, 73, 81, 0.2);
+}
+
+.mod-panel-hd {
+  height: 100px;
+  line-height: 100px;
+  font-size: 26px;
+  color: #000;
+  text-align: center;
+  border-bottom: 1px solid #e5e5ea;
+  box-sizing: border-box;
+}
+
+// 数据面板模块组件
+.m-data-panel {
+  position: relative;
+  background: #fff;
+  .data-panel__hd {
+    position: relative;
+    padding: 0 30px 0 10px;
+    display: flex;
+    align-items: center;
+    &:after {
+      content: ' ';
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 1px;
+      border-bottom: 1px solid #e5e5e6;
+    }
+  }
+  .data-panel__title {
+    font-size: 26px;
+    padding: 12px 0 14px 0;
+    flex: 1;
+    line-height: 37px;
+    color: #000;
+    display: inherit;
+  }
+  .data-panel__arrow {
+    flex-shrink: 0;
+    .iconfont {
+      font-size: 28px;
+      color: #979797;
+    }
+  }
+  .data-panel__bd {
+    position: relative;
+  }
+}
+.m-learn--status {
+  position: relative;
+  .m-learn__listWrap {
+    display: flex;
+    padding: 10px 0px;
+  }
+  .m-learn__item {
+    position: relative;
+    flex: 1;
+    padding: 10px;
+    &.right-line:after {
+      content: ' ';
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      width: 1px;
+      border-right: 1px solid #e5e5e6;
+    }
+  }
+  .m-learn__title {
+    font-size: 20px;
+    color: #999999;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+  }
+  .m-learn__value {
+    vertical-align: bottom;
+    color: #000000;
+    display: flex;
+    align-items: center;
+    .num {
+      font-size: 30px;
+      color: #000000;
+      line-height: 42px;
+      padding-right: 4px;
+      font-weight: 500;
+      word-break: break-all;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+    }
+    .unit {
+      flex-shrink: 0;
+      font-size: 15px;
+      color: #000000;
+      line-height: 36px;
+      font-weight: 500;
+      margin-top: 10px;
+      margin-left: auto;
+    }
+  }
+}

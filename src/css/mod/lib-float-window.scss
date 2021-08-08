@@ -1,0 +1,98 @@
+//float window 浮动窗口
+
+//主页右侧悬浮导航
+.yzf-right-nav {
+  position: fixed;
+  right: 20px;
+  top: calc(50vh - 78px);
+  z-index: 999;
+  .nav-item {
+    position: relative;
+    padding: 15px 10px;
+    background: #3369ff;
+    cursor: pointer;
+    .iconfont {
+      display: block;
+      width: 28px;
+      height: 28px;
+      font-size: 28px;
+      color: #ffffff;
+      margin: 0 10px;
+    }
+    .nav-txt {
+      margin-top: 4px;
+      font-size: 12px;
+      line-height: 16px;
+      color: #ffffff;
+    }
+    &:hover {
+      background: #265cf0;
+      .wx-code {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+    &:first-child::after {
+      content: '';
+      display: block;
+      width: 48px;
+      height: 1px;
+      background: #638bfc;
+      margin: 0 auto;
+      position: absolute;
+      bottom: 0;
+    }
+  }
+  .wx-code {
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s;
+    position: absolute;
+    bottom: 0px;
+    left: -150px;
+    padding: 10px;
+    background: #ffffff;
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.14);
+    cursor: default;
+    .wx-code-img {
+      display: block;
+      width: 120px;
+      height: 120px;
+    }
+    .wx-code-txt {
+      // margin-top: 10px;
+      font-size: 14px;
+      line-height: 20px;
+      color: #333333;
+      text-align: center;
+      display: block;
+      width: 120px;
+      margin: 10px auto 0px;
+    }
+  }
+}
+
+//腾讯云智服首页联系客服对话框
+body {
+  .main-chat {
+    transition: all 0.3s;
+    right: 20px;
+    z-index: 2147483647;
+    &.animation-open-fadeIn {
+      right: 95px;
+      width: 375px;
+      height: 600px;
+      margin-bottom: 0px;
+      opacity: 1;
+      visibility: visible;
+    }
+    &.animation-open-fadeOut {
+      right: 20px;
+      width: 80px;
+      height: 128px;
+      margin-bottom: 450px;
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+}

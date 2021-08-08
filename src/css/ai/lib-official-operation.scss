@@ -1,0 +1,117 @@
+.group-s-title {
+  &.-higher {
+    height: 80px !important;
+    line-height: 0 !important;
+    padding: 20px;
+  }
+  &.-noneBorder {
+    border-bottom: none !important;
+  }
+}
+
+.list-operation-item {
+  width: calc(100% - 40px);
+  height: 48px;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  // transition: all 0.1s ease-out;
+  cursor: default;
+}
+
+.list-operation-item__left {
+  display: flex;
+  align-items: center;
+}
+
+.list-operation-item__img {
+  width: 30px;
+  height: 30px;
+  border-radius: 2px;
+  overflow: hidden;
+  margin-right: 10px;
+}
+
+.list-operation-item__text {
+  max-width: 160px;
+  font-size: 14px;
+  color: #333;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.list-operation-item__right {
+  position: relative;
+  &::before {
+    content: '';
+    display: none;
+    position: absolute;
+    height: 100%;
+    width: 80px;
+    top: 0;
+    right: 40px;
+    background: linear-gradient(to right, rgba(233, 238, 253, 0) 0%, rgba(233, 238, 253, 1) 100%);
+  }
+}
+
+.list-operation-item__num {
+  font-size: 12px;
+  color: #999;
+  display: block;
+}
+
+.list-operation-item__hover {
+  font-size: 20px;
+  color: #335de8;
+  display: none;
+  .iconfont {
+    cursor: pointer;
+    &:last-child {
+      margin-left: 6px;
+    }
+  }
+}
+
+.list-operation-item {
+  &:hover {
+    background-color: #e9eefd;
+    .list-operation-item__right::before {
+      display: inline-block;
+    }
+    .list-operation-item__num {
+      display: none;
+    }
+    .list-operation-item__hover {
+      display: block;
+    }
+  }
+  &.-active {
+    background-color: #ebedf3;
+    &:hover {
+      background-color: #ebedf3;
+    }
+  }
+}
+
+.mod-table-wrapper {
+  &.-bottom30 {
+    margin-bottom: 30px;
+  }
+  &.-cellFillHeight {
+    .mod-table-tbody .mod-table-cell {
+      height: 100%;
+      padding: 0 18px;
+    }
+  }
+  &.-textPadding {
+    .mod-table-header .mod-table-cell {
+      padding: 0px 20px;
+    }
+    .mod-table-tbody .mod-table-cell {
+      height: 100%;
+      padding: 18px 20px;
+    }
+  }
+}

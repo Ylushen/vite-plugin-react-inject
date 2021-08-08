@@ -1,0 +1,289 @@
+// 机器人管理
+.robot-manage {
+  padding-top: 50px;
+  height: calc(100vh - 56px);
+  box-sizing: border-box;
+  overflow-y: auto;
+  overflow-y: overlay;
+  overflow-x: hidden;
+
+  .robot-manage-inner {
+    max-width: 1892px;
+    margin: 0 auto;
+    font-size: 0px;
+  }
+
+  .robot-box {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 344px;
+    height: 190px;
+    background: #ffffff;
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.14);
+    margin: 0 15px;
+    vertical-align: top;
+    margin-bottom: 50px;
+    cursor: pointer;
+
+    &.current {
+      .robot-box-hd {
+        background: #ebedf3;
+
+        .robot-title {
+          color: #275cf0 !important;
+        }
+      }
+    }
+
+    &:hover {
+      border: 1px solid #275cf0;
+      // box-shadow: 0 2px 8px 0 rgba(204, 218, 255, 1);
+      .robot-box-hd {
+        background: #ccdaff;
+
+        .robot-title {
+          color: #275cf0 !important;
+        }
+      }
+    }
+
+    &.add {
+      background: #ffffff;
+      border: 1px dashed #e5e5e6;
+      box-shadow: none;
+      color: #265bed;
+      text-align: center;
+      box-sizing: border-box;
+      line-height: 190px;
+      cursor: pointer;
+      font-size: 16px;
+
+      &:hover {
+        border-color: #265bed;
+      }
+    }
+
+    &.-normal {
+      cursor: not-allowed;
+      .robot-box-hd {
+        .robot-id {
+          .robot-title {
+            color: #666666;
+          }
+        }
+      }
+      &:hover {
+        border: none;
+        .robot-box-hd {
+          background: #f7f7fa;
+          .robot-id {
+            .robot-title {
+              color: #666666 !important;
+            }
+          }
+        }
+      }
+    }
+
+    .robot-box-hd {
+      height: 65px;
+      background: #f7f7fa;
+      position: relative;
+
+      .robot-id {
+        text-align: center;
+        vertical-align: top;
+        height: 65px;
+        position: absolute;
+        top: -20px;
+        width: 100%;
+
+        .robot-avater {
+          display: inline-block;
+          width: 40px;
+          height: 40px;
+          line-height: 40px;
+          background: #ffffff;
+          border: 1px solid rgba(51, 51, 51, 0.1);
+          border-radius: 2px;
+          // overflow: hidden;
+          position: relative;
+
+          .icon-v {
+            font-size: 34px;
+            color: #265bed;
+          }
+          img {
+            display: block;
+            max-width: 100%;
+            width: 100%;
+            height: 100%;
+          }
+          .robot-avater-normal {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 48.2px;
+            height: 16.86px;
+            margin-left: -24.1px;
+            background-color: rgba(0, 0, 0, 0.4);
+            border-radius: 0px 0px 2px 2px;
+            font-size: 12px;
+            color: #ffffff;
+            text-align: center;
+            transform: scale(0.83);
+            transform-origin: center bottom;
+          }
+          // 鼠标移入显示语言提示
+          .info {
+            display: none;
+            position: absolute;
+            text-align: justify;
+            background: #ffffff;
+            box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.14);
+            color: #333333;
+            z-index: 99;
+            padding: 10px 0px 10px 10px;
+            cursor: auto;
+            user-select: text;
+            bottom: -10px;
+            left: 50px;
+            font-size: 12px;
+            line-height: 1;
+            white-space: nowrap;
+            &::before {
+              content: ' ';
+              width: 0;
+              height: 0;
+              top: 10px;
+              left: -12px;
+              border-left: 6px solid transparent;
+              border-right: 6px solid #fff;
+              border-top: 6px solid transparent;
+              border-bottom: 6px solid transparent;
+              position: absolute;
+            }
+            .txt {
+              display: inline-block;
+              line-height: 1;
+              font-size: 12px;
+              padding-right: 10px;
+              box-sizing: content-box;
+              min-width: 24px;
+            }
+          }
+          &:hover {
+            .info {
+              display: block;
+            }
+          }
+        }
+
+        .robot-title {
+          font-size: 18px;
+          color: #333333;
+          text-align: center;
+          margin-top: 6px;
+          @include text-overflow();
+          padding: 0 20px;
+          .dot {
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            position: relative;
+            top: -4px;
+            margin-right: 6px;
+          }
+        }
+      }
+    }
+
+    .robot-box-bd {
+      height: 125px;
+
+      .robot-info {
+        text-align: center;
+        font-size: 0;
+        padding: 29px 0;
+
+        .robot-info-item {
+          display: inline-block;
+          padding: 0 5px;
+          box-sizing: border-box;
+          width: 33.33333%;
+
+          .txt {
+            font-size: 14px;
+            color: #999999;
+            text-align: center;
+            @include text-overflow();
+          }
+
+          .num {
+            font-size: 28px;
+            color: #333333;
+            margin-top: 6px;
+            @include text-overflow();
+          }
+        }
+      }
+    }
+  }
+}
+
+// 企业设置-产品设置
+.product-settings {
+  .robot-manage {
+    height: calc(100vh - 56px - 48px);
+    .robot-box {
+      .robot-box-bd {
+        .robot-info {
+          .robot-info-item {
+            width: 50%;
+          }
+        }
+      }
+      &.online {
+        .robot-title {
+          .dot {
+            background: #76cc21;
+          }
+        }
+      }
+      &.offline {
+        .robot-title {
+          .dot {
+            background: #999999;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1892px) {
+  .robot-manage .robot-manage-inner {
+    width: 1526px;
+  }
+}
+@media (max-width: 1520px) {
+  .robot-manage .robot-manage-inner {
+    width: 1133px;
+  }
+}
+
+// 适配 企业设置-产品设置中的 robot-manage-inner
+@media (max-width: 2050px) {
+  .product-settings .robot-manage .robot-manage-inner {
+    width: 1526px;
+  }
+}
+@media (max-width: 1676px) {
+  .product-settings .robot-manage .robot-manage-inner {
+    width: 1133px;
+  }
+}

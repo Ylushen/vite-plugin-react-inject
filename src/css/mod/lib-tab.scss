@@ -1,0 +1,224 @@
+@import '../base/lib-mixin.scss';
+
+// tab 选项卡/标签栏组件
+.m-tabBar--normal {
+  position: relative;
+  &.-bottomLine {
+    &:after {
+      @include setBottomLine($c: #e5e5e6);
+    }
+  }
+  &.-bottom30 {
+    margin-bottom: 30px;
+  }
+  .m-tabBar__list {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+  .m-tabBar__item {
+    flex-shrink: 0;
+    padding: 10px 27px;
+    cursor: pointer;
+    text-align: center;
+    box-sizing: border-box;
+    &.-width120 {
+      width: 120px;
+    }
+    &.-current .m-tabBar__txt {
+      color: #000;
+      font-weight: bold;
+    }
+  }
+  .m-tabBar__txt {
+    font-size: 14px;
+    color: #999999;
+    line-height: 21px;
+  }
+  .m-tabBar--slider {
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    width: 62px;
+    height: 2px;
+    background: #265bed;
+    transition: transform 0.15s ease-in;
+    z-index: 1;
+  }
+}
+
+// 图表表格组件
+.kf-ai-table {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  background: #ffffff;
+  .table__title {
+    position: relative;
+    color: #000000;
+    display: flex;
+    font-size: 14px;
+    line-height: 28px;
+    padding: 9.5px 15px;
+    &:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      border-bottom: 1px solid #e5e5e6;
+    }
+    .iconfont {
+      cursor: pointer;
+      color: #acb2bf;
+      margin-left: 4px;
+      margin-top: 1px;
+      &:hover {
+        color: #275cf0;
+      }
+    }
+  }
+  .table__body {
+    position: relative;
+    &.-max-row-5 {
+      max-height: 260px;
+      overflow-x: hidden;
+      overflow-y: hidden;
+    }
+  }
+  .table__row {
+    display: flex;
+    padding: 16px 20px;
+    align-items: center;
+    font-size: 14px;
+    color: #000000;
+    &.-bgcoler {
+      background: #f7f9ff;
+    }
+  }
+  .table__col {
+    flex-basis: 0;
+    flex-grow: 1;
+    max-width: 100%;
+    margin-right: 12px;
+    font-size: 14px;
+    word-break: break-all;
+    @include ellipsis-lines($lines: 1);
+    &:last-child {
+      margin-right: 0;
+    }
+    &.-align-center {
+      text-align: center;
+    }
+    &.-align-right {
+      text-align: right;
+    }
+    &.-w80 {
+      flex: 0 0 80px;
+    }
+  }
+  .table__thead {
+    position: relative;
+    &:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      border-bottom: 1px solid #e5e5e6;
+    }
+    .table__row {
+      color: #999999;
+      padding: 8px 15px;
+    }
+  }
+  .more {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    max-width: 100%;
+    color: #666;
+    font-size: 14px;
+    padding: 12px 14px;
+    cursor: pointer;
+    &:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      border-top: 1px solid #e5e5e6;
+    }
+    .iconfont {
+      color: #ccc;
+      font-size: 14px;
+      margin-left: 4px;
+    }
+    &.-blue {
+      color: #265cf0;
+      .iconfont {
+        color: #265cf0;
+      }
+    }
+  }
+
+  .components {
+    &.select {
+      display: flex;
+      justify-content: flex-end;
+      flex: 1;
+      .select-block {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 86px;
+        height: 28px;
+        background-color: #f5f6fa;
+        border-radius: 14px;
+        margin-left: 8px;
+        .select-text {
+          @include text-overflow();
+          width: 48px;
+          height: 18px;
+          font-family: PingFangSC-Regular;
+          font-size: 12px;
+          color: #265cf0;
+          text-align: right;
+          line-height: 18px;
+        }
+        .iconfont {
+          transform: rotate(-90deg);
+          color: #265cf0;
+          font-size: 12px;
+          margin-left: 4px;
+        }
+      }
+    }
+  }
+
+  // 小型表格
+  &.-smallSize {
+    .table__title {
+      font-size: 16px;
+      padding: 12px 14px;
+    }
+    .table__row {
+      font-size: 14px;
+      padding: 12px 14px;
+    }
+    .table__body {
+      &.-max-row-5 {
+        max-height: 220px;
+      }
+    }
+    .more {
+      font-size: 14px;
+      padding: 12px 14px;
+      .iconfont {
+        font-size: 14px;
+        margin-left: 4px;
+      }
+    }
+  }
+}

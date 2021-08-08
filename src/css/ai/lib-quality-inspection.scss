@@ -1,0 +1,114 @@
+// 知识学习模块
+.quality-inspection {
+  padding: 0 40px;
+  .mod-input-serach {
+    padding-top: 30px;
+    min-width: 1074px;
+    cursor: default;
+    .left {
+      font-size: 14px;
+      .left__title {
+        font-weight: bold;
+        color: #000;
+      }
+      .left__tip {
+        display: flex;
+        align-items: center;
+        color: #666;
+        margin-top: 10px;
+      }
+      .left__tip-cor {
+        width: 4px;
+        height: 4px;
+        background-color: #265bed;
+        margin-right: 6px;
+      }
+    }
+    .right {
+      .ai-btn {
+        &:not(:first-child) {
+          margin-left: 20px;
+        }
+      }
+    }
+  }
+  .mod-table .mod-table-cell .info.left {
+    left: -476px;
+  }
+}
+
+.cell-link {
+  &.-inner {
+    padding: 6px 0;
+    margin-right: 0;
+    color: #666;
+    cursor: default;
+  }
+}
+
+.mod-table-row {
+  &.current_soft {
+    background-color: #f5f5f7;
+  }
+}
+
+.mod-table-tbody .cell-link {
+  cursor: default;
+  &.-disabled {
+    .txt {
+      color: #cccccc;
+    }
+    &::after {
+      border-color: #cccccc !important;
+    }
+    &:hover {
+      .txt {
+        color: #cccccc !important;
+      }
+      &::after {
+        border-color: #cccccc !important;
+      }
+    }
+  }
+}
+
+.view-table-wrap {
+  width: 456px;
+  font-size: 14px;
+  max-height: 312px;
+  overflow-x: hidden;
+  overflow-y: overlay;
+  margin-right: 10px;
+}
+
+.view-table-header,
+.view-table-row {
+  display: grid;
+  grid-template-columns: 288px 116px 52px;
+}
+
+.view-table-header {
+  border-bottom: 1px solid #e5e5e6;
+  font-weight: bold;
+}
+
+.view-table-header-item,
+.view-table-row {
+  max-width: 100%;
+  padding: 10px 12px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.view-table-row-item {
+  color: #666;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.view-table-row-item__link {
+  cursor: pointer;
+  color: #265cf0;
+}

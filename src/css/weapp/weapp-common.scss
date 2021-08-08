@@ -1,0 +1,151 @@
+/***  内嵌小程序通用样式  ***/
+
+#yzfWeapp {
+  // 通用图片样式
+  .weapp-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  // 公用底部模块
+  .footer {
+    display: flex;
+    height: 30px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  // 模块元素
+  .innerWeapp-item--ele {
+    position: relative;
+    box-sizing: border-box;
+    &:hover .innerWeapp-item--fullWidth {
+      &:after {
+        border-color: #265cf0;
+      }
+      .innerWeapp-item--optionWrap {
+        visibility: visible;
+      }
+    }
+  }
+  // 模块元素选中态
+  .innerWeapp-item--current {
+    .innerWeapp-item--fullWidth:after {
+      border-style: solid !important;
+      border-color: #265cf0;
+    }
+  }
+  // 模块元素拖拽进手机占位状态
+  .innerWeapp-item--drag {
+    .innerWeapp-item--fullWidth:after {
+      border-style: solid;
+      border-color: #265cf0;
+      background: rgba(38, 92, 240, 0.2);
+    }
+    // 错误样式
+    &.innerWeapp-item--drag-error {
+      .innerWeapp-item--fullWidth:after {
+        border-color: #ed4343;
+        background: rgba(237, 67, 67, 0.2);
+      }
+    }
+    &:hover {
+      .innerWeapp-item--optionWrap {
+        visibility: hidden;
+      }
+    }
+  }
+  .innerWeapp-item--drag-errorText {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    padding: 0 40px;
+    box-sizing: border-box;
+    font-size: 14px;
+    color: #ed4343;
+    text-align: center;
+    z-index: 1;
+  }
+  // innerWeapp-item--fullWidth 放置选中和悬浮的边框线条和操作按钮
+  .innerWeapp-item--fullWidth {
+    position: absolute;
+    width: 375px;
+    height: 100%;
+    left: 50%;
+    top: 0;
+    margin-left: -187.5px;
+    &:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      border: 1px dashed transparent;
+      border-radius: 4px;
+      box-sizing: border-box;
+      pointer-events: none;
+      z-index: 11;
+    }
+    &:hover {
+      &:after {
+        border-color: #265cf0;
+      }
+      .innerWeapp-item--optionWrap {
+        visibility: visible;
+      }
+    }
+  }
+
+  // 模块元素的操作区
+  .innerWeapp-item--optionWrap {
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding-left: 8px;
+    transform: translateX(44px);
+    display: flex;
+    flex-direction: column;
+    transition: opacity 0.2s ease-in;
+  }
+  // 模块元素的操作区按钮
+  .innerWeapp-item--btn {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    // padding: 10px;
+    // width: 40px;
+    // height: 40px;
+    background: #265cf0;
+    border-radius: 4px;
+    box-sizing: border-box;
+    cursor: pointer;
+    .iconfont {
+      padding: 10px;
+      font-size: 20px;
+      line-height: 1;
+      color: #fff;
+      &.-disabled {
+        opacity: 0.3;
+        cursor: not-allowed;
+      }
+      &:not(:first-child) {
+        padding-top: 0px;
+      }
+    }
+    &:not(:first-child) {
+      margin-top: 4px;
+    }
+  }
+
+  // 模块元素内容区域
+  .innerWeapp-item--eleContent {
+    position: relative;
+    &.-paddingBottom {
+      padding-bottom: 16px;
+    }
+  }
+}

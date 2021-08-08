@@ -1,0 +1,1164 @@
+// 知识学习模块
+.knowledge-learn {
+  padding: 0 40px;
+  .mod-input-serach {
+    min-width: 1074px;
+    .right {
+      .ai-btn {
+        &:not(:first-child) {
+          margin-left: 20px;
+        }
+      }
+    }
+  }
+}
+
+// 发布知识
+.release-article {
+  .release-article-content {
+    position: relative;
+    height: calc(100vh - 56px - 48px - 80px);
+    min-height: calc(463px - 48px - 80px);
+    padding: 20px 0px;
+    box-sizing: border-box;
+    display: flex;
+    .kf-radio ~ span {
+      min-width: 98px !important;
+    }
+  }
+  .release-article-left {
+    width: 1100px;
+    padding: 0px 40px;
+    box-sizing: border-box;
+    .kf-ai-form-item {
+      font-size: 0px;
+    }
+  }
+  .release-article-right {
+    width: 640px;
+    min-width: 480px;
+    // height: 100%;
+    padding: 0px 40px;
+    overflow-y: auto;
+    overflow-y: overlay;
+    overflow-x: hidden;
+    border-left: 1px solid #e5e5e6;
+    box-sizing: border-box;
+    .kf-ai-form-item-label .iconfont .title-words .title-txt {
+      &:last-child {
+        margin-bottom: 0px;
+      }
+    }
+  }
+  .release-article-bottom {
+    position: relative;
+    height: 80px;
+    border-top: 1px solid #e5e5e6;
+    box-sizing: border-box;
+    padding: 0px 20px;
+    background: #fff;
+    .btn-area,
+    .btn-area__left,
+    .btn-area__right {
+      height: 100%;
+      display: flex;
+      align-items: center;
+    }
+    .btn-area {
+      justify-content: space-between;
+    }
+    .btn-area__right {
+      justify-content: flex-end;
+      .ai-btn {
+        &:not(:first-child) {
+          margin-left: 20px;
+        }
+      }
+    }
+    // .kf-ai-form-item-label .iconfont .title-words {
+    //     top: -64px;
+    // }
+    .btn-area__select {
+      width: 240px;
+      margin-left: 10px;
+    }
+  }
+  .kf-ai-form.kf-ai-label-left .kf-ai-form-item-label {
+    margin-bottom: 4px;
+    .iconfont .title-words {
+      width: 350px;
+    }
+  }
+  .kf-ai-rich-text {
+    height: calc(100vh - 56px - 48px - 80px - 40px - 60px - 40px);
+    // min-height: calc(463px - 48px - 80px - 40px - 60px - 40px);
+  }
+  // 发布文章页面中的添加试题
+  .add-topic-area .add-topic--normal {
+    // height: 60px;
+    margin-right: 0px;
+  }
+  // 发布文章页面中的试题列表
+  .release-article--topicList {
+    position: relative;
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+  .release-article--topicItem {
+    position: relative;
+    padding: 20px;
+    background: #e0e8ff;
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+    .topic-label {
+      font-size: 14px;
+      color: #666666;
+      line-height: 21px;
+      margin-bottom: 4px;
+    }
+    .topic-title {
+      font-size: 14px;
+      color: #666666;
+      line-height: 21px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      word-break: break-all;
+      word-wrap: break-word;
+      white-space: normal;
+    }
+    .topicItem__ft {
+      display: flex;
+    }
+    .topic-options {
+      display: flex;
+      margin-left: auto;
+      margin-top: 4px;
+    }
+    .option-btn {
+      font-size: 14px;
+      color: #265cf0;
+      text-align: left;
+      line-height: 21px;
+      cursor: pointer;
+      &:not(:last-child) {
+        margin-right: 20px;
+      }
+    }
+  }
+}
+// 1920px以上的屏幕
+@media (min-width: 1920px) {
+  .release-article {
+    .release-article-content {
+      display: block;
+    }
+    .release-article-left {
+      width: 100%;
+      padding-right: calc(640px + 40px);
+      box-sizing: border-box;
+    }
+    .release-article-right {
+      position: absolute;
+      top: 20px;
+      bottom: 20px;
+      right: 0px;
+    }
+  }
+}
+
+// 考试列表
+.exam-list {
+  padding: 0 40px;
+  .mod-input-serach {
+    min-width: 1074px;
+    .right {
+      .ai-btn {
+        &:not(:first-child) {
+          margin-left: 20px;
+        }
+      }
+    }
+  }
+  .ai-btn-white {
+    color: #ffffff;
+    background-color: #265cf0;
+  }
+  .mod-table {
+    .mod-table-body {
+      .mod-table-cell {
+        position: relative;
+        &.mod-table-cell-padding {
+          padding-left: 8px;
+          padding-right: 8px;
+          .blue {
+            color: #265cf0;
+            cursor: pointer;
+            padding: 0 10px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// 考试列表-新建考试
+.create-exam {
+  height: calc(100vh - 56px - 48px);
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  .create-exam__bd {
+    width: 100%;
+    padding: 20px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    overflow-x: hidden;
+    overflow-y: auto;
+    overflow-y: overlay;
+    box-sizing: border-box;
+  }
+  .create-exam__ft {
+    width: 100%;
+    position: relative;
+    flex-shrink: 0;
+    &:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      border-top: 1px solid #e5e5e6;
+    }
+    .right {
+      display: flex;
+      align-items: center;
+      float: right;
+    }
+    .btn-area {
+      display: flex;
+      align-items: center;
+    }
+    .ai-btn {
+      margin-top: 20px;
+      margin-bottom: 20px;
+      margin-right: 20px;
+    }
+    .desc-wrap {
+      height: 80px;
+      display: flex;
+      flex-direction: column;
+      margin-right: 20px;
+      align-items: flex-end;
+      justify-content: center;
+    }
+    .desc-wrap__txt {
+      font-size: 14px;
+      color: #000000;
+    }
+    .desc-wrap__desc {
+      font-size: 12px;
+      color: #999999;
+    }
+  }
+  .exam-edit__input {
+    width: 1000px;
+  }
+  .exam-edit__add {
+    width: 1000px;
+    .img-uploader .img {
+      width: 100%;
+      height: 120px;
+      .wait-uploader {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .iconfont {
+        display: inline-flex;
+        position: unset;
+        left: unset;
+        top: unset;
+        transform: unset;
+        width: auto;
+        height: auto;
+        font-size: 24px;
+        color: #000;
+      }
+      .uploader-txt {
+        display: inline-flex;
+        position: unset;
+        left: unset;
+        bottom: unset;
+        transform: unset;
+        font-size: 16px;
+        color: #999;
+      }
+    }
+  }
+
+  // 考试试题列表
+  .exam-topic--list {
+    position: relative;
+    width: 100%;
+  }
+  .exam-topic--item {
+    position: relative;
+    margin-bottom: 20px;
+    background: #fafafb;
+    border: 1px solid #e5e5e6;
+    &.-is-complete {
+      background: #fff;
+    }
+  }
+  .item-title {
+    padding: 20px 20px;
+    font-size: 16px;
+    color: #000000;
+    line-height: 21px;
+  }
+
+  // 编辑状态
+  .topic-edit__before {
+    padding: 0px 20px;
+    .kf-ai-form-item {
+      &:last-child {
+        margin-bottom: 0px;
+      }
+    }
+    .btn-area {
+      padding: 20px 0px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      .ai-btn:not(:last-child) {
+        margin-right: 20px;
+      }
+    }
+  }
+  // 非编辑状态
+  .topic-edit__after {
+    .after__content {
+      padding: 0px 20px;
+    }
+  }
+  .exam-topic__title {
+    font-size: 14px;
+    color: #000000;
+    line-height: 21px;
+    margin-bottom: 20px;
+    word-break: break-all;
+    word-wrap: normal;
+    white-space: normal;
+  }
+  .exam-topic__editBtn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    .iconfont {
+      font-size: 20px;
+      color: #275cf0;
+      cursor: pointer;
+      &:not(:last-child) {
+        margin-right: 16px;
+      }
+      &.-disabled {
+        opacity: 0.2;
+        cursor: not-allowed;
+      }
+    }
+  }
+  .exam-topic__optionsList {
+    margin-bottom: 20px;
+  }
+  // 非编辑状态-底部提示栏
+  .exam-topic__bottomTips {
+    display: flex;
+    width: 100%;
+    padding: 0px 20px;
+    height: 40px;
+    background: #f7f7fa;
+    box-sizing: border-box;
+    .left {
+      display: flex;
+      align-items: center;
+      margin-right: auto;
+    }
+    .right {
+      display: flex;
+      align-items: center;
+    }
+  }
+  .resolve-wrap {
+    position: relative;
+    display: flex;
+    align-items: center;
+    .resolve-txt {
+      font-size: 14px;
+      color: #000000;
+      line-height: 40px;
+      padding: 0px 6px;
+    }
+    .m-info {
+      display: none;
+      width: 236px;
+    }
+    &:hover {
+      .resolve-txt {
+        color: #265cf0;
+      }
+      .m-info {
+        display: block;
+      }
+    }
+  }
+
+  // 考试创建完成，进入发布状态页面
+  &.-publish {
+    .create-exam__bd {
+      flex-direction: row;
+      align-items: unset;
+    }
+    .exam-topic--item {
+      border: none;
+      .after__content {
+        padding: 0;
+      }
+    }
+    .exam-topic__editBtn {
+      display: none;
+    }
+  }
+  .create-exam__left {
+    width: 1100px;
+    padding: 0px 40px;
+    overflow-y: auto;
+    overflow-y: overlay;
+    overflow-x: hidden;
+    box-sizing: border-box;
+  }
+  .create-exam__right {
+    width: 640px;
+    min-width: 480px;
+    // height: 100%;
+    padding: 0px 40px;
+    overflow-y: auto;
+    overflow-y: overlay;
+    overflow-x: hidden;
+    border-left: 1px solid #e5e5e6;
+    box-sizing: border-box;
+  }
+  .exam-topic--titleWrap {
+    position: relative;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    &:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      border-bottom: 1px solid #e5e5e6;
+    }
+    .exam-topic--title {
+      font-size: 16px;
+      // font-weight: bold;
+      color: #000000;
+      text-align: left;
+      line-height: 21px;
+    }
+    .exam-topic--desc {
+      margin-top: 10px;
+      font-size: 14px;
+      color: #666666;
+      line-height: 21px;
+    }
+  }
+  .exam-publish-setting {
+    .setting-title {
+      font-size: 16px;
+      font-weight: bold;
+      color: #000000;
+      text-align: left;
+      line-height: 21px;
+      margin-bottom: 20px;
+    }
+  }
+  .exam-edit__input {
+    padding: 0 20px;
+    max-width: 1000px;
+    min-width: 1000px;
+    width: auto;
+    margin-right: 0;
+  }
+  .exam-topic__bottomTips {
+    height: 52px;
+  }
+  .kf-radio-input-blue {
+    color: #265cf0;
+  }
+  .kf-radio-input-red {
+    color: #ed4343;
+  }
+  &.exam-scoring {
+    .exam-topic__editBtn {
+      display: none;
+    }
+    .exam-topic--item {
+      .after__content {
+        padding: 0 20px;
+        .exam-topic__title {
+          margin-top: 20px;
+          &.exam-topic__title-point {
+            margin-bottom: 10px;
+            display: flex;
+          }
+        }
+      }
+      &.-is-complete {
+        border: 1px solid #e5e5e6;
+      }
+    }
+    display: flex;
+    flex-direction: row;
+    .exam-scoring-title {
+      font-family: PingFangSC-Medium;
+      font-size: 16px;
+      color: #000000;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #e5e5e6;
+    }
+    .exam-scoring-title-btn {
+      margin: 20px 0;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      height: 40px;
+      padding: 0 20px;
+      background-color: #e6ecff;
+      font-size: 14px;
+      color: #000000;
+      .exam-scoring-title-btn-left {
+        flex: 1;
+      }
+      .iconfont {
+        transform: rotate(90deg);
+        transform-origin: center center;
+        margin-left: 6px;
+        color: #999999;
+        &.icon-rotate {
+          transform: rotate(-90deg);
+        }
+      }
+    }
+    .scoring-list {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      min-height: 0;
+      width: 240px;
+      height: 100%;
+      border-right: 1px solid #e5e5e6;
+      .scoring-list-content {
+        width: 240px;
+        box-sizing: border-box;
+        display: flex;
+        padding: 14px 20px;
+        font-size: 14px;
+        color: #000000;
+        align-items: center;
+        cursor: pointer;
+        &:hover {
+          background-color: #f2f4f7;
+        }
+        &.scoring-list-content-title {
+          display: flex;
+          justify-content: space-between;
+          color: #999999;
+          border-bottom: 1px solid #e5e5e6;
+          cursor: auto;
+          &:hover {
+            background-color: transparent;
+          }
+          .scoring-list-btns {
+            &.-action {
+              font-family: PingFangSC-Medium;
+              color: #333333;
+              span {
+                position: relative;
+                &::after {
+                  content: '';
+                  position: absolute;
+                  bottom: -14px;
+                  left: 0;
+                  width: 100%;
+                  height: 2px;
+                  background-color: #265cf0;
+                  border-radius: 1px;
+                }
+              }
+            }
+          }
+          .scoring-list-left {
+            display: flex;
+            justify-content: center;
+            color: #999999;
+            margin-left: 7px;
+            flex: none;
+          }
+          .scoring-list-right {
+            display: flex;
+            justify-content: center;
+            font-size: 14px;
+            margin-right: 7px;
+          }
+        }
+        .scoring-list-left {
+          position: relative;
+          display: flex;
+          flex: 1;
+          justify-content: flex-start;
+          color: #000000;
+        }
+        .scoring-list-right {
+          display: flex;
+          position: relative;
+          color: #999999;
+          font-size: 12px;
+          &.redBall {
+            ::after {
+              content: '';
+              position: absolute;
+              left: -9px;
+              top: 50%;
+              width: 5px;
+              height: 5px;
+              margin-top: -2.5px;
+              background-color: #ed4343;
+              border-radius: 50%;
+            }
+          }
+        }
+      }
+      .scorll-scoring-list {
+        flex: 1;
+        overflow-y: auto;
+        overflow-x: hidden;
+      }
+      .scoring-list-content-loading {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 40px;
+        font-size: 14px;
+        color: #cccccc;
+        letter-spacing: 0;
+        border-top: 1px solid #e5e5e6;
+        position: absolute;
+        bottom: 0;
+        left: 0px;
+        width: 100%;
+        background-color: #ffffff;
+        .icon-181 {
+          margin-right: 7px;
+          font-size: 18px;
+          color: #265cf0;
+          animation: loading-spin 1s linear infinite;
+        }
+      }
+    }
+    .scoring-content {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      flex: 1;
+      justify-content: center;
+      height: 100%;
+      overflow: hidden;
+    }
+  }
+
+  &.-publish {
+    .exam-topic--item {
+      .after__content {
+        padding: 0 20px;
+        .exam-topic__title {
+          margin-top: 20px;
+        }
+      }
+      &.-is-complete {
+        border: 1px solid #e5e5e6;
+      }
+    }
+  }
+  .kf-ai-point-content {
+    // padding: 0.5px 25.5px;
+    // background-size: 100% 100%;
+    // display: inline;
+    padding: 0 5px;
+    color: #cccccc;
+    border-bottom: 1px solid #cccccc;
+  }
+  .kf-ai-point-content1 {
+    padding: 0.5px 25.5px;
+    background-size: 100% 100%;
+    display: inline;
+    background-image: url(../img/exam/exam01.png);
+  }
+  .kf-ai-point-content2 {
+    padding: 0.5px 25.5px;
+    background-size: 100% 100%;
+    display: inline;
+    background-image: url(../img/exam/exam02.png);
+  }
+  .kf-ai-point-content3 {
+    padding: 0.5px 25.5px;
+    background-size: 100% 100%;
+    display: inline;
+    background-image: url(../img/exam/exam03.png);
+  }
+  .kf-ai-point-content4 {
+    padding: 0.5px 25.5px;
+    background-size: 100% 100%;
+    display: inline;
+    background-image: url(../img/exam/exam04.png);
+  }
+  .kf-ai-point-content5 {
+    padding: 0.5px 25.5px;
+    background-size: 100% 100%;
+    display: inline;
+    background-image: url(../img/exam/exam05.png);
+  }
+  .kf-ai-point-content6 {
+    padding: 0.5px 25.5px;
+    background-size: 100% 100%;
+    display: inline;
+    background-image: url(../img/exam/exam06.png);
+  }
+  .kf-ai-point-content7 {
+    padding: 0.5px 25.5px;
+    background-size: 100% 100%;
+    display: inline;
+    background-image: url(../img/exam/exam07.png);
+  }
+  .kf-ai-point-content8 {
+    padding: 0.5px 25.5px;
+    background-size: 100% 100%;
+    display: inline;
+    background-image: url(../img/exam/exam08.png);
+  }
+  .kf-ai-point-content9 {
+    padding: 0.5px 25.5px;
+    background-size: 100% 100%;
+    display: inline;
+    background-image: url(../img/exam/exam09.png);
+  }
+  .kf-ai-point-content10 {
+    padding: 0.5px 25.5px;
+    background-size: 100% 100%;
+    display: inline;
+    background-image: url(../img/exam/exam10.png);
+  }
+  .exam-answer__title {
+    margin-bottom: 0;
+  }
+  .exam-answer {
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    line-height: 21px;
+    > i {
+      width: 48px;
+      height: 18px;
+      margin-right: 8px;
+      display: inline-block;
+    }
+    .exam-answer-header {
+      position: absolute;
+      top: 1px;
+      left: 0;
+      display: inline-block;
+      padding: 2px 4px;
+      width: 48px;
+      height: 18px;
+      line-height: 18px;
+      border: 1px solid #9ba2b1;
+      border-radius: 2px;
+      font-size: 12px;
+      color: #9ba2b1;
+      text-align: center;
+      transform: scale(0.8);
+      transform-origin: left center;
+    }
+  }
+  .exam-topic__title {
+    .point_fill {
+      display: inline-block;
+      height: 20px;
+      min-width: 40px;
+      padding: 0 5px;
+      box-sizing: border-box;
+      text-align: center;
+      margin: 0 5px;
+      border-bottom: 1px solid #000000;
+    }
+  }
+  .kf-ai-input-wrapper-point {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    &:first-child {
+      margin-top: 0;
+    }
+    .kf-ai-input-wrapper-point-text {
+      width: 45px;
+      margin-right: 6px;
+    }
+    .icon-del {
+      margin-left: 20px;
+      font-size: 18px;
+      color: #ed4343;
+      cursor: pointer;
+    }
+  }
+  .kf-ai-point-button {
+    cursor: pointer;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+    height: 40px;
+    background-color: #265cf0;
+    font-size: 14px;
+    color: #ffffff;
+    letter-spacing: 0;
+    border: none;
+  }
+  .kf-radio {
+    .kf-radio-input {
+      + .kf-checkout-inner,
+      + .kf-radio-inner {
+        .icon-116 {
+          display: none;
+        }
+      }
+    }
+    .kf-checkout-inner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 14px;
+      height: 14px;
+      position: relative;
+      top: 0;
+      left: 0;
+      background-color: #fff;
+      border: 1px solid #dddee1;
+      border-radius: 2px;
+      vertical-align: top;
+      transition: all 0.2s ease-in-out;
+    }
+    .kf-radio-input:checked + .kf-checkout-inner {
+      .icon-116 {
+        display: inline;
+        font-size: 12px;
+        color: #ffffff;
+      }
+    }
+  }
+
+  .exam-topic__editBtn {
+    top: 11px;
+  }
+  .item-title {
+    position: relative;
+    font-family: PingFangSC-Medium;
+    margin-bottom: 15px;
+    padding: 12px 20px;
+    &::after {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: 0 20px;
+      border-bottom: 1px solid #e5e5e6;
+      content: '';
+    }
+
+    .icon-329 {
+      margin-right: 10px;
+      color: #cccccc;
+    }
+    &.item-title-move {
+      cursor: move;
+      &:hover {
+        background-color: rgba(255, 85, 0, 0.3);
+      }
+    }
+  }
+  .resolve-wrap {
+    .resolve-txt {
+      position: relative;
+      // border-bottom: 1px dashed #666666;
+      line-height: normal;
+      padding: 0;
+      color: #666666;
+      ::after {
+        content: '';
+        position: absolute;
+        bottom: -2px;
+        right: 0;
+        left: 0;
+        margin: 0 1.5px;
+        border-bottom: 1px dashed #666666;
+      }
+      &:hover {
+        color: #265cf0;
+        ::after {
+          border-bottom-color: #265cf0;
+        }
+      }
+    }
+  }
+  .resolve-wrap {
+    .m-info {
+      right: -10px;
+      top: -2px;
+      .txt {
+        font-size: 14px;
+        color: #000000;
+        letter-spacing: 0;
+        text-align: justify;
+        line-height: 21px;
+        padding: 10px 12px;
+      }
+    }
+  }
+  .label-tips {
+    color: #666666;
+    .label-tips__txt {
+      color: #000000;
+    }
+    &.label-tips-ques {
+      margin-left: 20px;
+    }
+  }
+  .options-item {
+    .options {
+      .iconfont {
+        &.icon-add {
+          margin-left: 20px;
+        }
+      }
+      .kf-radio-wrapper {
+        margin-left: 40px;
+        margin-right: 25px;
+      }
+    }
+  }
+  .kf-ai-input-wrapper {
+    &.-error {
+      .kf-ai-input {
+        border: 1px solid #ef5c62;
+      }
+    }
+    .kf-ai-input {
+      padding-left: 10px;
+    }
+    &.width240 {
+      width: 240px;
+    }
+  }
+  .topic-edit__before {
+    .ai-btn {
+      min-width: 90px;
+    }
+  }
+  .add-topic--normal {
+    .after-content {
+      .btn-area {
+        .ai-btn {
+          text-align: center;
+          min-width: 90px;
+        }
+      }
+    }
+  }
+  .kf-ai-form-item-number-tip {
+    margin-bottom: 10px;
+    padding: 0 10px;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    height: 40px;
+    background-color: #f7f7fa;
+    justify-content: space-between;
+    .kf-ai-form-item-tip-number {
+      font-size: 14px;
+      color: #999999;
+    }
+  }
+}
+
+// 题目选项
+.exam-topic__optionsList {
+  .exam-topic__optionsItem {
+    font-size: 14px;
+    color: #333333;
+    line-height: 21px;
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+  .kf-radio-wrapper {
+    word-break: break-all;
+    word-wrap: normal;
+    white-space: normal;
+  }
+}
+
+// 试题库列表
+.topic-bank-list {
+  padding: 0 40px;
+  .mod-input-serach {
+    min-width: 1074px;
+    .right {
+      .ai-btn {
+        &:not(:first-child) {
+          margin-left: 20px;
+        }
+      }
+    }
+  }
+  .topic-bank-area {
+    position: relative;
+    padding: 0px;
+  }
+  .topic-bank-content {
+    position: relative;
+    height: calc(100vh - 56px - 48px - 80px - 88px);
+    overflow-x: hidden;
+    overflow-y: auto;
+    overflow-y: overlay;
+  }
+  .knowledge-box--list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .knowledge-box {
+    flex-shrink: 0;
+    flex-grow: 0;
+    width: 344px;
+    height: 190px;
+    margin-bottom: 40px;
+    margin-right: 40px;
+    .knowledge-box-hd {
+      display: flex;
+      align-items: center;
+      // padding: 20px 0px;
+      height: 65px;
+      .left {
+        font-weight: bold;
+        font-size: 16px;
+        color: #000000;
+        line-height: 24px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+      }
+    }
+    .knowledge-box-bd {
+      padding: 10px 20px 20px;
+      height: unset;
+      .content .list-item {
+        color: #666;
+        line-height: 19px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        &.desc-item {
+          color: #999999;
+          line-height: 16px;
+        }
+      }
+    }
+    .knowledge-box-ft {
+      display: flex;
+      align-items: center;
+      height: 32px;
+      margin-bottom: 18px;
+      .left {
+        .switch {
+          margin-top: unset;
+        }
+      }
+      .right {
+        margin-left: auto;
+        .ai-btn {
+          min-width: 76px;
+          padding: 5px 10px;
+        }
+      }
+    }
+  }
+}
+
+// 14000px以下的屏幕
+@media (max-width: 1400px) {
+  .create-exam {
+    .exam-edit__input,
+    .exam-edit__add {
+      margin-right: 50px;
+    }
+  }
+}
+
+// 1920px以上的屏幕
+@media (min-width: 1920px) {
+  .create-exam {
+    .create-exam__left {
+      width: 100%;
+      padding-right: calc(640px + 40px);
+      box-sizing: border-box;
+    }
+    .create-exam__right {
+      position: absolute;
+      top: 20px;
+      bottom: 100px;
+      right: 0px;
+    }
+  }
+}
+
+// 插入图片弹窗
+.add-photo--modal {
+  min-height: 212px;
+  padding-bottom: 20px !important;
+  .img-uploader {
+    .img {
+      margin-right: 8.6px;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+// 添加工单弹窗
+.add-order--modal {
+  width: calc(480px - 40px);
+  padding: 20px 20px 0;
+}

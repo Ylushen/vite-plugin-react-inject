@@ -1,0 +1,33 @@
+// 右侧边栏弹窗动画
+.dialog__slide {
+  left: auto;
+  top: auto;
+  bottom: 0;
+  right: 0;
+  transform: translateX(100%);
+}
+.dialog__slide-right-in {
+  animation: dialog__slide-right-in 0.5s ease forwards;
+}
+
+.dialog__slide-right-out {
+  animation: dialog__slide-right-out 0.5s ease forwards;
+}
+
+@keyframes dialog__slide-right-in {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes dialog__slide-right-out {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}

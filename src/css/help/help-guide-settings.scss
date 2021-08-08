@@ -1,0 +1,355 @@
+.help-guide-settings {
+  width: 100%;
+
+  .icon-213 {
+    top: 40px;
+    right: 40px;
+    opacity: 0.5;
+    color: #333;
+    font-size: 32px;
+    position: absolute;
+    cursor: pointer;
+  }
+
+  .help-guide-settings-main {
+    width: 1184px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 40px;
+
+    .help-guide-settings-header {
+      margin-top: 30px;
+      margin-bottom: 50px;
+
+      .help-bread-menu {
+        li {
+          color: #666;
+          margin-right: 24px;
+          position: relative;
+          display: inline-block;
+          cursor: pointer;
+
+          &:before {
+            content: ' ';
+            width: 8px;
+            height: 8px;
+            display: inline-block;
+            border-width: 1px 1px 0 0;
+            border-color: #999;
+            border-style: solid;
+            -webkit-transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+            transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+            position: absolute;
+            top: 50%;
+            margin-top: -4px;
+            right: -18px;
+            cursor: default;
+          }
+
+          &:last-child:before {
+            display: none;
+          }
+
+          &:last-child {
+            color: #333;
+            font-weight: 600;
+            cursor: default;
+          }
+        }
+      }
+    }
+
+    .help-guide-settings-content {
+      font-size: 0;
+
+      .settings-progress {
+        width: 334px;
+        font-size: 18px;
+        vertical-align: top;
+        display: inline-block;
+
+        .progress-bar {
+          width: 80%;
+          top: 60px;
+          position: relative;
+
+          .step {
+            height: 231px;
+            margin-left: 28px;
+            position: absolute;
+            background: url('../img/line.png');
+            background-size: 1px 231px;
+            background-repeat: no-repeat;
+
+            &:nth-child(1) {
+              top: 0;
+            }
+
+            &:nth-child(2) {
+              top: 231px;
+            }
+
+            &:nth-child(3) {
+              top: 462px;
+            }
+
+            &:nth-child(4) {
+              top: 693px;
+            }
+
+            &:last-child {
+              background: none;
+            }
+
+            img {
+              width: 24px;
+              height: 24px;
+              position: relative;
+              margin-left: -12px;
+              display: inline-block;
+              background: #fafafb;
+              vertical-align: top;
+            }
+
+            .step-label {
+              top: -3px;
+              color: #666;
+              font-size: 18px;
+              margin-left: 10px;
+              position: relative;
+              vertical-align: middle;
+            }
+          }
+        }
+      }
+
+      .float-menu {
+        width: 850px;
+        font-size: 14px;
+        vertical-align: top;
+        display: inline-block;
+
+        .step-menu {
+          font-size: 0;
+          height: 220px;
+          margin-bottom: 10px;
+
+          .card {
+            width: 190px;
+            height: 220px;
+            text-align: center;
+            display: inline-block;
+            vertical-align: top;
+            padding: 30px 0 0 0;
+            box-sizing: border-box;
+            cursor: pointer;
+            margin-right: 30px;
+
+            &:last-child {
+              margin-right: 0;
+            }
+
+            & > span {
+              display: block;
+            }
+
+            .card-icon {
+              width: 56px;
+              height: 56px;
+              margin: 0 auto;
+
+              .iconfont {
+                display: none;
+                top: -2px;
+                position: relative;
+              }
+
+              img {
+                width: 56px;
+                height: 56px;
+                display: inline-block;
+              }
+            }
+
+            .card-title {
+              color: #000;
+              font-size: 16px;
+              width: 152px;
+              margin: 10px auto 0 auto;
+
+              span {
+                max-width: 126px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                vertical-align: top;
+                display: inline-block;
+
+                &:hover {
+                  color: #275cf0;
+                  display: inline-block;
+                }
+              }
+
+              .icon-218 {
+                font-size: 20px;
+                margin-left: 6px;
+                color: #9ba2b1;
+                position: relative;
+                display: inline-block;
+              }
+            }
+
+            .card-abs {
+              color: #999;
+              font-size: 14px;
+              line-height: 1.5;
+              width: 140px;
+              margin: 12px 26px 0 26px;
+              @include ellipsis-lines($lines: 3);
+              white-space: break-spaces;
+            }
+
+            .watch-video {
+              display: none;
+            }
+
+            &.with-video {
+              .card-title {
+                height: 21px;
+                left: 13px;
+                position: relative;
+              }
+            }
+
+            &.mini-program {
+              cursor: default;
+              padding-top: 30px;
+
+              .card-title {
+                left: 13px;
+                position: relative;
+                span:hover {
+                  color: #000;
+                }
+              }
+
+              .watch-video {
+                cursor: pointer;
+              }
+            }
+
+            &:hover {
+              background: #fff;
+              position: relative;
+              box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.14);
+
+              .card-title {
+                left: 0;
+
+                .icon-218 {
+                  display: none;
+                }
+              }
+
+              &.mini-program {
+                padding-top: 10px;
+
+                .card-icon {
+                  display: none;
+                }
+
+                .card-abs {
+                  display: none;
+                }
+
+                .mini-program-img {
+                  width: 110px;
+                  height: 110px;
+                  margin-top: 10px;
+                  display: inline-block;
+                  background: url('../img/mini-program-white.png');
+                }
+              }
+
+              .watch-video {
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                padding-top: 15px;
+                padding-bottom: 15px;
+                position: absolute;
+                color: #666;
+                display: inline-block;
+                background: #fafafb;
+                z-index: 22;
+                font-size: 14px;
+
+                .icon-219 {
+                  top: 1px;
+                  margin-right: 6px;
+                  position: relative;
+                }
+
+                &:hover {
+                  color: #275cf0;
+                }
+              }
+            }
+
+            &.card-disabled {
+              background: #fafafb;
+              box-shadow: none;
+              position: relative;
+
+              .card-icon {
+                .iconfont {
+                  color: #caced6;
+                  font-size: 56px;
+                  display: inline-block;
+                }
+
+                img {
+                  display: none;
+                }
+              }
+
+              .card-title {
+                color: #999;
+
+                .iconfont {
+                  display: inline-block;
+                }
+
+                span:hover {
+                  color: #999;
+                  display: inline-block;
+                }
+              }
+
+              .card-abs {
+                color: #ccc;
+              }
+
+              .watch-video {
+                display: none;
+              }
+
+              &:hover {
+                .card-title {
+                  left: 13px;
+                }
+
+                .suspend {
+                  top: 130px;
+                  margin-left: -40px;
+                  display: inline-block;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

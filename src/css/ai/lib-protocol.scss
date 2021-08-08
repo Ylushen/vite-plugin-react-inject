@@ -1,0 +1,197 @@
+.protocol-frame {
+  background: #fafafb;
+  padding-top: 20px;
+  padding-bottom: 40px;
+
+  .blue {
+    color: #275cf0;
+  }
+
+  .protocol {
+    width: 1100px;
+    background: #fff;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 90px;
+    box-sizing: border-box;
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.14);
+
+    .big-title {
+      font-family: PingFangSC-Semibold;
+      font-size: 32px;
+      font-weight: bolder;
+      color: #000;
+      padding-top: 60px;
+      padding-bottom: 30px;
+      text-align: center;
+      border-bottom: 1px solid #999;
+    }
+
+    .big-main {
+      padding-top: 10px;
+      padding-bottom: 60px;
+
+      .head-words {
+        .sub-title {
+          font-family: PingFangSC-Semibold;
+          font-size: 20px;
+          color: #000000;
+          letter-spacing: 0;
+          font-weight: bold;
+          margin-top: 40px;
+          margin-bottom: 20px;
+        }
+
+        .sub-title-content {
+          font-size: 14px;
+          color: #333333;
+          letter-spacing: 0;
+          margin-top: 10px;
+        }
+
+        .sub-title-notice {
+          font-family: PingFangSC-Semibold;
+          font-size: 14px;
+          color: #000000;
+          font-weight: 600;
+          margin-top: 10px;
+        }
+      }
+
+      .ordered-list {
+        .ordered-item {
+          .sub-first {
+            margin-top: 40px;
+
+            .sub-first-title {
+              color: #000;
+              font-size: 20px;
+              font-weight: bold;
+              margin-bottom: 20px;
+            }
+
+            .sub-second {
+              .sub-second-title {
+                color: #000;
+                font-size: 16px;
+                margin-top: 30px;
+                margin-bottom: 20px;
+              }
+
+              .sub-second-content {
+                .line-words {
+                  color: #333;
+                  font-size: 14px;
+                  margin-top: 10px;
+                  text-align: justify;
+                  word-break: break-all;
+                }
+
+                .line-words-notice {
+                  color: #000;
+                  font-size: 14px;
+                  font-weight: 600;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .end-main {
+        margin-top: 10px;
+      }
+
+      .company {
+        margin-top: 40px;
+        font-family: PingFangSC-Semibold;
+        font-size: 20px;
+        color: #000000;
+        text-align: right;
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+// 添加移动端服务协议响应式布局
+@media screen and (max-width: 1100px) {
+  .protocol-frame {
+    padding: 0;
+    .protocol {
+      width: auto;
+      padding: 0 50px;
+    }
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1125px) {
+}
+@media screen and (max-width: 900px) {
+}
+@media screen and (max-width: 768px) {
+}
+@media (max-width: 767px) {
+  .protocol-frame {
+    .protocol {
+      padding: 0;
+      .big-title {
+        font-size: 18px;
+        padding: 0;
+        line-height: 44px;
+      }
+      .big-main {
+        padding: 0 15px 30px;
+        .head-words {
+          .sub-title {
+            font-size: 16px;
+            margin: 0;
+            padding: 10px 0 5px;
+          }
+          .sub-title-notice {
+            margin-top: 5px;
+            text-align: justify;
+            word-break: break-all;
+            word-wrap: normal;
+          }
+          .sub-title-content {
+            margin-top: 5px;
+            text-align: justify;
+            word-break: break-all;
+            word-wrap: normal;
+          }
+        }
+        .ordered-list {
+          .ordered-item {
+            .sub-first {
+              margin-top: 10px;
+              .sub-first-title {
+                margin: 0;
+                font-size: 16px;
+              }
+              .sub-second {
+                .sub-second-title {
+                  margin-top: 10px;
+                  margin-bottom: 0px;
+                  font-size: 14px;
+                }
+                .sub-second-content {
+                  .line-words {
+                    margin-top: 0px;
+                    padding-top: 5px;
+                  }
+                }
+              }
+            }
+          }
+        }
+        .end-main {
+          font-size: 14px;
+        }
+        .company {
+          font-size: 14px;
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+}

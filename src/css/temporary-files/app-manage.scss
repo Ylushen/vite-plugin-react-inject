@@ -1,0 +1,87 @@
+// 临时文件(应用管理页面样式)，之后作合并用
+@import '../base/lib-mixin.scss';
+
+// settings18页面
+// .settings{
+//     &.application-manage{
+//         .set-tips {
+//             &.top-grid{
+//                 &.no-padding{
+//                     padding: 0;
+//                 }
+//             }
+//             .title{
+//                 &.title-inline-block{
+//                     display: inline-block;
+//                 }
+//                 &.title-flex{
+//                     display: flex;
+//                     align-items: center;
+//                     .title-text{
+//                         font-weight: normal;
+//                         margin-left: 20px;
+//                         font-family: MicrosoftYaHei;
+//                         font-size: 14px;
+//                         color: #265CF0;
+//                         cursor: pointer;
+//                     }
+//                 }
+//                 .iconfont {
+//                     position: relative;
+//                     &.icon-89 {
+//                         margin-top: 2px;
+//                         font-weight:normal;
+//                         color: #acb2bf;
+//                         display: block;
+//                         float: right;
+//                         margin-left: 6px;
+//                     }
+//                     .title-words {
+//                         display: none;
+//                         position: absolute;
+//                         width: 480px;
+//                         top: 21px;
+//                         left: 0px;
+//                         color: #000;
+//                         font-size: 14px;
+//                         letter-spacing: 0.18px;
+//                         line-height: 1.5;
+//                         z-index: 999999;
+//                         box-sizing: border-box;
+//                         background: #ffffff;
+//                         padding: 20px;
+//                         box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.14);
+//                         text-align: justify;
+//                         .title-txt {
+//                             text-align: left;
+//                             margin-bottom: 10px;
+//                             &:last-child {
+//                               margin-bottom: 0;
+//                             }
+//                         }
+//                         .title-txt02 {
+//                             text-align: left;
+//                             color: #666;
+//                             padding-left: 10px;
+//                         }
+//                         .pic {
+//                             display: block;
+//                             width: 100%;
+//                             img {
+//                                 display: block;
+//                                 max-width: 100%;
+//                                 border: 1px solid #e5e5e6;
+//                             }
+//                         }
+//                     }
+//                     &:hover {
+//                         color: #275cf0;
+//                         .title-words {
+//                             display: block;
+//                         }
+//                     }
+//                 }
+//             }
+//         }
+//     }
+// }

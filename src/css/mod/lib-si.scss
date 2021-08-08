@@ -1,0 +1,250 @@
+// 针对有si查询的布局
+.has-si-adaptation {
+  .layout-ai-three {
+    padding-left: 0px;
+    padding-right: 0px;
+    width: 440px;
+    position: absolute;
+    left: 480px;
+    top: 0px;
+    bottom: 0px;
+    transition: left 0.2s ease;
+    .message-new {
+      position: absolute;
+      bottom: 232px;
+    }
+  }
+  .layout-ai-four {
+    width: auto;
+    transition: unset;
+    margin-left: 740px;
+    position: relative;
+  }
+  .chat-area {
+    min-width: 310px;
+  }
+  .chat-box {
+    &.artificial {
+      .chat-data {
+        min-width: 340px;
+      }
+      .cont {
+        box-sizing: border-box;
+        width: 100%;
+        // .user-info {
+        //     width: 100%;
+        // }
+        .text.send-fail {
+          min-width: unset;
+        }
+        // .text {
+        //     width: 100%;
+        // }
+        .pic {
+          width: 100%;
+          img {
+            max-width: 208px;
+            max-height: 292px;
+          }
+        }
+      }
+      .kf-side {
+        display: inline-block;
+        width: 100%;
+        // padding-right: 24px;
+        .cont {
+          width: unset;
+          // 语音消息
+          .audio-area .audio-progress {
+            width: 105px;
+          }
+          .voice-area {
+            max-width: 330px;
+            min-width: 250px;
+            font-size: 0px;
+          }
+        }
+        &.not-txt-info {
+          .cont {
+            // 纯图片
+            .pic {
+              width: 100%;
+              img {
+                max-width: 292px;
+                max-height: 292px;
+              }
+            }
+            // 聊天记录
+            .chat-record {
+              width: unset;
+              max-width: 344px;
+              min-width: 200px;
+              text-align: left;
+            }
+            // 商品
+            // .commodity {
+            //     width: unset;
+            //     // max-width: 440px;
+            //     // min-width: 200px;
+            //     max-width: 280px;
+            //     min-width: 225px;
+            //     .commodity-img {
+            //         position: unset;
+            //         width: 100%;
+            //         height: 100%;
+            //         font-size: 0px;
+            //         margin-bottom: 10px;
+            //         img {
+            //             width: 100%;
+            //         }
+            //     }
+            //     .commodity-info {
+            //         padding-left: 0px;
+            //     }
+            // }
+          }
+        }
+      }
+      .user-side.not-txt-info {
+        padding-right: 24px;
+        .cont {
+          // 语音消息
+          .audio-area .audio-progress {
+            width: 105px;
+          }
+          .voice-area {
+            max-width: 330px;
+            min-width: 250px;
+            font-size: 0px;
+          }
+          // 纯图片
+          .pic {
+            width: 100%;
+            img {
+              max-width: 292px;
+              max-height: 292px;
+            }
+          }
+          // 聊天记录
+          .chat-record {
+            width: unset;
+            max-width: 344px;
+            min-width: 200px;
+          }
+        }
+      }
+    }
+  }
+  // 右侧用户信息样式
+  .layout-ai-four .user-info .item-group .item {
+    width: 33.333333%;
+    &.long {
+      width: 100%;
+    }
+  }
+  // 常态下占据66.66百分比
+  .layout-ai-four .user-info .item-group .-normal-col66 {
+    width: 66.66%;
+  }
+  // 会话表单列表块
+  .form-list-panel {
+    .item-group .item {
+      min-width: 50%;
+    }
+  }
+}
+// SI查询 左边第一列关闭的情况
+.layout-ai-inner.close {
+  .has-si-adaptation {
+    .layout-ai-three {
+      left: 364px;
+    }
+  }
+  .form-center .layout-ai-three {
+    left: 286px !important;
+  }
+}
+
+// 1920px以上的屏幕
+@media (max-width: 1920px) {
+  .has-si-adaptation .not-txt-info {
+    // 商品
+    .commodity {
+      width: 420px;
+      max-width: 322px;
+      min-width: 225px;
+    }
+    // 会话-发送的小程序消息
+    .weapp-message {
+      width: 420px;
+      max-width: 322px;
+      min-width: 225px;
+    }
+  }
+}
+
+// 1920px以上的屏幕
+@media (min-width: 1920px) {
+  // .has-si-adaptation {
+  //     .layout-ai-three {
+  //         position: relative;
+  //         padding-left: 300px;
+  //         width: unset;
+  //         padding-right: 1000px;
+  //         left: unset!important;
+  //         top: unset!important;
+  //         bottom: unset!important;
+  //     }
+  //     .layout-ai-four {
+  //         // width: auto;
+  //         // transition: unset;
+  //         // margin-left: 740px;
+  //         // position: relative;
+  //         width: 1000px;
+  //         transition: all 0.2s ease;
+  //         margin-left: 0px;
+  //         position: absolute;
+  //     }
+  // }
+  .yzf-overflow-body:not(.overseas) {
+    .has-si-adaptation {
+      .layout-ai-three {
+        position: relative;
+        padding-left: 300px;
+        width: unset;
+        padding-right: 1000px;
+        left: unset !important;
+        top: unset !important;
+        bottom: unset !important;
+      }
+      .layout-ai-four {
+        // width: auto;
+        // transition: unset;
+        // margin-left: 740px;
+        // position: relative;
+        width: 1000px;
+        transition: all 0.2s ease;
+        margin-left: 0px;
+        position: absolute;
+      }
+    }
+  }
+  .yzf-overflow-body:not(.overseas) .layout-ai-inner.close .has-si-adaptation .layout-ai-three {
+    left: unset;
+  }
+}
+// 1590px 以下的屏幕
+@media (max-width: 1590px) {
+  .has-si-adaptation {
+    // 右侧用户信息样式
+    .layout-ai-four .user-info .item-group .item {
+      width: 50%;
+      &.long {
+        width: 100%;
+      }
+    }
+  }
+  // .form-center.has-si-adaptation .user-info .item-group .item .icon-content__item {
+  //     width: 50%;
+  // }
+}

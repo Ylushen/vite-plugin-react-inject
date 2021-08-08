@@ -1,0 +1,1253 @@
+// 推送管理样式
+@import '../base/lib-mixin.scss';
+.push-manage-new {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 56px - 48px);
+  display: flex;
+  flex-wrap: wrap;
+  .kf-ai-form-item-content .kf-ai-form-item-value {
+    line-height: 20px;
+    font-size: 14px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #000;
+  }
+}
+
+// 内容部分
+.push-manage-new-top {
+  flex-shrink: 0;
+  width: 100%;
+  height: calc(100% - 80px);
+  padding: 30px 20px 30px 40px;
+  overflow-x: hidden;
+  overflow-y: overlay;
+  box-sizing: border-box;
+  .m-tabBar__item {
+    padding: 0 20px 14px;
+  }
+  .img-uploader {
+    font-size: 0;
+    .img {
+      width: 152px;
+      height: 100px;
+      margin-right: 20px;
+      margin-bottom: 10px;
+      &:last-child {
+        margin-right: 0px;
+      }
+    }
+  }
+  .push-mod--setting {
+    max-width: 670px;
+  }
+  .kf-ai-form {
+    &.-bottomspace {
+      position: relative;
+      padding-bottom: 10px;
+      margin-bottom: 30px;
+      &:after {
+        position: absolute;
+        bottom: 0;
+        width: calc(100% - 20px);
+        height: 1px;
+        left: 0px;
+        bottom: 0px;
+        content: '';
+        background-color: #e5e5e6;
+      }
+    }
+    &.-bottomnull {
+      .kf-ai-form-item {
+        margin-bottom: 0;
+      }
+    }
+  }
+  .kf-ai-form-item {
+    margin-right: 20px;
+    .kf-ai-form-item-value-action {
+      line-height: 20px;
+      font-size: 14px;
+      padding-top: 10px;
+      color: #000;
+      @include word-break;
+      &.lines-3 {
+        @include ellipsis-lines($lines: 3);
+      }
+    }
+    .two-input__item {
+      width: 190px;
+      margin-right: 10px;
+      .select-search {
+        display: flex;
+      }
+      .kf-ai-select {
+        width: 121px;
+        height: 40px;
+        flex-shrink: 0;
+      }
+      .is-input {
+        width: 190px;
+      }
+      &.-flex-1 {
+        margin-right: 0;
+      }
+      .option-btn {
+        &.is-disabled {
+          cursor: not-allowed;
+          .iconfont {
+            cursor: not-allowed;
+            color: #ccc;
+          }
+        }
+      }
+    }
+  }
+  .kf-ai-form-item-content {
+    .push-mod--setting {
+      .font-gray {
+        cursor: not-allowed;
+        color: #cccccc;
+      }
+    }
+    .m-list {
+      &:first-child {
+        margin-top: 11px;
+      }
+    }
+    .kf-ai-form-item-content-blue {
+      cursor: pointer;
+      font-size: 14px;
+      color: #265cf0;
+      letter-spacing: 0;
+      padding-left: 7px;
+      .icon-arrow-down {
+        position: relative;
+        top: 1px;
+      }
+    }
+    .item-group-link {
+      display: inline-block;
+      cursor: pointer;
+      color: #265cf0;
+    }
+  }
+  // -layout3 3个输入框一组，输入框最小宽度250，再小的话输入框换行
+  .-layout3 {
+    display: flex;
+    flex-wrap: wrap;
+    .kf-ai-form-item {
+      width: calc(33.33% - 20px);
+      min-width: 207px;
+    }
+  }
+  // -selectInput 针对文章标题多选和输入框结合的扩展类名
+  .-selectInput {
+    display: flex;
+    flex-wrap: wrap;
+    .kf-ai-form-item {
+      width: calc(60% - 19px);
+      min-width: 520px;
+    }
+    .kf-ai-select {
+      width: 400px;
+    }
+  }
+  // -layout2 2个输入框一组，输入框最小宽度250，再小的话输入框换行
+  .-layout2 {
+    display: flex;
+    flex-wrap: wrap;
+    .kf-ai-form-item {
+      width: calc(50% - 20px);
+      min-width: 207px;
+    }
+  }
+  // -layout1 1个输入框一组，输入框最小宽度250，再小的话输入框换行
+  .-layout1 {
+    display: flex;
+    flex-wrap: wrap;
+    .kf-ai-form-item {
+      width: 100%;
+      min-width: 207px;
+    }
+  }
+  .kf-ai-form-item-value {
+    &.-breakAll {
+      word-break: break-all;
+    }
+  }
+}
+
+.push-manage-title-info {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  color: #265cf0;
+  background-color: #e9eefd;
+  border-radius: 2px;
+  overflow: hidden;
+  &.-bottom30 {
+    margin-bottom: 30px;
+  }
+}
+
+.push-manage-title-infoLine {
+  width: 4px;
+  height: 100%;
+  background-color: #265cf0;
+}
+
+.push-manage-title-infoIcon {
+  margin: 0 4px 0 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .iconfont {
+    font-size: 20px;
+  }
+}
+
+.push-manage-title-infoTxt {
+  font-size: 16px;
+}
+
+.push-manage-new-title {
+  font-size: 14px;
+  color: #333333;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.push-manage-new-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  .iconfont {
+    font-size: 20px;
+    color: #76cc21;
+  }
+  .push-manage-new-infoTxt {
+    margin-left: 6px;
+    font-size: 14px;
+    color: #333;
+  }
+}
+
+.push-manage-new-double-content {
+  display: flex;
+  padding-bottom: 30px !important;
+}
+
+.push-manage-new-double-content__left {
+  width: 60%;
+  min-width: 500px;
+  // flex: 1;
+  padding-right: 20px;
+  border-right: 1px solid #e5e5e6;
+  .kf-ai-form-item .two-input__item {
+    flex: 1;
+    width: auto;
+    min-width: unset;
+    max-width: 160px;
+    &.-flex-1 {
+      min-width: unset;
+    }
+    .select-search {
+      flex: 1;
+      max-width: 350px;
+    }
+    .is-input {
+      width: auto;
+      max-width: 230px;
+      min-width: 180px;
+    }
+  }
+}
+
+.push-manage-new-double-content__right {
+  flex-shrink: 0;
+  // width: 577px;
+  min-width: 600px;
+  .m-card--common {
+    width: 375px;
+    // height: 212px;
+    margin-left: 40px;
+    margin-top: 20px;
+  }
+}
+
+// 推送内容模块
+.push-content {
+  width: 100%;
+  height: 800px;
+  box-sizing: border-box;
+  border: 1px solid #e5e5e6;
+  display: flex;
+  justify-content: space-between;
+}
+
+.push-content__left {
+  box-sizing: border-box;
+  border-right: 1px solid #e5e5e6;
+  overflow-y: overlay;
+  @include clearScrollbar();
+}
+
+.push-content-container {
+  width: 100%;
+  &:first-child {
+    .push-content-header {
+      border-top: none;
+    }
+  }
+  &.-fold {
+    .push-content-header {
+      border-bottom: none;
+      .icon-arrow-up:before {
+        content: '\e84c';
+      }
+    }
+    .push-content-wrap {
+      height: 0;
+      overflow: hidden;
+    }
+  }
+  &:last-child {
+    &.-fold {
+      .push-content-header {
+        border-bottom: 1px solid #e5e5e6;
+      }
+    }
+  }
+}
+
+.push-content-header {
+  width: 100%;
+  height: 40px;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f7f7fa;
+  box-sizing: border-box;
+  border-bottom: 1px solid #e5e5e6;
+  border-top: 1px solid #e5e5e6;
+  cursor: pointer;
+  .iconfont {
+    font-size: 20px;
+    color: #999;
+    transition: all 0.2s ease-out;
+  }
+  &:hover {
+    .iconfont {
+      color: #666;
+    }
+  }
+}
+
+.push-content-header-title {
+  font-size: 14px;
+  color: #666;
+}
+
+.push-content-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  transition: all 0.2s ease-out;
+  height: auto;
+}
+
+.push-content-item {
+  width: 33.3333%;
+  height: 110px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 2px;
+  transition: all 0.2s ease-out;
+  &:hover,
+  &:active {
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.12);
+    .push-content-item-name {
+      color: #265cf0;
+    }
+  }
+  &.-disabled {
+    .push-content-item-photoWrap {
+      filter: grayscale(100%) opacity(0.4);
+    }
+    &:hover,
+    &:active {
+      cursor: default;
+      box-shadow: none;
+      .push-content-item-name {
+        color: #666;
+      }
+    }
+  }
+}
+
+.push-content-item-photoWrap {
+  width: 48px;
+  height: 48px;
+}
+
+.push-content-item-name {
+  font-size: 12px;
+  color: #666;
+  margin-top: 6px;
+  transition: all 0.2s ease-out;
+}
+
+.push-content__center {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  // align-items: center;
+  .chat-list {
+    position: absolute;
+    right: 0px;
+  }
+}
+
+.push-content-center-inner {
+  position: relative;
+  margin-top: 20px;
+  // width: 516px;
+  width: 100%;
+  height: 760px;
+  display: flex;
+  justify-content: center;
+  // height: 960px;
+  // width: 375px;
+  // padding-left: 42px;
+  // padding-right: 99px;
+  // overflow-x: hidden;
+  // overflow-y: auto;
+  // overflow-y: overlay;
+  // box-sizing: border-box;
+  // box-shadow: 0 0 10px 0 rgba(31,43,77,0.20);
+}
+
+.push-content__right {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+  border-left: 1px solid #e5e5e6;
+  .push-content-header {
+    border-top: none;
+  }
+  .kf-ai-form-container {
+    // width: 100%;
+    // height: 700px;
+    flex: 1;
+    height: auto;
+    overflow: auto;
+    overflow-y: overlay;
+    // overflow-x: hidden;
+    overflow-x: overlay;
+    // 隐藏滚动条
+    @include clearScrollbar();
+  }
+  // .push-content__rightBdWrap {
+  //     // min-width: 600px;
+  // }
+  .kf-ai-form {
+    // padding: 20px;
+    font-size: 0;
+    article {
+      font-size: 14px;
+    }
+  }
+  .add-title--modal {
+    width: 100%;
+  }
+  .pldr,
+  .add-conclusion--modal,
+  .add-task--modal {
+    width: 100%;
+    height: auto;
+  }
+  .edit-bd,
+  .add-eventDescription--modal {
+    min-width: 560px;
+    &.-noBottom {
+      padding-bottom: 0;
+    }
+  }
+  .push-mask {
+    max-height: none;
+  }
+  .kf-ai-form-item {
+    margin-right: 0;
+    // &:last-child {
+    //     margin-bottom: 0;
+    // }
+    &.-bottomLine {
+      padding-bottom: 32px;
+      border-bottom: 1px solid #e5e5e6;
+    }
+    &.-halfInline {
+      width: 50%;
+      display: inline-block;
+    }
+  }
+  // .kf-checkbox-wrapper {
+  //     margin-top: 10px;
+  // }
+  .insert-uploader-wrap {
+    display: flex;
+    margin-top: 20px;
+  }
+  .img-uploader .img {
+    width: 100px;
+    height: 100px;
+    // margin-right: 20px !important;
+    margin-bottom: 0;
+  }
+  .kf-tandem-input-option {
+    margin-bottom: 10px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  .kf-tandem-input-option.-oneChild {
+    margin: auto;
+  }
+  .desc-info--block {
+    color: #999;
+  }
+  .ai-btn {
+    &.-disabled {
+      background: #f5f5f5;
+      color: #cccccc;
+      cursor: not-allowed;
+    }
+    &.-marginTop {
+      margin-top: 10px;
+    }
+  }
+  .kf-fileUpload-box {
+    margin-top: 8px;
+    margin-bottom: 20px;
+  }
+  .fileUpload-fujian {
+    background: transparent;
+    transition: all 0.2s ease-out;
+    &:hover {
+      background: #e9eefd;
+    }
+  }
+}
+
+.kf-ai-form-item {
+  &.-marginBottom10 {
+    margin-bottom: 10px;
+  }
+}
+
+.kf-tandem-input-option {
+  &.-marginBottom {
+    margin-bottom: 10px !important;
+  }
+}
+
+.push-content__right-tip {
+  width: 100%;
+  padding: 9px 10px;
+  color: #999;
+  font-size: 12px;
+  background-color: #f7f7fa;
+  margin-bottom: 20px;
+}
+
+.push-content__right-btn {
+  width: 100%;
+  height: 40px;
+  box-sizing: border-box;
+  border: 1px solid #e5e5e6;
+  margin-bottom: 20px;
+  color: #265cf0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 14px;
+  .iconfont {
+    margin-right: 4px;
+  }
+}
+
+.push-content__right-title {
+  font-size: 14px;
+  color: #333;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  .iconfont {
+    color: #ed4343;
+    cursor: pointer;
+    display: none;
+  }
+}
+
+.push-content__right-node {
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  &.-bottomLine {
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #e5e5e6;
+  }
+  &.-hasDelBtn {
+    .iconfont {
+      display: inline-block;
+    }
+  }
+}
+
+.kf-radio-wrapper {
+  &.-marginright37 {
+    margin-right: 37px;
+  }
+  &.-marginright40 {
+    margin-right: 40px !important;
+  }
+}
+
+.push-content__inner {
+  display: flex;
+  width: 100%;
+  height: 410px;
+  box-sizing: border-box;
+  border: 1px solid #e5e5e6;
+  margin-bottom: 20px;
+}
+
+.push-content__innerL {
+  position: relative;
+  display: inline-block;
+  width: 40%;
+  height: 100%;
+  box-sizing: border-box;
+  border-right: 1px solid #e5e5e6;
+}
+
+.push-content__innerL-top {
+  width: 100%;
+  height: calc(100% - 40px);
+  overflow-y: overlay;
+  .kf-tandem-input-option {
+    height: 130px;
+    padding: 20px;
+    margin-bottom: 0;
+    .kf-ai-input-wrapper {
+      width: calc(100% - 28px);
+      &::after {
+        width: 20px !important;
+        right: -20px !important;
+      }
+    }
+    .option-btn {
+      right: 20px;
+    }
+    &:hover {
+      background-color: #dfe7fd;
+    }
+    &:active {
+      background-color: #ebedf3;
+    }
+    &.-active {
+      background-color: #ebedf3;
+      &:hover {
+        background-color: #ebedf3;
+      }
+    }
+  }
+}
+
+.push-content__innerL-btn {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 40px;
+  border-top: 1px solid #e5e5e6;
+  box-sizing: border-box;
+  cursor: pointer;
+  .iconfont {
+    font-size: 16px;
+    color: #265cf0;
+    margin-right: 6px;
+  }
+  .btn-txt {
+    font-size: 14px;
+    color: #265cf0;
+  }
+  &.-disabeld {
+    cursor: not-allowed;
+    .iconfont,
+    .btn-txt {
+      color: #999;
+    }
+  }
+}
+
+.push-content__innerR {
+  width: calc(60% - 40px);
+  height: calc(100% - 40px);
+  padding: 20px;
+  display: inline-block;
+  overflow-y: overlay;
+}
+
+.kf-ai-form-itemWrap {
+  display: flex;
+  justify-content: space-between;
+  .kf-ai-form-item {
+    width: calc(50% - 10px);
+  }
+}
+
+.push-content__rightFt {
+  // position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  padding: 0 20px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  color: #ccc;
+  background-color: #fff;
+  box-sizing: border-box;
+  border-top: 1px solid #e5e5e6;
+  &.-current {
+    color: #265cf0;
+  }
+  .ai-btn-txt {
+    margin-left: 10px;
+  }
+}
+
+.push-content-form {
+  height: 660px;
+  overflow-y: overlay;
+  padding: 20px;
+}
+
+// 1776px以上的屏幕
+@media (min-width: 1776.1px) {
+  .push-content__left {
+    width: 360px;
+  }
+  .push-content__center {
+    flex: 1;
+  }
+  .push-content__right {
+    width: 640px;
+  }
+}
+
+// 1776px以下的屏幕（中间极限缩放）
+@media (max-width: 1776px) {
+  .push-content__left {
+    width: auto;
+    flex: 1;
+  }
+  .push-content__center {
+    width: 516px;
+    min-width: 516px;
+  }
+  .push-content__right {
+    width: 640px;
+  }
+}
+
+// 1716px以下的屏幕（左侧不换行极限缩放）
+@media (max-width: 1716px) {
+  .push-content__left {
+    width: 200px;
+    min-width: 200px;
+    overflow-y: overlay;
+  }
+  .push-content-item {
+    width: 50%;
+  }
+  .push-content__center {
+    width: 516px;
+  }
+}
+
+// 1600px以下的屏幕（左侧不换行极限缩放）
+@media (max-width: 1600px) {
+  .push-content__left {
+    width: 117px;
+    min-width: 117px;
+    overflow-y: overlay;
+  }
+  .push-content-item {
+    width: 100%;
+  }
+  .push-content__center {
+    width: 516px;
+  }
+}
+
+// 底部部分
+.push-manage-new-ft {
+  width: 100%;
+  position: relative;
+  flex-shrink: 0;
+  &:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    border-top: 1px solid #e5e5e6;
+  }
+  .right {
+    display: flex;
+    align-items: center;
+    float: right;
+  }
+  .btn-area {
+    display: flex;
+    align-items: center;
+  }
+  .ai-btn {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+  }
+  .btn-area__left {
+    position: absolute;
+    left: 40px;
+    .kf-ai-form-item-label .iconfont {
+      margin-left: 0;
+      margin-right: 6px;
+      cursor: default;
+      &:hover {
+        color: #acb2bf;
+      }
+    }
+  }
+}
+
+.icon-add {
+  &.not-gray-opacity {
+    color: #bdcefa !important;
+  }
+}
+.icon-del {
+  &.not-gray-opacity {
+    color: #f9c6c6 !important;
+  }
+}
+.icon-91 {
+  &.not-gray-opacity {
+    color: #f9c6c6 !important;
+  }
+}
+.kf-ai-switch {
+  &.not-gray-opacity {
+    background-color: #e5e5e6 !important;
+  }
+}
+.kf-ai-switch-checked {
+  &.not-gray-opacity {
+    background-color: #bdcefa !important;
+  }
+}
+.not-gray-opacity {
+  cursor: not-allowed !important;
+}
+.ai-btn-primary-font {
+  color: #265cf0;
+}
+.table__flex_column {
+  display: flex;
+  flex-direction: column;
+}
+// 新建推送设置页面中的设置部分
+.push-mod--setting {
+  position: relative;
+  width: 100%;
+  .push-mod__hd {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 44px;
+    background: #f7f7fa;
+  }
+  .push-mod__title {
+    font-size: 14px;
+    color: #000000;
+    margin-left: 10px;
+  }
+  .push-mod__btn {
+    padding: 0px 20px;
+    font-size: 14px;
+    color: #265cf0;
+    line-height: 44px;
+    margin-left: auto;
+    cursor: pointer;
+    .kf-ai-dropdown {
+      position: absolute;
+      right: 14px;
+      top: 38px;
+    }
+    .kf-ai-dropdown__menu {
+      line-height: normal;
+      left: unset;
+      right: 0px;
+      top: 0;
+    }
+  }
+  .kf-ai-dropdown {
+    .kf-ai-dropdown__menu {
+      width: 240px;
+    }
+  }
+  .push-mod__bd {
+    position: relative;
+  }
+  .push-mod--list {
+    position: relative;
+  }
+  .push-mod__item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    height: 40px;
+    border: 1px solid #e5e5e6;
+    border-top: unset;
+    box-sizing: border-box;
+    cursor: move;
+    &.-bottomItem {
+      cursor: default;
+    }
+    &.cursorPointer {
+      cursor: pointer;
+    }
+    .item-icon {
+      flex-shrink: 0;
+      margin-right: 4px;
+      .iconfont {
+        font-size: 16px;
+        color: #cccccc;
+        cursor: pointer;
+      }
+      .icon-329 {
+        cursor: move;
+      }
+    }
+    .item-title {
+      font-size: 14px;
+      color: #000000;
+    }
+    .item-option {
+      margin-left: auto;
+      margin-right: 20px;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+    }
+    .item-option-btn {
+      margin-right: 16px;
+      &:last-child {
+        margin-right: 0px;
+      }
+      .iconfont {
+        font-size: 20px;
+        color: #265cf0;
+        cursor: pointer;
+        &.font-gray {
+          cursor: not-allowed;
+          color: #cccccc;
+        }
+      }
+    }
+  }
+}
+
+.select-search {
+  &.-widthAuto {
+    display: flex;
+    .kf-ai-select {
+      width: auto;
+    }
+    .kf-ai-input-wrapper.is-input {
+      display: flex;
+      flex: 1;
+    }
+  }
+}
+
+// 推送页面的弹窗
+.push-mask {
+  max-height: 507px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  overflow-y: overlay;
+  padding: 20px;
+  .push-mask-item {
+    &.-first {
+      .option-btn {
+        display: none;
+      }
+    }
+  }
+  .push-mask-header {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .option-btn {
+      cursor: pointer;
+    }
+    .icon-del {
+      color: #ed4343;
+    }
+  }
+  .push-mask-title {
+    font-size: 14px;
+    color: #333;
+    font-weight: bold;
+  }
+  .push-mask-box {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    &:first-child {
+      margin-top: 0;
+    }
+    .kf-ai-select-selection {
+      display: flex;
+      &.bg-gray {
+        cursor: not-allowed;
+        background-color: #f5f5f5;
+        .kf-ai-select-value {
+          color: #999;
+        }
+      }
+    }
+    .push-mask-content {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      .push-uploader {
+        overflow-x: auto;
+        width: 100%;
+        white-space: nowrap;
+        .img {
+          margin-right: 16px;
+        }
+      }
+      .kf-ai-form-item {
+        &.two-input {
+          &:last-child {
+            .two-input__item {
+              margin-bottom: 0;
+            }
+          }
+        }
+      }
+      // .kf-ai-rich-text {
+      //     &.-red {
+      //         border-color: #ed4343;
+      //         .kf-ai-rich-absolute-text {
+      //             color: #ed4343;
+      //         }
+      //     }
+      // }
+      .kf-ai-rich-text-container {
+        padding: 11px 35px 11px 10px;
+      }
+    }
+    .push-mask-1 {
+      display: flex;
+      flex-direction: column;
+      width: 290px;
+    }
+    .push-title {
+      font-size: 14px;
+      color: #666666;
+      letter-spacing: 0;
+      margin-bottom: 4px;
+      > span {
+        font-size: 12px;
+        color: #cccccc;
+      }
+      &.-height21 {
+        height: 21px;
+      }
+    }
+    .kf-ai-rich-text {
+      position: relative;
+      min-height: auto;
+      .kf-ai-rich-text-content {
+        min-height: 115px;
+      }
+    }
+  }
+  .push-time-line {
+    margin: 30px 0 10px 0;
+    border-bottom: 1px solid #e5e5e6;
+  }
+}
+
+.kf-ai-rich-text {
+  &.-red {
+    border-color: #ed4343;
+    .kf-ai-rich-absolute-text {
+      color: #ed4343;
+    }
+  }
+}
+
+.kf-ai-rich-absolute-text {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-size: 14px;
+  color: #cccccc;
+  text-align: right;
+}
+
+.padding-top-20 {
+  padding-top: 20px !important;
+}
+
+.padding-bottom-20 {
+  padding-bottom: 20px !important;
+}
+
+.margin-top-20 {
+  margin-top: 20px;
+}
+
+.margin-right-0 {
+  margin-right: 0px !important;
+}
+
+.not-touch {
+  pointer-events: none;
+}
+
+// 审核列表 审核进度
+.examine-progress {
+  padding-bottom: 30px;
+  border-bottom: 1px solid #e5e5e6;
+  margin-bottom: 30px;
+}
+.examine-progress__lists {
+  .examine-progress__item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    &::after {
+      position: absolute;
+      content: '';
+      width: 1px;
+      height: 30px;
+      background: #ccc;
+      left: 9px;
+      top: 20px;
+    }
+    &:last-child {
+      margin-bottom: 0;
+      &::after {
+        display: none;
+      }
+    }
+    // 下一步已完成
+    &.-finished {
+      &::after {
+        background: #265cf0;
+      }
+      .item-icon {
+        background: url(../img/examine-finished.png);
+        background-size: 100% 100%;
+      }
+      .item-txt {
+        .txt {
+          color: #333;
+        }
+      }
+    }
+    // 审批中
+    &.-finish {
+      .item-icon {
+        background: url(../img/examine-finish.png);
+        background-size: 100% 100%;
+      }
+      .item-txt {
+        .txt {
+          color: #265cf0;
+        }
+      }
+    }
+    // 当前步骤驳回
+    &.-fail {
+      .item-icon {
+        background: url(../img/examine-fail.png);
+        background-size: 100% 100%;
+      }
+      .item-txt {
+        .txt {
+          color: #ed4343;
+        }
+      }
+      .fail-tip {
+        display: block;
+      }
+    }
+    .fail-tip {
+      display: none;
+      position: absolute;
+      top: 20px;
+      left: 30px;
+      font-size: 12px;
+      color: #ed4343;
+    }
+    .item-icon {
+      width: 20px;
+      height: 20px;
+      margin-right: 10px;
+      background: url(../img/examing.png);
+      background-size: 100% 100%;
+    }
+    .item-txt {
+      flex: 1;
+      .txt {
+        display: inline-block;
+        font-size: 14px;
+        color: #999;
+        line-height: 20px;
+      }
+      .txt-small {
+        display: inline-block;
+        margin-left: 10px;
+        font-size: 12px;
+        color: #999;
+        line-height: 16px;
+      }
+    }
+  }
+}

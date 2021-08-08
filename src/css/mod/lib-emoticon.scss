@@ -1,0 +1,71 @@
+// 人工会话表情样式
+.panel-container {
+  position: absolute;
+  left: 10px;
+  right: 10px;
+  bottom: 213px;
+  max-width: 456px;
+  display: block;
+  background: #fff;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  z-index: 10001;
+}
+
+.panel-close {
+}
+
+.panel-title {
+  line-height: 24px;
+}
+
+.panel-title__item {
+  line-height: 24px;
+  font-size: 12px;
+  color: #444;
+}
+
+.panel-content {
+  //   width: 438px;
+  overflow: hidden;
+  width: 100%;
+  max-height: 400px;
+  overflow-y: overlay;
+  .face-item {
+    display: block;
+    float: left;
+    cursor: pointer;
+    > img {
+      display: block;
+      width: 24px;
+      height: 24px;
+      margin: 2px;
+    }
+  }
+}
+
+// 针对有SI查询的第三列 中表情的样式适配
+.has-si-adaptation .panel-container {
+  max-width: 456px;
+  z-index: 1;
+  box-sizing: border-box;
+  left: 10px;
+  right: 10px;
+  bottom: 213px;
+  .panel-content {
+    width: 100%;
+    max-height: 400px;
+    overflow-y: overlay;
+  }
+}
+
+// 带边框的 textarea 输入框中的表情样式
+.askbox-icon {
+  position: relative;
+  .panel-container {
+    bottom: auto;
+    top: 30px;
+    left: 0px;
+  }
+}

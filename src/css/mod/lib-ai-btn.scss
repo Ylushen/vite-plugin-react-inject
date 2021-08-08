@@ -1,0 +1,240 @@
+.ai-btn {
+  display: inline-block;
+  margin-bottom: 0;
+  margin: 0;
+  font-weight: 400;
+  text-align: center;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  // padding: 9px 24px;
+  padding: 9px 12px;
+  min-width: 120px;
+  font-size: 14px;
+  border-radius: 0;
+  transition: color 0.2s linear, background-color 0.2s linear, border 0.2s linear, box-shadow 0.2s linear;
+  color: #666;
+  background-color: transparent;
+  border-color: #e5e5e6;
+  box-sizing: border-box;
+  .dot {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: #e81414;
+    border-radius: 50%;
+    right: 10px;
+    top: 10px;
+  }
+}
+
+.ai-btn:hover {
+  color: #333;
+  // background-color: #fff;
+  // border-color: #265BED
+}
+
+.ai-btn:active {
+  color: #000;
+  // background-color: #fff;
+  // border-color: #265BED
+}
+
+.ai-btn .iconfont {
+  font-family: Ionicons;
+  speak: none;
+  font-style: normal;
+  font-weight: 400;
+  font-variant: normal;
+  text-transform: none;
+  text-rendering: auto;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  vertical-align: -2px;
+  font-size: 20px;
+
+  margin-right: 6px;
+}
+
+.ai-btn > span {
+  display: inline-block;
+}
+
+.ai-btn,
+.ai-btn:active,
+.ai-btn:focus {
+  outline: 0;
+}
+
+.ai-btn:not([disabled]):hover {
+  text-decoration: none;
+}
+
+.ai-btn:not([disabled]):active {
+  outline: 0;
+}
+
+.ai-btn.disabled,
+.ai-btn[disabled] {
+  cursor: not-allowed;
+
+  color: #fff;
+  background: #ccdaff;
+  border-color: #ccdaff;
+  &:hover {
+    background: #ccdaff;
+    color: #fff;
+    border-color: #ccdaff;
+  }
+}
+
+.ai-btn[is-disabled] {
+  cursor: not-allowed;
+  position: relative;
+  color: #ccdaff;
+  background: #fff;
+  border-color: #f2f2f2;
+  &:hover {
+    background: #fff;
+    color: #ccdaff;
+    border-color: #f2f2f2;
+  }
+}
+
+.ai-btn[icon-disabled] {
+  cursor: not-allowed;
+
+  color: #ccdaff;
+  background: #fff;
+  border-color: #f2f2f2;
+  &:hover {
+    background: #fff;
+    color: #ccdaff;
+    border-color: #f2f2f2;
+  }
+}
+
+.ai-btn-default[disabled] {
+  cursor: not-allowed;
+
+  color: #ccc;
+  background: #fff;
+  border-color: #f2f2f2;
+  &:hover {
+    background: #fff;
+    color: #ccc;
+    border-color: #f2f2f2;
+  }
+}
+
+.ai-btn[is-disabled]:hover {
+  .suspend {
+    display: block;
+    top: -48px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.ai-btn.ai-btn-tips {
+  position: relative;
+  .suspend {
+    display: block;
+    top: -48px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9999;
+  }
+}
+
+.btn-long {
+  width: 100%;
+}
+.ai-btn.disabled > *,
+.ai-btn[disabled] > * {
+  pointer-events: none;
+}
+
+.ai-btn-primary {
+  color: #fff !important;
+  background-color: #265bed;
+  border-color: #265bed;
+}
+
+.ai-btn-primary:hover {
+  color: #fff;
+  background-color: #2252d6;
+  border-color: #2252d6;
+}
+.ai-btn-primary:active {
+  color: #fff;
+  background-color: #1e48bd;
+  border-color: #1e48bd;
+}
+
+.ai-btn-red {
+  color: #fff;
+  background-color: #ef5c62;
+  border-color: #ef5c62;
+}
+
+.ai-btn-red:hover {
+  color: #fff;
+  background-color: #ef5c62;
+  border-color: #ef5c62;
+}
+.ai-btn-red:active {
+  color: #fff;
+  background-color: #ef5c62;
+  border-color: #ef5c62;
+}
+
+.ai-btn-blue {
+  color: #265bed;
+  &:hover {
+    color: #265bed;
+  }
+}
+
+.ai-btn-txt {
+  padding: 10px;
+  min-width: 50px;
+  border: none;
+  color: #265cf0;
+  &:hover {
+    color: #265cf0;
+  }
+  &[disabled],
+  &[disabled]:hover {
+    color: #cccccc;
+    background: none;
+  }
+}
+
+.ai-btn-long {
+  width: 100%;
+}
+
+.to-sending {
+  background: #f9fafc;
+  border: 1px solid #e5e5ea;
+  border-radius: 4px;
+  color: #d6d7dc;
+  &:hover {
+    border-color: #e5e5ea;
+    color: #d6d7dc;
+    background: #f9fafc;
+  }
+}
+
+.ai-btn-sm {
+  min-width: 95px;
+}
