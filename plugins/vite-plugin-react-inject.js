@@ -1,16 +1,15 @@
 const fs = require('fs')
 
-const HAS_REACT = /import\s+React\s+from\s+['"]react['"]/g
+const HAS_REACT = /import([{}\s\w_,*]+)React([{}\s\w_,*]+)from\s+['"]react['"]/
 
-const DEFAUlTE_OPTIONS = {
+const DEFAULT_OPTIONS = {
 	includes: /src/,
 	external: /node_modules/,
 	test: /.jsx?$/,
 }
 
 function injectReact(options) {
-	options = Object.assign(DEFAUlTE_OPTIONS, options)
-	const virtualFileId = '@my-virtual-file'
+	options = Object.assign(DEFAULT_OPTIONS, options)
 
 	return {
 		name: 'vite-plugin-react-inject', // 必须的，将会在 warning 和 error 中显示
