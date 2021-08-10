@@ -1,4 +1,6 @@
-/*@import "img/test.scss";*/
+@import "./img/test.scss";
+/*@import "./css/style-login.scss";*/
+
 .App {
   text-align: center;
 }
