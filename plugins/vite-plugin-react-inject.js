@@ -9,7 +9,7 @@ const DEFAUlTE_OPTIONS = {
 }
 
 function injectReact(options) {
-	options = Object.assign(DEFAUlTE_OPTIONS, options)
+	options = Object.assign({}, DEFAUlTE_OPTIONS, options)
 	const virtualFileId = '@my-virtual-file'
 
 	return {

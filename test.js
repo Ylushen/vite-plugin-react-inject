@@ -1,9 +1,31 @@
-const HAS_REACT = /import\s+React\s+from\s+['"]react['"]/g
+const PATH_TEST = /url\(['"]([^)]+)['"]\)/g
 
+const dataUrlRE = /^\s*data:/i
+const isDataUrl = url => dataUrlRE.test(url)
+const isImage = /^[.\/]+img\//
 
-const str = `
-import React from 'react'
-import ReactDOM from 'react-dom'
+let str = `
+body {
+  font-size: 20px;
+  background-image: url("@/img/login-intranet.png");
+}
+
+body {
+  font-size: 20px;
+  background-image: url("../../img/login-intranet.png");
+}
+
+body {
+  font-size: 20px;
+  background-image: url("../img/login-intranet.png");
+}
 `
 
-console.log(HAS_REACT.test(str))
+str = str.replace(PATH_TEST, (str, $1) => {
+  if (isDataUrl($1) || $1.startsWith('@')) return str
+  console.log(str, $1)
+  const newUrl = $1.replace(isImage, '@/img/')
+  return str.replace($1, newUrl)
+})
+
+console.log(str)
