@@ -9,7 +9,7 @@ const DEFAULT_OPTIONS = {
 }
 
 function injectReact(options) {
-	options = Object.assign(DEFAULT_OPTIONS, options)
+	options = Object.assign({}, DEFAULT_OPTIONS, options)
 
 	return {
 		name: 'vite-plugin-react-inject', // 必须的，将会在 warning 和 error 中显示
