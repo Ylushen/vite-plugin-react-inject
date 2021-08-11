@@ -26,7 +26,11 @@ function replaceScssUrl(content, options) {
     async load(id) {
       if (options.external.test(id)) return
       if (!options.test.test(id)) return
-      let content = await loadSass({ file: id })
+      try {
+        let content = await loadSass({ file: id })
+      } catch (e) {
+        return null
+      }
       if (!PATH_TEST.test(content)) return content
       content = content.replace(PATH_TEST, (str, $1) => {
         if (isDataUrl($1) || $1.startsWith('@')) return str

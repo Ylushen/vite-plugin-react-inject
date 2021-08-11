@@ -14,9 +14,15 @@ function injectReact(options) {
 	return {
 		name: 'vite-plugin-react-inject', // 必须的，将会在 warning 和 error 中显示
 		load(id) {
-			if (options.external.test(id)) return
-			if (!options.test.test(id)) return
-			let content = fs.readFileSync(id, 'utf-8')
+			console.log(id, 'id')
+			if (options.external.test(id)) return null
+			if (!options.test.test(id)) return null
+			let content
+			try {
+				content = fs.readFileSync(id, 'utf-8')
+			} catch (e) {
+				return null
+			}
 			if (HAS_REACT.test(content)) return content
 			content = `import React from 'react'\n` + content
 			return content
