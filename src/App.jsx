@@ -4,8 +4,9 @@ import logo from './logo.svg'
 // import './css/style-login.scss'
 import "./img/test.scss";
 import Button from './components/Button'
+import {connect} from 'react-redux'
 
-function App() {
+function App(props) {
   const [count, setCount] = useState(0)
 
   return (
@@ -14,8 +15,8 @@ function App() {
         <img src={logo}  className="App-logo" alt="logo" />
         <p>Hello Vite + React!</p>
         <p>
-          <button type="button" onClick={() => setCount((count) => count + 1)}>
-            count is: {count}
+          <button type="button" onClick={() => props.getData()}>
+            count is: {props.data}
           </button>
         </p>
         <p>
@@ -46,4 +47,12 @@ function App() {
   )
 }
 
-export default App
+const mapStateToProps = state => ({
+  data: state.data,
+});
+
+const mapDispatchToProps = dispatch => ({
+  getData: () => { dispatch({ type: 'FETCH_DATA' }); },
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(App)
